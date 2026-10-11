@@ -1,0 +1,9 @@
+{
+  "gaussians": 228043,
+  "float_properties": 62,
+  "all_gaussian_attributes_match_checkpoint": true,
+  "all_values_finite": true,
+  "binary_payload_length_correct": true,
+  "ply_sha256": "2104c7957871913115db877da651facc6159b14e349a0489f3a417bb76c613be",
+  "visual_quality_reviewed": false
+}

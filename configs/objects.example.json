@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "objects": [
+    {
+      "id": "carton",
+      "label": "Selected carton",
+      "image": "../runs/office/frames/capture-00-frame-000020.jpg",
+      "mask": "../inputs/carton-mask.png",
+      "seed": 42,
+      "transform": {"position": [0, 0.9, 0], "quaternion": [0, 0, 0, 1], "scale": 0.2},
+      "collider": {"type": "box", "dimensions": [0.7, 1, 0.7], "center": [0, 0, 0]},
+      "background_removed": false,
+      "note": "Example pose only. Fit local collider to output and align transform; crop room splats before enabling clean motion."
+    }
+  ]
+}

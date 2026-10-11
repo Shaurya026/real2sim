@@ -1,0 +1,9 @@
+{
+  "extracted_images": 200,
+  "registered_images": 200,
+  "registered_fraction": 1.0,
+  "missing_referenced_images": [],
+  "sparse_points_present": true,
+  "minimum_registered_fraction": 0.8,
+  "note": "Coverage heuristic only. A high fraction does not prove accurate room geometry."
+}

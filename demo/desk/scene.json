@@ -1,0 +1,97 @@
+{
+  "version": 1,
+  "title": "Desk \u00b7 supplied Gaussian reconstruction",
+  "world": {
+    "up": "+Y",
+    "units": "uncalibrated",
+    "metric_scale_verified": false
+  },
+  "room": {
+    "representation": "splat",
+    "asset": "assets/room.ply",
+    "transform": {
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "quaternion": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": 1
+    }
+  },
+  "camera": {
+    "position": [
+      0.8960020050441105,
+      0.22650528819097682,
+      0.015997635821500697
+    ],
+    "target": [
+      0.8275937878627715,
+      0.12491583044496217,
+      -0.3647908861344777
+    ],
+    "up": [
+      -0.08357470172828249,
+      0.9664630832757936,
+      -0.2428257692362002
+    ],
+    "frame": "images/frame_00001.jpg"
+  },
+  "camera_views": "poses.json",
+  "show_grid": false,
+  "objects": [
+    {
+      "id": "example_cube",
+      "label": "Illustrative cube (not SAM 3D)",
+      "representation": "primitive",
+      "color": "#e5aa5f",
+      "transform": {
+        "position": [
+          0.6,
+          0.1,
+          -0.1
+        ],
+        "quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": 1
+      },
+      "collider": {
+        "type": "box",
+        "dimensions": [
+          0.08,
+          0.08,
+          0.08
+        ],
+        "center": [
+          0,
+          0,
+          0
+        ]
+      },
+      "background_removed": true
+    }
+  ],
+  "interaction_step": 0.02,
+  "provenance": {
+    "source": "supplied tum_desk_test_01-comparison",
+    "gaussians": 228043,
+    "backend": "Nerfstudio Splatfacto",
+    "iterations": 7000,
+    "scope": "Existing splat; illustrative cube added to test controls; no SAM3D inference claimed"
+  },
+  "limitations": [
+    "Unverified scale",
+    "Review renderer uses SH degree 0",
+    "Demonstration cube is authored and separate from the room",
+    "No collision scene or policy training"
+  ]
+}

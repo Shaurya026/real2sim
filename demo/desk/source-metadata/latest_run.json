@@ -1,0 +1,9 @@
+{
+  "config": "/content/sousvide-room-starter/runs/tum_desk_test_01/outputs/20261010T152858263828Z/tum_desk_test_01/splatfacto/2026-10-10_152906/config.yml",
+  "output": "/content/sousvide-room-starter/runs/tum_desk_test_01/outputs/20261010T152858263828Z",
+  "iterations": 7000,
+  "torch_version": "2.1.2+cu118",
+  "cuda_version": "11.8",
+  "gpu": "Tesla T4",
+  "torch_compile_disabled": true
+}

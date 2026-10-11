@@ -1,0 +1,9 @@
+{
+  "backend": "splatfacto",
+  "status": "selected from supplied Astra-era proposal and verified existing export; not a new model review",
+  "evidence": ["supplied desk metadata/training_config.yml", "supplied desk metadata/manifest.json", "room-to-robot-plan.md"],
+  "rationale": "Reuse the proven supplied Nerfstudio export path; COLMAP camera recovery, Gaussian PLY export, and Spark browser rendering have direct adapters.",
+  "alternatives": ["3DGruT and SOUS VIDE remain research integration references, not implemented backends in this release"],
+  "review_model": "gpt-6-astra",
+  "review_entrypoint": "agents/review.py"
+}

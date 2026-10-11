@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "room2sim-pipeline"
+version = "0.1.0"
+description = "Video → room splats → Blender repairs → SAM 3D objects → interactive browser"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+review = ["openai>=2,<3", "playwright>=1.48,<2"]
+media = ["Pillow>=10,<13", "imageio-ffmpeg>=0.5,<1"]
+
+[project.scripts]
+room2sim = "room2sim.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

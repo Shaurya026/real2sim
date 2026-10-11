@@ -1,0 +1,85 @@
+{
+  "version": 1,
+  "title": "Pantry \u00b7 supplied repaired mesh demo",
+  "world": {
+    "up": "+Y",
+    "units": "estimated metres",
+    "metric_scale_verified": false
+  },
+  "room": {
+    "representation": "mesh",
+    "asset": "assets/room.glb",
+    "transform": {
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "quaternion": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": 1
+    }
+  },
+  "camera": {
+    "position": [
+      0.5,
+      1.5,
+      1.8
+    ],
+    "target": [
+      -0.4,
+      0.9,
+      3.0
+    ]
+  },
+  "show_grid": false,
+  "objects": [
+    {
+      "id": "snack_packet",
+      "label": "Snack Packet",
+      "representation": "mesh",
+      "node": "snack_packet",
+      "transform": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": 1
+      },
+      "collider": {
+        "type": "box",
+        "dimensions": [
+          0.17000001668930054,
+          0.24499988555908203,
+          0.043552398681640625
+        ],
+        "center": [
+          0.0,
+          0.0,
+          0.001276254653930664
+        ]
+      },
+      "background_removed": true
+    }
+  ],
+  "provenance": {
+    "source": "room2sim_repository.zip",
+    "scope": "Existing capture-specific Blender/mesh repair result, adapted to new browser controls; not a newly reconstructed Gaussian/SAM 3D result"
+  },
+  "limitations": [
+    "Scale is estimated",
+    "Existing archive mesh rather than room splats",
+    "Kinematic interactions rather than physical simulation"
+  ]
+}

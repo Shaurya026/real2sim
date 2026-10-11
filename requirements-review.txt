@@ -1,0 +1,3 @@
+# Separate agent environment, only for agents/review.py call:
+openai>=2,<3
+# Browser capture uses Node Playwright in agents/package.json.

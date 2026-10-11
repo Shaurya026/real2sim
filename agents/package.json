@@ -1,0 +1,7 @@
+{
+  "name": "room2sim-browser-review",
+  "private": true,
+  "type": "module",
+  "dependencies": {"playwright": "^1.57.0"},
+  "engines": {"node": ">=18"}
+}

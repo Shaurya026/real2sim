@@ -1,0 +1,5 @@
+# Pipeline orchestration, demo packaging and PLY validation: Python standard library.
+# Assumes stage-specific dependencies already exist; no automatic installations.
+# Optional input extraction/mask helpers:
+Pillow>=10,<13
+imageio-ffmpeg>=0.5,<1

@@ -1,0 +1,3067 @@
+[
+  {
+    "frame": 0,
+    "timestamp": 1305031452.79172,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031452.791720.png"
+  },
+  {
+    "frame": 1,
+    "timestamp": 1305031452.823674,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031452.823674.png"
+  },
+  {
+    "frame": 2,
+    "timestamp": 1305031452.859642,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031452.859642.png"
+  },
+  {
+    "frame": 3,
+    "timestamp": 1305031452.891726,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031452.891726.png"
+  },
+  {
+    "frame": 4,
+    "timestamp": 1305031452.923715,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031452.923715.png"
+  },
+  {
+    "frame": 5,
+    "timestamp": 1305031452.959701,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031452.959701.png"
+  },
+  {
+    "frame": 6,
+    "timestamp": 1305031452.991647,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031452.991647.png"
+  },
+  {
+    "frame": 7,
+    "timestamp": 1305031453.02365,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031453.023650.png"
+  },
+  {
+    "frame": 8,
+    "timestamp": 1305031453.059754,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031453.059754.png"
+  },
+  {
+    "frame": 9,
+    "timestamp": 1305031453.091704,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031453.091704.png"
+  },
+  {
+    "frame": 10,
+    "timestamp": 1305031453.123633,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031453.123633.png"
+  },
+  {
+    "frame": 11,
+    "timestamp": 1305031453.159673,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031453.159673.png"
+  },
+  {
+    "frame": 12,
+    "timestamp": 1305031453.191726,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031453.191726.png"
+  },
+  {
+    "frame": 13,
+    "timestamp": 1305031453.223689,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031453.223689.png"
+  },
+  {
+    "frame": 14,
+    "timestamp": 1305031453.25967,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031453.259670.png"
+  },
+  {
+    "frame": 15,
+    "timestamp": 1305031453.291696,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031453.291696.png"
+  },
+  {
+    "frame": 16,
+    "timestamp": 1305031453.323682,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031453.323682.png"
+  },
+  {
+    "frame": 17,
+    "timestamp": 1305031453.359684,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031453.359684.png"
+  },
+  {
+    "frame": 18,
+    "timestamp": 1305031453.39169,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031453.391690.png"
+  },
+  {
+    "frame": 19,
+    "timestamp": 1305031453.423683,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031453.423683.png"
+  },
+  {
+    "frame": 20,
+    "timestamp": 1305031453.459685,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031453.459685.png"
+  },
+  {
+    "frame": 21,
+    "timestamp": 1305031453.491698,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031453.491698.png"
+  },
+  {
+    "frame": 22,
+    "timestamp": 1305031453.523684,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031453.523684.png"
+  },
+  {
+    "frame": 23,
+    "timestamp": 1305031453.559753,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031453.559753.png"
+  },
+  {
+    "frame": 24,
+    "timestamp": 1305031453.59164,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031453.591640.png"
+  },
+  {
+    "frame": 25,
+    "timestamp": 1305031453.627706,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031453.627706.png"
+  },
+  {
+    "frame": 26,
+    "timestamp": 1305031453.6596,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031453.659600.png"
+  },
+  {
+    "frame": 27,
+    "timestamp": 1305031453.691678,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031453.691678.png"
+  },
+  {
+    "frame": 28,
+    "timestamp": 1305031453.727652,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031453.727652.png"
+  },
+  {
+    "frame": 29,
+    "timestamp": 1305031453.759694,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031453.759694.png"
+  },
+  {
+    "frame": 30,
+    "timestamp": 1305031453.791716,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031453.791716.png"
+  },
+  {
+    "frame": 31,
+    "timestamp": 1305031453.827773,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031453.827773.png"
+  },
+  {
+    "frame": 32,
+    "timestamp": 1305031453.859705,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031453.859705.png"
+  },
+  {
+    "frame": 33,
+    "timestamp": 1305031453.89171,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031453.891710.png"
+  },
+  {
+    "frame": 34,
+    "timestamp": 1305031453.927723,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031453.927723.png"
+  },
+  {
+    "frame": 35,
+    "timestamp": 1305031453.959641,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031453.959641.png"
+  },
+  {
+    "frame": 36,
+    "timestamp": 1305031453.991624,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031453.991624.png"
+  },
+  {
+    "frame": 37,
+    "timestamp": 1305031454.027662,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031454.027662.png"
+  },
+  {
+    "frame": 38,
+    "timestamp": 1305031454.059654,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031454.059654.png"
+  },
+  {
+    "frame": 39,
+    "timestamp": 1305031454.091651,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031454.091651.png"
+  },
+  {
+    "frame": 40,
+    "timestamp": 1305031454.127701,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031454.127701.png"
+  },
+  {
+    "frame": 41,
+    "timestamp": 1305031454.159672,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031454.159672.png"
+  },
+  {
+    "frame": 42,
+    "timestamp": 1305031454.191658,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031454.191658.png"
+  },
+  {
+    "frame": 43,
+    "timestamp": 1305031454.227671,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031454.227671.png"
+  },
+  {
+    "frame": 44,
+    "timestamp": 1305031454.259627,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031454.259627.png"
+  },
+  {
+    "frame": 45,
+    "timestamp": 1305031454.291639,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031454.291639.png"
+  },
+  {
+    "frame": 46,
+    "timestamp": 1305031454.327699,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031454.327699.png"
+  },
+  {
+    "frame": 47,
+    "timestamp": 1305031454.359636,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031454.359636.png"
+  },
+  {
+    "frame": 48,
+    "timestamp": 1305031454.391677,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031454.391677.png"
+  },
+  {
+    "frame": 49,
+    "timestamp": 1305031454.427465,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031454.427465.png"
+  },
+  {
+    "frame": 50,
+    "timestamp": 1305031454.459913,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031454.459913.png"
+  },
+  {
+    "frame": 51,
+    "timestamp": 1305031454.491617,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031454.491617.png"
+  },
+  {
+    "frame": 52,
+    "timestamp": 1305031454.5277,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031454.527700.png"
+  },
+  {
+    "frame": 53,
+    "timestamp": 1305031454.559575,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031454.559575.png"
+  },
+  {
+    "frame": 54,
+    "timestamp": 1305031454.591635,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031454.591635.png"
+  },
+  {
+    "frame": 55,
+    "timestamp": 1305031454.62758,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031454.627580.png"
+  },
+  {
+    "frame": 56,
+    "timestamp": 1305031454.659528,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031454.659528.png"
+  },
+  {
+    "frame": 57,
+    "timestamp": 1305031454.691884,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031454.691884.png"
+  },
+  {
+    "frame": 58,
+    "timestamp": 1305031454.727659,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031454.727659.png"
+  },
+  {
+    "frame": 59,
+    "timestamp": 1305031454.759732,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031454.759732.png"
+  },
+  {
+    "frame": 60,
+    "timestamp": 1305031454.791641,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031454.791641.png"
+  },
+  {
+    "frame": 61,
+    "timestamp": 1305031454.82757,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031454.827570.png"
+  },
+  {
+    "frame": 62,
+    "timestamp": 1305031454.85962,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031454.859620.png"
+  },
+  {
+    "frame": 63,
+    "timestamp": 1305031454.891764,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031454.891764.png"
+  },
+  {
+    "frame": 64,
+    "timestamp": 1305031454.927567,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031454.927567.png"
+  },
+  {
+    "frame": 65,
+    "timestamp": 1305031454.959648,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031454.959648.png"
+  },
+  {
+    "frame": 66,
+    "timestamp": 1305031454.991937,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031454.991937.png"
+  },
+  {
+    "frame": 67,
+    "timestamp": 1305031455.027799,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031455.027799.png"
+  },
+  {
+    "frame": 68,
+    "timestamp": 1305031455.059636,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031455.059636.png"
+  },
+  {
+    "frame": 69,
+    "timestamp": 1305031455.0917,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031455.091700.png"
+  },
+  {
+    "frame": 70,
+    "timestamp": 1305031455.127695,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031455.127695.png"
+  },
+  {
+    "frame": 71,
+    "timestamp": 1305031455.15972,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031455.159720.png"
+  },
+  {
+    "frame": 72,
+    "timestamp": 1305031455.191655,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031455.191655.png"
+  },
+  {
+    "frame": 73,
+    "timestamp": 1305031455.227581,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031455.227581.png"
+  },
+  {
+    "frame": 74,
+    "timestamp": 1305031455.259631,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031455.259631.png"
+  },
+  {
+    "frame": 75,
+    "timestamp": 1305031455.291831,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031455.291831.png"
+  },
+  {
+    "frame": 76,
+    "timestamp": 1305031455.327766,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031455.327766.png"
+  },
+  {
+    "frame": 77,
+    "timestamp": 1305031455.35963,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031455.359630.png"
+  },
+  {
+    "frame": 78,
+    "timestamp": 1305031455.391665,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031455.391665.png"
+  },
+  {
+    "frame": 79,
+    "timestamp": 1305031455.427642,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031455.427642.png"
+  },
+  {
+    "frame": 80,
+    "timestamp": 1305031455.459589,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031455.459589.png"
+  },
+  {
+    "frame": 81,
+    "timestamp": 1305031455.491637,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031455.491637.png"
+  },
+  {
+    "frame": 82,
+    "timestamp": 1305031455.52761,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031455.527610.png"
+  },
+  {
+    "frame": 83,
+    "timestamp": 1305031455.559669,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031455.559669.png"
+  },
+  {
+    "frame": 84,
+    "timestamp": 1305031455.591645,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031455.591645.png"
+  },
+  {
+    "frame": 85,
+    "timestamp": 1305031455.627617,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031455.627617.png"
+  },
+  {
+    "frame": 86,
+    "timestamp": 1305031455.659615,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031455.659615.png"
+  },
+  {
+    "frame": 87,
+    "timestamp": 1305031455.691605,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031455.691605.png"
+  },
+  {
+    "frame": 88,
+    "timestamp": 1305031455.727628,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031455.727628.png"
+  },
+  {
+    "frame": 89,
+    "timestamp": 1305031455.759683,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031455.759683.png"
+  },
+  {
+    "frame": 90,
+    "timestamp": 1305031455.791666,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031455.791666.png"
+  },
+  {
+    "frame": 91,
+    "timestamp": 1305031455.82759,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031455.827590.png"
+  },
+  {
+    "frame": 92,
+    "timestamp": 1305031455.859526,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031455.859526.png"
+  },
+  {
+    "frame": 93,
+    "timestamp": 1305031455.891657,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031455.891657.png"
+  },
+  {
+    "frame": 94,
+    "timestamp": 1305031455.927955,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031455.927955.png"
+  },
+  {
+    "frame": 95,
+    "timestamp": 1305031455.959716,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031455.959716.png"
+  },
+  {
+    "frame": 96,
+    "timestamp": 1305031455.991694,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031455.991694.png"
+  },
+  {
+    "frame": 97,
+    "timestamp": 1305031456.02777,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031456.027770.png"
+  },
+  {
+    "frame": 98,
+    "timestamp": 1305031456.059713,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031456.059713.png"
+  },
+  {
+    "frame": 99,
+    "timestamp": 1305031456.091707,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031456.091707.png"
+  },
+  {
+    "frame": 100,
+    "timestamp": 1305031456.127645,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031456.127645.png"
+  },
+  {
+    "frame": 101,
+    "timestamp": 1305031456.159731,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031456.159731.png"
+  },
+  {
+    "frame": 102,
+    "timestamp": 1305031456.191658,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031456.191658.png"
+  },
+  {
+    "frame": 103,
+    "timestamp": 1305031456.227678,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031456.227678.png"
+  },
+  {
+    "frame": 104,
+    "timestamp": 1305031456.259614,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031456.259614.png"
+  },
+  {
+    "frame": 105,
+    "timestamp": 1305031456.291675,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031456.291675.png"
+  },
+  {
+    "frame": 106,
+    "timestamp": 1305031456.327718,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031456.327718.png"
+  },
+  {
+    "frame": 107,
+    "timestamp": 1305031456.359846,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031456.359846.png"
+  },
+  {
+    "frame": 108,
+    "timestamp": 1305031456.391619,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031456.391619.png"
+  },
+  {
+    "frame": 109,
+    "timestamp": 1305031456.427662,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031456.427662.png"
+  },
+  {
+    "frame": 110,
+    "timestamp": 1305031456.45961,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031456.459610.png"
+  },
+  {
+    "frame": 111,
+    "timestamp": 1305031456.491677,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031456.491677.png"
+  },
+  {
+    "frame": 112,
+    "timestamp": 1305031456.527641,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031456.527641.png"
+  },
+  {
+    "frame": 113,
+    "timestamp": 1305031456.559608,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031456.559608.png"
+  },
+  {
+    "frame": 114,
+    "timestamp": 1305031456.591651,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031456.591651.png"
+  },
+  {
+    "frame": 115,
+    "timestamp": 1305031456.627612,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031456.627612.png"
+  },
+  {
+    "frame": 116,
+    "timestamp": 1305031456.659665,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031456.659665.png"
+  },
+  {
+    "frame": 117,
+    "timestamp": 1305031456.691612,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031456.691612.png"
+  },
+  {
+    "frame": 118,
+    "timestamp": 1305031456.727693,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031456.727693.png"
+  },
+  {
+    "frame": 119,
+    "timestamp": 1305031456.759615,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031456.759615.png"
+  },
+  {
+    "frame": 120,
+    "timestamp": 1305031456.791649,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031456.791649.png"
+  },
+  {
+    "frame": 121,
+    "timestamp": 1305031456.827603,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031456.827603.png"
+  },
+  {
+    "frame": 122,
+    "timestamp": 1305031456.859634,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031456.859634.png"
+  },
+  {
+    "frame": 123,
+    "timestamp": 1305031456.891672,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031456.891672.png"
+  },
+  {
+    "frame": 124,
+    "timestamp": 1305031456.92769,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031456.927690.png"
+  },
+  {
+    "frame": 125,
+    "timestamp": 1305031456.959667,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031456.959667.png"
+  },
+  {
+    "frame": 126,
+    "timestamp": 1305031456.991709,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031456.991709.png"
+  },
+  {
+    "frame": 127,
+    "timestamp": 1305031457.027648,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031457.027648.png"
+  },
+  {
+    "frame": 128,
+    "timestamp": 1305031457.059621,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031457.059621.png"
+  },
+  {
+    "frame": 129,
+    "timestamp": 1305031457.091655,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031457.091655.png"
+  },
+  {
+    "frame": 130,
+    "timestamp": 1305031457.127632,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031457.127632.png"
+  },
+  {
+    "frame": 131,
+    "timestamp": 1305031457.159693,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031457.159693.png"
+  },
+  {
+    "frame": 132,
+    "timestamp": 1305031457.191735,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031457.191735.png"
+  },
+  {
+    "frame": 133,
+    "timestamp": 1305031457.227543,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031457.227543.png"
+  },
+  {
+    "frame": 134,
+    "timestamp": 1305031457.259691,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031457.259691.png"
+  },
+  {
+    "frame": 135,
+    "timestamp": 1305031457.291656,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031457.291656.png"
+  },
+  {
+    "frame": 136,
+    "timestamp": 1305031457.327548,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031457.327548.png"
+  },
+  {
+    "frame": 137,
+    "timestamp": 1305031457.359712,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031457.359712.png"
+  },
+  {
+    "frame": 138,
+    "timestamp": 1305031457.391684,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031457.391684.png"
+  },
+  {
+    "frame": 139,
+    "timestamp": 1305031457.427641,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031457.427641.png"
+  },
+  {
+    "frame": 140,
+    "timestamp": 1305031457.459614,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031457.459614.png"
+  },
+  {
+    "frame": 141,
+    "timestamp": 1305031457.491705,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031457.491705.png"
+  },
+  {
+    "frame": 142,
+    "timestamp": 1305031457.527638,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031457.527638.png"
+  },
+  {
+    "frame": 143,
+    "timestamp": 1305031457.559685,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031457.559685.png"
+  },
+  {
+    "frame": 144,
+    "timestamp": 1305031457.591678,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031457.591678.png"
+  },
+  {
+    "frame": 145,
+    "timestamp": 1305031457.627526,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031457.627526.png"
+  },
+  {
+    "frame": 146,
+    "timestamp": 1305031457.659632,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031457.659632.png"
+  },
+  {
+    "frame": 147,
+    "timestamp": 1305031457.69157,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031457.691570.png"
+  },
+  {
+    "frame": 148,
+    "timestamp": 1305031457.727669,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031457.727669.png"
+  },
+  {
+    "frame": 149,
+    "timestamp": 1305031457.759556,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031457.759556.png"
+  },
+  {
+    "frame": 150,
+    "timestamp": 1305031457.791567,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031457.791567.png"
+  },
+  {
+    "frame": 151,
+    "timestamp": 1305031457.827699,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031457.827699.png"
+  },
+  {
+    "frame": 152,
+    "timestamp": 1305031457.859623,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031457.859623.png"
+  },
+  {
+    "frame": 153,
+    "timestamp": 1305031457.891593,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031457.891593.png"
+  },
+  {
+    "frame": 154,
+    "timestamp": 1305031457.927633,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031457.927633.png"
+  },
+  {
+    "frame": 155,
+    "timestamp": 1305031457.959632,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031457.959632.png"
+  },
+  {
+    "frame": 156,
+    "timestamp": 1305031457.991644,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031457.991644.png"
+  },
+  {
+    "frame": 157,
+    "timestamp": 1305031458.027845,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031458.027845.png"
+  },
+  {
+    "frame": 158,
+    "timestamp": 1305031458.059689,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031458.059689.png"
+  },
+  {
+    "frame": 159,
+    "timestamp": 1305031458.09169,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031458.091690.png"
+  },
+  {
+    "frame": 160,
+    "timestamp": 1305031458.127605,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031458.127605.png"
+  },
+  {
+    "frame": 161,
+    "timestamp": 1305031458.159638,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031458.159638.png"
+  },
+  {
+    "frame": 162,
+    "timestamp": 1305031458.191646,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031458.191646.png"
+  },
+  {
+    "frame": 163,
+    "timestamp": 1305031458.227611,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031458.227611.png"
+  },
+  {
+    "frame": 164,
+    "timestamp": 1305031458.259934,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031458.259934.png"
+  },
+  {
+    "frame": 165,
+    "timestamp": 1305031458.291664,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031458.291664.png"
+  },
+  {
+    "frame": 166,
+    "timestamp": 1305031458.327628,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031458.327628.png"
+  },
+  {
+    "frame": 167,
+    "timestamp": 1305031458.35959,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031458.359590.png"
+  },
+  {
+    "frame": 168,
+    "timestamp": 1305031458.391626,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031458.391626.png"
+  },
+  {
+    "frame": 169,
+    "timestamp": 1305031458.427598,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031458.427598.png"
+  },
+  {
+    "frame": 170,
+    "timestamp": 1305031458.459637,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031458.459637.png"
+  },
+  {
+    "frame": 171,
+    "timestamp": 1305031458.491696,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031458.491696.png"
+  },
+  {
+    "frame": 172,
+    "timestamp": 1305031458.527737,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031458.527737.png"
+  },
+  {
+    "frame": 173,
+    "timestamp": 1305031458.559628,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031458.559628.png"
+  },
+  {
+    "frame": 174,
+    "timestamp": 1305031458.591641,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031458.591641.png"
+  },
+  {
+    "frame": 175,
+    "timestamp": 1305031458.627659,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031458.627659.png"
+  },
+  {
+    "frame": 176,
+    "timestamp": 1305031458.659623,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031458.659623.png"
+  },
+  {
+    "frame": 177,
+    "timestamp": 1305031458.691674,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031458.691674.png"
+  },
+  {
+    "frame": 178,
+    "timestamp": 1305031458.72765,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031458.727650.png"
+  },
+  {
+    "frame": 179,
+    "timestamp": 1305031458.759945,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031458.759945.png"
+  },
+  {
+    "frame": 180,
+    "timestamp": 1305031458.791632,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031458.791632.png"
+  },
+  {
+    "frame": 181,
+    "timestamp": 1305031458.827564,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031458.827564.png"
+  },
+  {
+    "frame": 182,
+    "timestamp": 1305031458.859887,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031458.859887.png"
+  },
+  {
+    "frame": 183,
+    "timestamp": 1305031458.891665,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031458.891665.png"
+  },
+  {
+    "frame": 184,
+    "timestamp": 1305031458.927621,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031458.927621.png"
+  },
+  {
+    "frame": 185,
+    "timestamp": 1305031458.959617,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031458.959617.png"
+  },
+  {
+    "frame": 186,
+    "timestamp": 1305031458.991647,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031458.991647.png"
+  },
+  {
+    "frame": 187,
+    "timestamp": 1305031459.027665,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031459.027665.png"
+  },
+  {
+    "frame": 188,
+    "timestamp": 1305031459.059631,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031459.059631.png"
+  },
+  {
+    "frame": 189,
+    "timestamp": 1305031459.09165,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031459.091650.png"
+  },
+  {
+    "frame": 190,
+    "timestamp": 1305031459.127618,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031459.127618.png"
+  },
+  {
+    "frame": 191,
+    "timestamp": 1305031459.159639,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031459.159639.png"
+  },
+  {
+    "frame": 192,
+    "timestamp": 1305031459.191674,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031459.191674.png"
+  },
+  {
+    "frame": 193,
+    "timestamp": 1305031459.227607,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031459.227607.png"
+  },
+  {
+    "frame": 194,
+    "timestamp": 1305031459.25976,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031459.259760.png"
+  },
+  {
+    "frame": 195,
+    "timestamp": 1305031459.29169,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031459.291690.png"
+  },
+  {
+    "frame": 196,
+    "timestamp": 1305031459.327632,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031459.327632.png"
+  },
+  {
+    "frame": 197,
+    "timestamp": 1305031459.359651,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031459.359651.png"
+  },
+  {
+    "frame": 198,
+    "timestamp": 1305031459.391667,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031459.391667.png"
+  },
+  {
+    "frame": 199,
+    "timestamp": 1305031459.427646,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031459.427646.png"
+  },
+  {
+    "frame": 200,
+    "timestamp": 1305031459.459679,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031459.459679.png"
+  },
+  {
+    "frame": 201,
+    "timestamp": 1305031459.491555,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031459.491555.png"
+  },
+  {
+    "frame": 202,
+    "timestamp": 1305031459.527594,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031459.527594.png"
+  },
+  {
+    "frame": 203,
+    "timestamp": 1305031459.559647,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031459.559647.png"
+  },
+  {
+    "frame": 204,
+    "timestamp": 1305031459.591695,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031459.591695.png"
+  },
+  {
+    "frame": 205,
+    "timestamp": 1305031459.627608,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031459.627608.png"
+  },
+  {
+    "frame": 206,
+    "timestamp": 1305031459.659641,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031459.659641.png"
+  },
+  {
+    "frame": 207,
+    "timestamp": 1305031459.691604,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031459.691604.png"
+  },
+  {
+    "frame": 208,
+    "timestamp": 1305031459.727551,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031459.727551.png"
+  },
+  {
+    "frame": 209,
+    "timestamp": 1305031459.759635,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031459.759635.png"
+  },
+  {
+    "frame": 210,
+    "timestamp": 1305031459.79165,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031459.791650.png"
+  },
+  {
+    "frame": 211,
+    "timestamp": 1305031459.827664,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031459.827664.png"
+  },
+  {
+    "frame": 212,
+    "timestamp": 1305031459.85966,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031459.859660.png"
+  },
+  {
+    "frame": 213,
+    "timestamp": 1305031459.891596,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031459.891596.png"
+  },
+  {
+    "frame": 214,
+    "timestamp": 1305031459.927607,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031459.927607.png"
+  },
+  {
+    "frame": 215,
+    "timestamp": 1305031459.95965,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031459.959650.png"
+  },
+  {
+    "frame": 216,
+    "timestamp": 1305031459.991725,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031459.991725.png"
+  },
+  {
+    "frame": 217,
+    "timestamp": 1305031460.027565,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031460.027565.png"
+  },
+  {
+    "frame": 218,
+    "timestamp": 1305031460.059659,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031460.059659.png"
+  },
+  {
+    "frame": 219,
+    "timestamp": 1305031460.091717,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031460.091717.png"
+  },
+  {
+    "frame": 220,
+    "timestamp": 1305031460.12769,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031460.127690.png"
+  },
+  {
+    "frame": 221,
+    "timestamp": 1305031460.159678,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031460.159678.png"
+  },
+  {
+    "frame": 222,
+    "timestamp": 1305031460.191559,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031460.191559.png"
+  },
+  {
+    "frame": 223,
+    "timestamp": 1305031460.227761,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031460.227761.png"
+  },
+  {
+    "frame": 224,
+    "timestamp": 1305031460.259667,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031460.259667.png"
+  },
+  {
+    "frame": 225,
+    "timestamp": 1305031460.291689,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031460.291689.png"
+  },
+  {
+    "frame": 226,
+    "timestamp": 1305031460.327512,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031460.327512.png"
+  },
+  {
+    "frame": 227,
+    "timestamp": 1305031460.35963,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031460.359630.png"
+  },
+  {
+    "frame": 228,
+    "timestamp": 1305031460.391611,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031460.391611.png"
+  },
+  {
+    "frame": 229,
+    "timestamp": 1305031460.427477,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031460.427477.png"
+  },
+  {
+    "frame": 230,
+    "timestamp": 1305031460.45962,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031460.459620.png"
+  },
+  {
+    "frame": 231,
+    "timestamp": 1305031460.491504,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031460.491504.png"
+  },
+  {
+    "frame": 232,
+    "timestamp": 1305031460.52757,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031460.527570.png"
+  },
+  {
+    "frame": 233,
+    "timestamp": 1305031460.559647,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031460.559647.png"
+  },
+  {
+    "frame": 234,
+    "timestamp": 1305031460.591855,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031460.591855.png"
+  },
+  {
+    "frame": 235,
+    "timestamp": 1305031460.627625,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031460.627625.png"
+  },
+  {
+    "frame": 236,
+    "timestamp": 1305031460.659764,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031460.659764.png"
+  },
+  {
+    "frame": 237,
+    "timestamp": 1305031460.691671,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031460.691671.png"
+  },
+  {
+    "frame": 238,
+    "timestamp": 1305031460.727675,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031460.727675.png"
+  },
+  {
+    "frame": 239,
+    "timestamp": 1305031460.759667,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031460.759667.png"
+  },
+  {
+    "frame": 240,
+    "timestamp": 1305031460.79166,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031460.791660.png"
+  },
+  {
+    "frame": 241,
+    "timestamp": 1305031460.82766,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031460.827660.png"
+  },
+  {
+    "frame": 242,
+    "timestamp": 1305031460.859714,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031460.859714.png"
+  },
+  {
+    "frame": 243,
+    "timestamp": 1305031460.891774,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031460.891774.png"
+  },
+  {
+    "frame": 244,
+    "timestamp": 1305031460.927562,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031460.927562.png"
+  },
+  {
+    "frame": 245,
+    "timestamp": 1305031460.959649,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031460.959649.png"
+  },
+  {
+    "frame": 246,
+    "timestamp": 1305031460.991668,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031460.991668.png"
+  },
+  {
+    "frame": 247,
+    "timestamp": 1305031461.02762,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031461.027620.png"
+  },
+  {
+    "frame": 248,
+    "timestamp": 1305031461.059662,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031461.059662.png"
+  },
+  {
+    "frame": 249,
+    "timestamp": 1305031461.091728,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031461.091728.png"
+  },
+  {
+    "frame": 250,
+    "timestamp": 1305031461.127586,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031461.127586.png"
+  },
+  {
+    "frame": 251,
+    "timestamp": 1305031461.15972,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031461.159720.png"
+  },
+  {
+    "frame": 252,
+    "timestamp": 1305031461.192013,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031461.192013.png"
+  },
+  {
+    "frame": 253,
+    "timestamp": 1305031461.227607,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031461.227607.png"
+  },
+  {
+    "frame": 254,
+    "timestamp": 1305031461.259642,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031461.259642.png"
+  },
+  {
+    "frame": 255,
+    "timestamp": 1305031461.291656,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031461.291656.png"
+  },
+  {
+    "frame": 256,
+    "timestamp": 1305031461.327751,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031461.327751.png"
+  },
+  {
+    "frame": 257,
+    "timestamp": 1305031461.359709,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031461.359709.png"
+  },
+  {
+    "frame": 258,
+    "timestamp": 1305031461.391708,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031461.391708.png"
+  },
+  {
+    "frame": 259,
+    "timestamp": 1305031461.427624,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031461.427624.png"
+  },
+  {
+    "frame": 260,
+    "timestamp": 1305031461.459781,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031461.459781.png"
+  },
+  {
+    "frame": 261,
+    "timestamp": 1305031461.491677,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031461.491677.png"
+  },
+  {
+    "frame": 262,
+    "timestamp": 1305031461.527705,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031461.527705.png"
+  },
+  {
+    "frame": 263,
+    "timestamp": 1305031461.559677,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031461.559677.png"
+  },
+  {
+    "frame": 264,
+    "timestamp": 1305031461.59169,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031461.591690.png"
+  },
+  {
+    "frame": 265,
+    "timestamp": 1305031461.627541,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031461.627541.png"
+  },
+  {
+    "frame": 266,
+    "timestamp": 1305031461.659622,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031461.659622.png"
+  },
+  {
+    "frame": 267,
+    "timestamp": 1305031461.691563,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031461.691563.png"
+  },
+  {
+    "frame": 268,
+    "timestamp": 1305031461.727602,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031461.727602.png"
+  },
+  {
+    "frame": 269,
+    "timestamp": 1305031461.759684,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031461.759684.png"
+  },
+  {
+    "frame": 270,
+    "timestamp": 1305031461.791612,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031461.791612.png"
+  },
+  {
+    "frame": 271,
+    "timestamp": 1305031461.827615,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031461.827615.png"
+  },
+  {
+    "frame": 272,
+    "timestamp": 1305031461.859767,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031461.859767.png"
+  },
+  {
+    "frame": 273,
+    "timestamp": 1305031461.891723,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031461.891723.png"
+  },
+  {
+    "frame": 274,
+    "timestamp": 1305031461.927758,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031461.927758.png"
+  },
+  {
+    "frame": 275,
+    "timestamp": 1305031461.959703,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031461.959703.png"
+  },
+  {
+    "frame": 276,
+    "timestamp": 1305031461.99159,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031461.991590.png"
+  },
+  {
+    "frame": 277,
+    "timestamp": 1305031462.027675,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031462.027675.png"
+  },
+  {
+    "frame": 278,
+    "timestamp": 1305031462.059837,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031462.059837.png"
+  },
+  {
+    "frame": 279,
+    "timestamp": 1305031462.091777,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031462.091777.png"
+  },
+  {
+    "frame": 280,
+    "timestamp": 1305031462.127739,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031462.127739.png"
+  },
+  {
+    "frame": 281,
+    "timestamp": 1305031462.159646,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031462.159646.png"
+  },
+  {
+    "frame": 282,
+    "timestamp": 1305031462.191641,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031462.191641.png"
+  },
+  {
+    "frame": 283,
+    "timestamp": 1305031462.227633,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031462.227633.png"
+  },
+  {
+    "frame": 284,
+    "timestamp": 1305031462.259765,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031462.259765.png"
+  },
+  {
+    "frame": 285,
+    "timestamp": 1305031462.291629,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031462.291629.png"
+  },
+  {
+    "frame": 286,
+    "timestamp": 1305031462.32754,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031462.327540.png"
+  },
+  {
+    "frame": 287,
+    "timestamp": 1305031462.359732,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031462.359732.png"
+  },
+  {
+    "frame": 288,
+    "timestamp": 1305031462.391695,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031462.391695.png"
+  },
+  {
+    "frame": 289,
+    "timestamp": 1305031462.427635,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031462.427635.png"
+  },
+  {
+    "frame": 290,
+    "timestamp": 1305031462.459897,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031462.459897.png"
+  },
+  {
+    "frame": 291,
+    "timestamp": 1305031462.492008,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031462.492008.png"
+  },
+  {
+    "frame": 292,
+    "timestamp": 1305031462.52767,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031462.527670.png"
+  },
+  {
+    "frame": 293,
+    "timestamp": 1305031462.559862,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031462.559862.png"
+  },
+  {
+    "frame": 294,
+    "timestamp": 1305031462.591862,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031462.591862.png"
+  },
+  {
+    "frame": 295,
+    "timestamp": 1305031462.627851,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031462.627851.png"
+  },
+  {
+    "frame": 296,
+    "timestamp": 1305031462.65966,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031462.659660.png"
+  },
+  {
+    "frame": 297,
+    "timestamp": 1305031462.692548,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031462.692548.png"
+  },
+  {
+    "frame": 298,
+    "timestamp": 1305031462.727652,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031462.727652.png"
+  },
+  {
+    "frame": 299,
+    "timestamp": 1305031462.759782,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031462.759782.png"
+  },
+  {
+    "frame": 300,
+    "timestamp": 1305031462.791943,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031462.791943.png"
+  },
+  {
+    "frame": 301,
+    "timestamp": 1305031462.827816,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031462.827816.png"
+  },
+  {
+    "frame": 302,
+    "timestamp": 1305031462.859782,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031462.859782.png"
+  },
+  {
+    "frame": 303,
+    "timestamp": 1305031462.891847,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031462.891847.png"
+  },
+  {
+    "frame": 304,
+    "timestamp": 1305031462.927607,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031462.927607.png"
+  },
+  {
+    "frame": 305,
+    "timestamp": 1305031462.959676,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031462.959676.png"
+  },
+  {
+    "frame": 306,
+    "timestamp": 1305031462.99555,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031462.995550.png"
+  },
+  {
+    "frame": 307,
+    "timestamp": 1305031463.027667,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031463.027667.png"
+  },
+  {
+    "frame": 308,
+    "timestamp": 1305031463.05981,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031463.059810.png"
+  },
+  {
+    "frame": 309,
+    "timestamp": 1305031463.095809,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031463.095809.png"
+  },
+  {
+    "frame": 310,
+    "timestamp": 1305031463.12755,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031463.127550.png"
+  },
+  {
+    "frame": 311,
+    "timestamp": 1305031463.159787,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031463.159787.png"
+  },
+  {
+    "frame": 312,
+    "timestamp": 1305031463.195657,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031463.195657.png"
+  },
+  {
+    "frame": 313,
+    "timestamp": 1305031463.227784,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031463.227784.png"
+  },
+  {
+    "frame": 314,
+    "timestamp": 1305031463.260034,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031463.260034.png"
+  },
+  {
+    "frame": 315,
+    "timestamp": 1305031463.295737,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031463.295737.png"
+  },
+  {
+    "frame": 316,
+    "timestamp": 1305031463.327739,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031463.327739.png"
+  },
+  {
+    "frame": 317,
+    "timestamp": 1305031463.35975,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031463.359750.png"
+  },
+  {
+    "frame": 318,
+    "timestamp": 1305031463.39563,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031463.395630.png"
+  },
+  {
+    "frame": 319,
+    "timestamp": 1305031463.427716,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031463.427716.png"
+  },
+  {
+    "frame": 320,
+    "timestamp": 1305031463.459756,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031463.459756.png"
+  },
+  {
+    "frame": 321,
+    "timestamp": 1305031463.495629,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031463.495629.png"
+  },
+  {
+    "frame": 322,
+    "timestamp": 1305031463.52767,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031463.527670.png"
+  },
+  {
+    "frame": 323,
+    "timestamp": 1305031463.559751,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031463.559751.png"
+  },
+  {
+    "frame": 324,
+    "timestamp": 1305031463.5956,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031463.595600.png"
+  },
+  {
+    "frame": 325,
+    "timestamp": 1305031463.627588,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031463.627588.png"
+  },
+  {
+    "frame": 326,
+    "timestamp": 1305031463.659766,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031463.659766.png"
+  },
+  {
+    "frame": 327,
+    "timestamp": 1305031463.69564,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031463.695640.png"
+  },
+  {
+    "frame": 328,
+    "timestamp": 1305031463.727588,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031463.727588.png"
+  },
+  {
+    "frame": 329,
+    "timestamp": 1305031463.759674,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031463.759674.png"
+  },
+  {
+    "frame": 330,
+    "timestamp": 1305031463.795647,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031463.795647.png"
+  },
+  {
+    "frame": 331,
+    "timestamp": 1305031463.827761,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031463.827761.png"
+  },
+  {
+    "frame": 332,
+    "timestamp": 1305031463.85991,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031463.859910.png"
+  },
+  {
+    "frame": 333,
+    "timestamp": 1305031463.895648,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031463.895648.png"
+  },
+  {
+    "frame": 334,
+    "timestamp": 1305031463.927664,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031463.927664.png"
+  },
+  {
+    "frame": 335,
+    "timestamp": 1305031463.95968,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031463.959680.png"
+  },
+  {
+    "frame": 336,
+    "timestamp": 1305031463.995821,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031463.995821.png"
+  },
+  {
+    "frame": 337,
+    "timestamp": 1305031464.027703,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031464.027703.png"
+  },
+  {
+    "frame": 338,
+    "timestamp": 1305031464.059652,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031464.059652.png"
+  },
+  {
+    "frame": 339,
+    "timestamp": 1305031464.095634,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031464.095634.png"
+  },
+  {
+    "frame": 340,
+    "timestamp": 1305031464.127681,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031464.127681.png"
+  },
+  {
+    "frame": 341,
+    "timestamp": 1305031464.159817,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031464.159817.png"
+  },
+  {
+    "frame": 342,
+    "timestamp": 1305031464.195585,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031464.195585.png"
+  },
+  {
+    "frame": 343,
+    "timestamp": 1305031464.227624,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031464.227624.png"
+  },
+  {
+    "frame": 344,
+    "timestamp": 1305031464.259644,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031464.259644.png"
+  },
+  {
+    "frame": 345,
+    "timestamp": 1305031464.295667,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031464.295667.png"
+  },
+  {
+    "frame": 346,
+    "timestamp": 1305031464.327866,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031464.327866.png"
+  },
+  {
+    "frame": 347,
+    "timestamp": 1305031464.359684,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031464.359684.png"
+  },
+  {
+    "frame": 348,
+    "timestamp": 1305031464.395611,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031464.395611.png"
+  },
+  {
+    "frame": 349,
+    "timestamp": 1305031464.427634,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031464.427634.png"
+  },
+  {
+    "frame": 350,
+    "timestamp": 1305031464.459689,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031464.459689.png"
+  },
+  {
+    "frame": 351,
+    "timestamp": 1305031464.495633,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031464.495633.png"
+  },
+  {
+    "frame": 352,
+    "timestamp": 1305031464.527574,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031464.527574.png"
+  },
+  {
+    "frame": 353,
+    "timestamp": 1305031464.559703,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031464.559703.png"
+  },
+  {
+    "frame": 354,
+    "timestamp": 1305031464.595698,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031464.595698.png"
+  },
+  {
+    "frame": 355,
+    "timestamp": 1305031464.627672,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031464.627672.png"
+  },
+  {
+    "frame": 356,
+    "timestamp": 1305031464.659749,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031464.659749.png"
+  },
+  {
+    "frame": 357,
+    "timestamp": 1305031464.695663,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031464.695663.png"
+  },
+  {
+    "frame": 358,
+    "timestamp": 1305031464.727652,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031464.727652.png"
+  },
+  {
+    "frame": 359,
+    "timestamp": 1305031464.75974,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031464.759740.png"
+  },
+  {
+    "frame": 360,
+    "timestamp": 1305031464.796021,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031464.796021.png"
+  },
+  {
+    "frame": 361,
+    "timestamp": 1305031464.827759,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031464.827759.png"
+  },
+  {
+    "frame": 362,
+    "timestamp": 1305031464.859654,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031464.859654.png"
+  },
+  {
+    "frame": 363,
+    "timestamp": 1305031464.895817,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031464.895817.png"
+  },
+  {
+    "frame": 364,
+    "timestamp": 1305031464.927799,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031464.927799.png"
+  },
+  {
+    "frame": 365,
+    "timestamp": 1305031464.959763,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031464.959763.png"
+  },
+  {
+    "frame": 366,
+    "timestamp": 1305031464.995687,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031464.995687.png"
+  },
+  {
+    "frame": 367,
+    "timestamp": 1305031465.027823,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031465.027823.png"
+  },
+  {
+    "frame": 368,
+    "timestamp": 1305031465.059749,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031465.059749.png"
+  },
+  {
+    "frame": 369,
+    "timestamp": 1305031465.0957,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031465.095700.png"
+  },
+  {
+    "frame": 370,
+    "timestamp": 1305031465.127664,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031465.127664.png"
+  },
+  {
+    "frame": 371,
+    "timestamp": 1305031465.159842,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031465.159842.png"
+  },
+  {
+    "frame": 372,
+    "timestamp": 1305031465.195564,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031465.195564.png"
+  },
+  {
+    "frame": 373,
+    "timestamp": 1305031465.227907,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031465.227907.png"
+  },
+  {
+    "frame": 374,
+    "timestamp": 1305031465.259807,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031465.259807.png"
+  },
+  {
+    "frame": 375,
+    "timestamp": 1305031465.295623,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031465.295623.png"
+  },
+  {
+    "frame": 376,
+    "timestamp": 1305031465.327674,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031465.327674.png"
+  },
+  {
+    "frame": 377,
+    "timestamp": 1305031465.359948,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031465.359948.png"
+  },
+  {
+    "frame": 378,
+    "timestamp": 1305031465.395586,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031465.395586.png"
+  },
+  {
+    "frame": 379,
+    "timestamp": 1305031465.427697,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031465.427697.png"
+  },
+  {
+    "frame": 380,
+    "timestamp": 1305031465.460125,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031465.460125.png"
+  },
+  {
+    "frame": 381,
+    "timestamp": 1305031465.495703,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031465.495703.png"
+  },
+  {
+    "frame": 382,
+    "timestamp": 1305031465.527622,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031465.527622.png"
+  },
+  {
+    "frame": 383,
+    "timestamp": 1305031465.559812,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031465.559812.png"
+  },
+  {
+    "frame": 384,
+    "timestamp": 1305031465.595599,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031465.595599.png"
+  },
+  {
+    "frame": 385,
+    "timestamp": 1305031465.627688,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031465.627688.png"
+  },
+  {
+    "frame": 386,
+    "timestamp": 1305031465.66006,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031465.660060.png"
+  },
+  {
+    "frame": 387,
+    "timestamp": 1305031465.695668,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031465.695668.png"
+  },
+  {
+    "frame": 388,
+    "timestamp": 1305031465.727682,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031465.727682.png"
+  },
+  {
+    "frame": 389,
+    "timestamp": 1305031465.759766,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031465.759766.png"
+  },
+  {
+    "frame": 390,
+    "timestamp": 1305031465.795937,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031465.795937.png"
+  },
+  {
+    "frame": 391,
+    "timestamp": 1305031465.827996,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031465.827996.png"
+  },
+  {
+    "frame": 392,
+    "timestamp": 1305031465.859861,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031465.859861.png"
+  },
+  {
+    "frame": 393,
+    "timestamp": 1305031465.895494,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031465.895494.png"
+  },
+  {
+    "frame": 394,
+    "timestamp": 1305031465.927495,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031465.927495.png"
+  },
+  {
+    "frame": 395,
+    "timestamp": 1305031465.95971,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031465.959710.png"
+  },
+  {
+    "frame": 396,
+    "timestamp": 1305031465.995753,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031465.995753.png"
+  },
+  {
+    "frame": 397,
+    "timestamp": 1305031466.027644,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031466.027644.png"
+  },
+  {
+    "frame": 398,
+    "timestamp": 1305031466.059757,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031466.059757.png"
+  },
+  {
+    "frame": 399,
+    "timestamp": 1305031466.09584,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031466.095840.png"
+  },
+  {
+    "frame": 400,
+    "timestamp": 1305031466.12764,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031466.127640.png"
+  },
+  {
+    "frame": 401,
+    "timestamp": 1305031466.160428,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031466.160428.png"
+  },
+  {
+    "frame": 402,
+    "timestamp": 1305031466.195833,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031466.195833.png"
+  },
+  {
+    "frame": 403,
+    "timestamp": 1305031466.227951,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031466.227951.png"
+  },
+  {
+    "frame": 404,
+    "timestamp": 1305031466.259815,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031466.259815.png"
+  },
+  {
+    "frame": 405,
+    "timestamp": 1305031466.295737,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031466.295737.png"
+  },
+  {
+    "frame": 406,
+    "timestamp": 1305031466.327702,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031466.327702.png"
+  },
+  {
+    "frame": 407,
+    "timestamp": 1305031466.359829,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031466.359829.png"
+  },
+  {
+    "frame": 408,
+    "timestamp": 1305031466.395784,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031466.395784.png"
+  },
+  {
+    "frame": 409,
+    "timestamp": 1305031466.427819,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031466.427819.png"
+  },
+  {
+    "frame": 410,
+    "timestamp": 1305031466.45979,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031466.459790.png"
+  },
+  {
+    "frame": 411,
+    "timestamp": 1305031466.495809,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031466.495809.png"
+  },
+  {
+    "frame": 412,
+    "timestamp": 1305031466.527538,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031466.527538.png"
+  },
+  {
+    "frame": 413,
+    "timestamp": 1305031466.560353,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031466.560353.png"
+  },
+  {
+    "frame": 414,
+    "timestamp": 1305031466.595936,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031466.595936.png"
+  },
+  {
+    "frame": 415,
+    "timestamp": 1305031466.627549,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031466.627549.png"
+  },
+  {
+    "frame": 416,
+    "timestamp": 1305031466.659688,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031466.659688.png"
+  },
+  {
+    "frame": 417,
+    "timestamp": 1305031466.695822,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031466.695822.png"
+  },
+  {
+    "frame": 418,
+    "timestamp": 1305031466.728074,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031466.728074.png"
+  },
+  {
+    "frame": 419,
+    "timestamp": 1305031466.759637,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031466.759637.png"
+  },
+  {
+    "frame": 420,
+    "timestamp": 1305031466.795604,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031466.795604.png"
+  },
+  {
+    "frame": 421,
+    "timestamp": 1305031466.827879,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031466.827879.png"
+  },
+  {
+    "frame": 422,
+    "timestamp": 1305031466.859665,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031466.859665.png"
+  },
+  {
+    "frame": 423,
+    "timestamp": 1305031466.895694,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031466.895694.png"
+  },
+  {
+    "frame": 424,
+    "timestamp": 1305031466.927756,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031466.927756.png"
+  },
+  {
+    "frame": 425,
+    "timestamp": 1305031466.959728,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031466.959728.png"
+  },
+  {
+    "frame": 426,
+    "timestamp": 1305031466.995712,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031466.995712.png"
+  },
+  {
+    "frame": 427,
+    "timestamp": 1305031467.027843,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031467.027843.png"
+  },
+  {
+    "frame": 428,
+    "timestamp": 1305031467.0597,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031467.059700.png"
+  },
+  {
+    "frame": 429,
+    "timestamp": 1305031467.095687,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031467.095687.png"
+  },
+  {
+    "frame": 430,
+    "timestamp": 1305031467.128974,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031467.128974.png"
+  },
+  {
+    "frame": 431,
+    "timestamp": 1305031467.15966,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031467.159660.png"
+  },
+  {
+    "frame": 432,
+    "timestamp": 1305031467.195663,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031467.195663.png"
+  },
+  {
+    "frame": 433,
+    "timestamp": 1305031467.227704,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031467.227704.png"
+  },
+  {
+    "frame": 434,
+    "timestamp": 1305031467.259694,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031467.259694.png"
+  },
+  {
+    "frame": 435,
+    "timestamp": 1305031467.295846,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031467.295846.png"
+  },
+  {
+    "frame": 436,
+    "timestamp": 1305031467.328008,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031467.328008.png"
+  },
+  {
+    "frame": 437,
+    "timestamp": 1305031467.359654,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031467.359654.png"
+  },
+  {
+    "frame": 438,
+    "timestamp": 1305031467.395756,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031467.395756.png"
+  },
+  {
+    "frame": 439,
+    "timestamp": 1305031467.427783,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031467.427783.png"
+  },
+  {
+    "frame": 440,
+    "timestamp": 1305031467.459692,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031467.459692.png"
+  },
+  {
+    "frame": 441,
+    "timestamp": 1305031467.496058,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031467.496058.png"
+  },
+  {
+    "frame": 442,
+    "timestamp": 1305031467.527663,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031467.527663.png"
+  },
+  {
+    "frame": 443,
+    "timestamp": 1305031467.559763,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031467.559763.png"
+  },
+  {
+    "frame": 444,
+    "timestamp": 1305031467.595989,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031467.595989.png"
+  },
+  {
+    "frame": 445,
+    "timestamp": 1305031467.627532,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031467.627532.png"
+  },
+  {
+    "frame": 446,
+    "timestamp": 1305031467.659626,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031467.659626.png"
+  },
+  {
+    "frame": 447,
+    "timestamp": 1305031467.695886,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031467.695886.png"
+  },
+  {
+    "frame": 448,
+    "timestamp": 1305031467.727535,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031467.727535.png"
+  },
+  {
+    "frame": 449,
+    "timestamp": 1305031467.759907,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031467.759907.png"
+  },
+  {
+    "frame": 450,
+    "timestamp": 1305031467.796075,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031467.796075.png"
+  },
+  {
+    "frame": 451,
+    "timestamp": 1305031467.8278,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031467.827800.png"
+  },
+  {
+    "frame": 452,
+    "timestamp": 1305031467.859729,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031467.859729.png"
+  },
+  {
+    "frame": 453,
+    "timestamp": 1305031467.895947,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031467.895947.png"
+  },
+  {
+    "frame": 454,
+    "timestamp": 1305031467.927754,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031467.927754.png"
+  },
+  {
+    "frame": 455,
+    "timestamp": 1305031467.959826,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031467.959826.png"
+  },
+  {
+    "frame": 456,
+    "timestamp": 1305031467.995754,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031467.995754.png"
+  },
+  {
+    "frame": 457,
+    "timestamp": 1305031468.028107,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031468.028107.png"
+  },
+  {
+    "frame": 458,
+    "timestamp": 1305031468.05985,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031468.059850.png"
+  },
+  {
+    "frame": 459,
+    "timestamp": 1305031468.095867,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031468.095867.png"
+  },
+  {
+    "frame": 460,
+    "timestamp": 1305031468.127816,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031468.127816.png"
+  },
+  {
+    "frame": 461,
+    "timestamp": 1305031468.159864,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031468.159864.png"
+  },
+  {
+    "frame": 462,
+    "timestamp": 1305031468.195985,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031468.195985.png"
+  },
+  {
+    "frame": 463,
+    "timestamp": 1305031468.228158,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031468.228158.png"
+  },
+  {
+    "frame": 464,
+    "timestamp": 1305031468.259754,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031468.259754.png"
+  },
+  {
+    "frame": 465,
+    "timestamp": 1305031468.29583,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031468.295830.png"
+  },
+  {
+    "frame": 466,
+    "timestamp": 1305031468.327847,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031468.327847.png"
+  },
+  {
+    "frame": 467,
+    "timestamp": 1305031468.359787,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031468.359787.png"
+  },
+  {
+    "frame": 468,
+    "timestamp": 1305031468.39586,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031468.395860.png"
+  },
+  {
+    "frame": 469,
+    "timestamp": 1305031468.428025,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031468.428025.png"
+  },
+  {
+    "frame": 470,
+    "timestamp": 1305031468.459759,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031468.459759.png"
+  },
+  {
+    "frame": 471,
+    "timestamp": 1305031468.495809,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031468.495809.png"
+  },
+  {
+    "frame": 472,
+    "timestamp": 1305031468.527756,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031468.527756.png"
+  },
+  {
+    "frame": 473,
+    "timestamp": 1305031468.559739,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031468.559739.png"
+  },
+  {
+    "frame": 474,
+    "timestamp": 1305031468.595768,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031468.595768.png"
+  },
+  {
+    "frame": 475,
+    "timestamp": 1305031468.627626,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031468.627626.png"
+  },
+  {
+    "frame": 476,
+    "timestamp": 1305031468.659579,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031468.659579.png"
+  },
+  {
+    "frame": 477,
+    "timestamp": 1305031468.695835,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031468.695835.png"
+  },
+  {
+    "frame": 478,
+    "timestamp": 1305031468.727785,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031468.727785.png"
+  },
+  {
+    "frame": 479,
+    "timestamp": 1305031468.759628,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031468.759628.png"
+  },
+  {
+    "frame": 480,
+    "timestamp": 1305031468.795796,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031468.795796.png"
+  },
+  {
+    "frame": 481,
+    "timestamp": 1305031468.829247,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031468.829247.png"
+  },
+  {
+    "frame": 482,
+    "timestamp": 1305031468.859659,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031468.859659.png"
+  },
+  {
+    "frame": 483,
+    "timestamp": 1305031468.895873,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031468.895873.png"
+  },
+  {
+    "frame": 484,
+    "timestamp": 1305031468.928141,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031468.928141.png"
+  },
+  {
+    "frame": 485,
+    "timestamp": 1305031468.959594,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031468.959594.png"
+  },
+  {
+    "frame": 486,
+    "timestamp": 1305031468.995711,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031468.995711.png"
+  },
+  {
+    "frame": 487,
+    "timestamp": 1305031469.027699,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031469.027699.png"
+  },
+  {
+    "frame": 488,
+    "timestamp": 1305031469.059832,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031469.059832.png"
+  },
+  {
+    "frame": 489,
+    "timestamp": 1305031469.095723,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031469.095723.png"
+  },
+  {
+    "frame": 490,
+    "timestamp": 1305031469.127679,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031469.127679.png"
+  },
+  {
+    "frame": 491,
+    "timestamp": 1305031469.159703,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031469.159703.png"
+  },
+  {
+    "frame": 492,
+    "timestamp": 1305031469.19554,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031469.195540.png"
+  },
+  {
+    "frame": 493,
+    "timestamp": 1305031469.227754,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031469.227754.png"
+  },
+  {
+    "frame": 494,
+    "timestamp": 1305031469.259586,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031469.259586.png"
+  },
+  {
+    "frame": 495,
+    "timestamp": 1305031469.296754,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031469.296754.png"
+  },
+  {
+    "frame": 496,
+    "timestamp": 1305031469.327618,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031469.327618.png"
+  },
+  {
+    "frame": 497,
+    "timestamp": 1305031469.359592,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031469.359592.png"
+  },
+  {
+    "frame": 498,
+    "timestamp": 1305031469.395695,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031469.395695.png"
+  },
+  {
+    "frame": 499,
+    "timestamp": 1305031469.427651,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031469.427651.png"
+  },
+  {
+    "frame": 500,
+    "timestamp": 1305031469.459668,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031469.459668.png"
+  },
+  {
+    "frame": 501,
+    "timestamp": 1305031469.495744,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031469.495744.png"
+  },
+  {
+    "frame": 502,
+    "timestamp": 1305031469.527622,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031469.527622.png"
+  },
+  {
+    "frame": 503,
+    "timestamp": 1305031469.559645,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031469.559645.png"
+  },
+  {
+    "frame": 504,
+    "timestamp": 1305031469.595755,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031469.595755.png"
+  },
+  {
+    "frame": 505,
+    "timestamp": 1305031469.627752,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031469.627752.png"
+  },
+  {
+    "frame": 506,
+    "timestamp": 1305031469.65959,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031469.659590.png"
+  },
+  {
+    "frame": 507,
+    "timestamp": 1305031469.695613,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031469.695613.png"
+  },
+  {
+    "frame": 508,
+    "timestamp": 1305031469.727679,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031469.727679.png"
+  },
+  {
+    "frame": 509,
+    "timestamp": 1305031469.759599,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031469.759599.png"
+  },
+  {
+    "frame": 510,
+    "timestamp": 1305031469.795621,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031469.795621.png"
+  },
+  {
+    "frame": 511,
+    "timestamp": 1305031469.827526,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031469.827526.png"
+  },
+  {
+    "frame": 512,
+    "timestamp": 1305031469.859574,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031469.859574.png"
+  },
+  {
+    "frame": 513,
+    "timestamp": 1305031469.895755,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031469.895755.png"
+  },
+  {
+    "frame": 514,
+    "timestamp": 1305031469.927854,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031469.927854.png"
+  },
+  {
+    "frame": 515,
+    "timestamp": 1305031469.959805,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031469.959805.png"
+  },
+  {
+    "frame": 516,
+    "timestamp": 1305031469.995551,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031469.995551.png"
+  },
+  {
+    "frame": 517,
+    "timestamp": 1305031470.027694,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031470.027694.png"
+  },
+  {
+    "frame": 518,
+    "timestamp": 1305031470.059638,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031470.059638.png"
+  },
+  {
+    "frame": 519,
+    "timestamp": 1305031470.095944,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031470.095944.png"
+  },
+  {
+    "frame": 520,
+    "timestamp": 1305031470.127633,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031470.127633.png"
+  },
+  {
+    "frame": 521,
+    "timestamp": 1305031470.159626,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031470.159626.png"
+  },
+  {
+    "frame": 522,
+    "timestamp": 1305031470.196092,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031470.196092.png"
+  },
+  {
+    "frame": 523,
+    "timestamp": 1305031470.227618,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031470.227618.png"
+  },
+  {
+    "frame": 524,
+    "timestamp": 1305031470.259965,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031470.259965.png"
+  },
+  {
+    "frame": 525,
+    "timestamp": 1305031470.295718,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031470.295718.png"
+  },
+  {
+    "frame": 526,
+    "timestamp": 1305031470.327644,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031470.327644.png"
+  },
+  {
+    "frame": 527,
+    "timestamp": 1305031470.359624,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031470.359624.png"
+  },
+  {
+    "frame": 528,
+    "timestamp": 1305031470.395823,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031470.395823.png"
+  },
+  {
+    "frame": 529,
+    "timestamp": 1305031470.427641,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031470.427641.png"
+  },
+  {
+    "frame": 530,
+    "timestamp": 1305031470.459721,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031470.459721.png"
+  },
+  {
+    "frame": 531,
+    "timestamp": 1305031470.495686,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031470.495686.png"
+  },
+  {
+    "frame": 532,
+    "timestamp": 1305031470.527689,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031470.527689.png"
+  },
+  {
+    "frame": 533,
+    "timestamp": 1305031470.559677,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031470.559677.png"
+  },
+  {
+    "frame": 534,
+    "timestamp": 1305031470.59576,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031470.595760.png"
+  },
+  {
+    "frame": 535,
+    "timestamp": 1305031470.627729,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031470.627729.png"
+  },
+  {
+    "frame": 536,
+    "timestamp": 1305031470.65969,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031470.659690.png"
+  },
+  {
+    "frame": 537,
+    "timestamp": 1305031470.69563,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031470.695630.png"
+  },
+  {
+    "frame": 538,
+    "timestamp": 1305031470.727654,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031470.727654.png"
+  },
+  {
+    "frame": 539,
+    "timestamp": 1305031470.759682,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031470.759682.png"
+  },
+  {
+    "frame": 540,
+    "timestamp": 1305031470.795615,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031470.795615.png"
+  },
+  {
+    "frame": 541,
+    "timestamp": 1305031470.827831,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031470.827831.png"
+  },
+  {
+    "frame": 542,
+    "timestamp": 1305031470.859645,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031470.859645.png"
+  },
+  {
+    "frame": 543,
+    "timestamp": 1305031470.895722,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031470.895722.png"
+  },
+  {
+    "frame": 544,
+    "timestamp": 1305031470.927684,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031470.927684.png"
+  },
+  {
+    "frame": 545,
+    "timestamp": 1305031470.959647,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031470.959647.png"
+  },
+  {
+    "frame": 546,
+    "timestamp": 1305031470.995996,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031470.995996.png"
+  },
+  {
+    "frame": 547,
+    "timestamp": 1305031471.027644,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031471.027644.png"
+  },
+  {
+    "frame": 548,
+    "timestamp": 1305031471.059636,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031471.059636.png"
+  },
+  {
+    "frame": 549,
+    "timestamp": 1305031471.095777,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031471.095777.png"
+  },
+  {
+    "frame": 550,
+    "timestamp": 1305031471.127663,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031471.127663.png"
+  },
+  {
+    "frame": 551,
+    "timestamp": 1305031471.159649,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031471.159649.png"
+  },
+  {
+    "frame": 552,
+    "timestamp": 1305031471.195703,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031471.195703.png"
+  },
+  {
+    "frame": 553,
+    "timestamp": 1305031471.227569,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031471.227569.png"
+  },
+  {
+    "frame": 554,
+    "timestamp": 1305031471.259722,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031471.259722.png"
+  },
+  {
+    "frame": 555,
+    "timestamp": 1305031471.296068,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031471.296068.png"
+  },
+  {
+    "frame": 556,
+    "timestamp": 1305031471.327642,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031471.327642.png"
+  },
+  {
+    "frame": 557,
+    "timestamp": 1305031471.359615,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031471.359615.png"
+  },
+  {
+    "frame": 558,
+    "timestamp": 1305031471.39573,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031471.395730.png"
+  },
+  {
+    "frame": 559,
+    "timestamp": 1305031471.427704,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031471.427704.png"
+  },
+  {
+    "frame": 560,
+    "timestamp": 1305031471.459647,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031471.459647.png"
+  },
+  {
+    "frame": 561,
+    "timestamp": 1305031471.496491,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031471.496491.png"
+  },
+  {
+    "frame": 562,
+    "timestamp": 1305031471.527624,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031471.527624.png"
+  },
+  {
+    "frame": 563,
+    "timestamp": 1305031471.559671,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031471.559671.png"
+  },
+  {
+    "frame": 564,
+    "timestamp": 1305031471.595702,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031471.595702.png"
+  },
+  {
+    "frame": 565,
+    "timestamp": 1305031471.627621,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031471.627621.png"
+  },
+  {
+    "frame": 566,
+    "timestamp": 1305031471.659642,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031471.659642.png"
+  },
+  {
+    "frame": 567,
+    "timestamp": 1305031471.695609,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031471.695609.png"
+  },
+  {
+    "frame": 568,
+    "timestamp": 1305031471.727501,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031471.727501.png"
+  },
+  {
+    "frame": 569,
+    "timestamp": 1305031471.759702,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031471.759702.png"
+  },
+  {
+    "frame": 570,
+    "timestamp": 1305031471.795801,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031471.795801.png"
+  },
+  {
+    "frame": 571,
+    "timestamp": 1305031471.827639,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031471.827639.png"
+  },
+  {
+    "frame": 572,
+    "timestamp": 1305031471.859665,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031471.859665.png"
+  },
+  {
+    "frame": 573,
+    "timestamp": 1305031471.895604,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031471.895604.png"
+  },
+  {
+    "frame": 574,
+    "timestamp": 1305031471.927651,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031471.927651.png"
+  },
+  {
+    "frame": 575,
+    "timestamp": 1305031471.959643,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031471.959643.png"
+  },
+  {
+    "frame": 576,
+    "timestamp": 1305031471.995573,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031471.995573.png"
+  },
+  {
+    "frame": 577,
+    "timestamp": 1305031472.027638,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031472.027638.png"
+  },
+  {
+    "frame": 578,
+    "timestamp": 1305031472.059668,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031472.059668.png"
+  },
+  {
+    "frame": 579,
+    "timestamp": 1305031472.095601,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031472.095601.png"
+  },
+  {
+    "frame": 580,
+    "timestamp": 1305031472.127594,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031472.127594.png"
+  },
+  {
+    "frame": 581,
+    "timestamp": 1305031472.159645,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031472.159645.png"
+  },
+  {
+    "frame": 582,
+    "timestamp": 1305031472.195682,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031472.195682.png"
+  },
+  {
+    "frame": 583,
+    "timestamp": 1305031472.227626,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031472.227626.png"
+  },
+  {
+    "frame": 584,
+    "timestamp": 1305031472.26384,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031472.263840.png"
+  },
+  {
+    "frame": 585,
+    "timestamp": 1305031472.295671,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031472.295671.png"
+  },
+  {
+    "frame": 586,
+    "timestamp": 1305031472.327678,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031472.327678.png"
+  },
+  {
+    "frame": 587,
+    "timestamp": 1305031472.363577,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031472.363577.png"
+  },
+  {
+    "frame": 588,
+    "timestamp": 1305031472.395599,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031472.395599.png"
+  },
+  {
+    "frame": 589,
+    "timestamp": 1305031472.427686,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031472.427686.png"
+  },
+  {
+    "frame": 590,
+    "timestamp": 1305031472.463603,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031472.463603.png"
+  },
+  {
+    "frame": 591,
+    "timestamp": 1305031472.495626,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031472.495626.png"
+  },
+  {
+    "frame": 592,
+    "timestamp": 1305031472.527625,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031472.527625.png"
+  },
+  {
+    "frame": 593,
+    "timestamp": 1305031472.563587,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031472.563587.png"
+  },
+  {
+    "frame": 594,
+    "timestamp": 1305031472.595675,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031472.595675.png"
+  },
+  {
+    "frame": 595,
+    "timestamp": 1305031472.627701,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031472.627701.png"
+  },
+  {
+    "frame": 596,
+    "timestamp": 1305031472.663575,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031472.663575.png"
+  },
+  {
+    "frame": 597,
+    "timestamp": 1305031472.695755,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031472.695755.png"
+  },
+  {
+    "frame": 598,
+    "timestamp": 1305031472.727628,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031472.727628.png"
+  },
+  {
+    "frame": 599,
+    "timestamp": 1305031472.763578,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031472.763578.png"
+  },
+  {
+    "frame": 600,
+    "timestamp": 1305031472.79564,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031472.795640.png"
+  },
+  {
+    "frame": 601,
+    "timestamp": 1305031472.827627,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031472.827627.png"
+  },
+  {
+    "frame": 602,
+    "timestamp": 1305031472.863598,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031472.863598.png"
+  },
+  {
+    "frame": 603,
+    "timestamp": 1305031472.895713,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031472.895713.png"
+  },
+  {
+    "frame": 604,
+    "timestamp": 1305031472.927685,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031472.927685.png"
+  },
+  {
+    "frame": 605,
+    "timestamp": 1305031472.963756,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031472.963756.png"
+  },
+  {
+    "frame": 606,
+    "timestamp": 1305031472.995704,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031472.995704.png"
+  },
+  {
+    "frame": 607,
+    "timestamp": 1305031473.027638,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031473.027638.png"
+  },
+  {
+    "frame": 608,
+    "timestamp": 1305031473.063684,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031473.063684.png"
+  },
+  {
+    "frame": 609,
+    "timestamp": 1305031473.095695,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031473.095695.png"
+  },
+  {
+    "frame": 610,
+    "timestamp": 1305031473.127744,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031473.127744.png"
+  },
+  {
+    "frame": 611,
+    "timestamp": 1305031473.16706,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031473.167060.png"
+  },
+  {
+    "frame": 612,
+    "timestamp": 1305031473.196069,
+    "source": "rgbd_dataset_freiburg1_desk/rgb/1305031473.196069.png"
+  }
+]

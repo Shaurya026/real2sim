@@ -1,0 +1,5 @@
+# This is a prerequisite manifest, not a pip-installable replacement for upstream.
+# Use an already configured facebookresearch/sam-3d-objects environment.
+# Its requirements, CUDA extensions, SAM License and gated checkpoints are owned
+# by the pinned upstream checkout. See docs/SETUP.md and backends/sam3d_infer.py.
+# Adapter imports: numpy, Pillow, torch, notebook/inference.py and its dependencies.
