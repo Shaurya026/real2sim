@@ -1,0 +1,13 @@
+README and visual assets for shreyasajal/real2sim
+
+Copy the CONTENTS of this folder into the repository root, preserving demo/ paths.
+Replace README.md and add the supplied demo files. The pantry GLB matches the
+existing supplied asset. Other repository code and documentation stay in place.
+
+Upload/commit the media along with README.md so the images and links resolve.
+The video is 18 MB and the embedded HTML viewer is 27 MB; use Git if the web
+upload interface rejects a file. No file in this update exceeds 50 MiB.
+
+The offline pantry viewer can be opened directly, or served as described in
+README.md. Documentation links point to files already in the GitHub repository.
+This update has been prepared locally; it has not been pushed to GitHub.

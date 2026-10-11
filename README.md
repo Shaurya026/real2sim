@@ -1,141 +1,148 @@
-# Room2Sim Pipeline
+# Real2Sim
 
-**Room video → Gaussian splats → reviewed Blender repairs → individual SAM 3D objects → an interactive browser environment.**
+### Capture a real space. Explore it in 3D. Bring its objects to life.
 
-This is an executable project scaffold with real stage adapters, portable scene packages, an offline browser viewer, supplied demo assets, and separate GPT-6 Astra review/fix tools. Robot policy training is deferred.
+Real2Sim turns room videos and photographs into interactive 3D environments: photographic rooms you can navigate, chairs you can move, and objects you can pick up in simulation.
 
-![Supplied office reconstruction and carton interaction](demo/media/office-preview.png)
+The project brings together camera recovery, scene reconstruction, texture cleanup, fitted geometry and object interaction. The demonstrations below show completed reconstruction experiments; the current pipeline packages those ideas into configurable stages for new captures.
 
-*Above: an existing result from `room2sim_repository.zip`, included as reference evidence. It was not produced by running the new pipeline.*
+[**Watch the demo**](https://github.com/shreyasajal/real2sim/raw/refs/heads/main/demo/media/pantry-tour.webm) · [**Explore the 3D scene**](#try-the-interactive-scene) · [**How it works**](#how-it-works) · [**Setup**](docs/SETUP.md)
 
-## Run immediately
+[![Pantry reconstruction: coffee station, room tour and simulated snack pickup](demo/media/pantry-preview.jpg)](https://github.com/shreyasajal/real2sim/raw/refs/heads/main/demo/media/pantry-tour.webm)
 
-No installation commands are run automatically. Assume prerequisites are already available; [requirements and environment checks](docs/SETUP.md) describe what the person executing each stage needs to provide. Python 3.10+ is sufficient to package and serve the included demos. The viewer is already built and requires no internet at runtime.
+*One room reconstructed from two videos, with a continuous walkthrough and a simulated snack pickup. Click the preview to open the approximately 60-second recording.*
+
+## See what we built
+
+| Office: movable objects | Office: repaired furniture |
+| :---: | :---: |
+| [![Carton pickup in the reconstructed office](demo/media/office-preview.png)](https://github.com/shreyasajal/real2sim/raw/refs/heads/main/demo/office/assets/room.glb) | [![Completed office chairs and photographic walls](demo/media/chairs-preview.png)](https://github.com/shreyasajal/real2sim/raw/refs/heads/main/demo/office-tour/assets/room.glb) |
+| A separate carton with a pickup animation, plus two chairs that roll and swivel. | Repaired chair geometry, photographed wall detail and an animated chair. |
+| [Download animated GLB](https://github.com/shreyasajal/real2sim/raw/refs/heads/main/demo/office/assets/room.glb) | [Download animated GLB](https://github.com/shreyasajal/real2sim/raw/refs/heads/main/demo/office-tour/assets/room.glb) |
+
+| Demonstration | What to open |
+| --- | --- |
+| **Pantry tour and snack pickup** | [Watch the video](https://github.com/shreyasajal/real2sim/raw/refs/heads/main/demo/media/pantry-tour.webm) · [Download animated 3D scene](https://github.com/shreyasajal/real2sim/raw/refs/heads/main/demo/pantry/assets/room.glb) |
+| **Office carton and chair interactions** | [Preview](demo/media/office-preview.png) · [3D scene with three animation clips](https://github.com/shreyasajal/real2sim/raw/refs/heads/main/demo/office/assets/room.glb) |
+| **Second office and chair motion** | [Preview](demo/media/chairs-preview.png) · [Animated 3D scene](https://github.com/shreyasajal/real2sim/raw/refs/heads/main/demo/office-tour/assets/room.glb) |
+| **Object reconstruction from four images** | [Can grasp preview](demo/media/can-preview.png) · [Textured can model](https://github.com/shreyasajal/real2sim/raw/refs/heads/main/demo/can/assets/can.glb) |
+
+GLB downloads contain embedded textures. Open them in a compatible 3D viewer or Blender; select an animation clip to inspect motion. The can GLB is a static model—the grasp is shown in the preview and documented in the earlier experiments.
+
+## Try the interactive scene
+
+The supplied pantry viewer runs locally and includes both navigation and pickup playback:
 
 ```bash
-cd room2sim-pipeline
-python3 room2sim.py doctor
-# Ready-made desk splat + an illustrative movable cube:
-python3 room2sim.py serve site/desk
+git clone https://github.com/shreyasajal/real2sim.git
+cd real2sim
+python3 -m http.server 8080 --bind 127.0.0.1
 ```
 
-Open **http://127.0.0.1:8080**. Drag to orbit, scroll to zoom, switch to walk mode, select an object, move/lift/rotate it, reset it, show interaction bounds, and export placements or screenshots.
+Open **http://127.0.0.1:8080/demo/pantry/viewer.html**.
 
-Alternatively, inspect the supplied office mesh with a movable carton or pantry mesh with a movable packet:
+| Control | Action |
+| --- | --- |
+| **Guided tour** | Follow the continuous camera route through the room |
+| **Drag** | Look around |
+| **WASD / arrow keys** | Move through the scene |
+| **Q / E** | Adjust camera height |
+| **Pick up snack** | Play the recorded contact simulation |
+| **Pause / reset** | Inspect or restart the interaction |
+| **Overview / room cutaway** | Inspect the room and object layout |
 
-```bash
-python3 room2sim.py serve site/office --port 8081
-python3 room2sim.py serve site/pantry --port 8082
-```
+You can also open `demo/pantry/viewer.html` directly in a desktop browser. Its scene is embedded and works offline. The screenshot and recording links above are previews; GitHub's file browser does not execute the HTML viewer.
 
-To create a fresh, shareable demo package:
+## What changed between a scan and an interactive room?
 
-```bash
-python3 room2sim.py demo --scene desk --output site/my-desk
-python3 room2sim.py validate site/my-desk
-python3 room2sim.py serve site/my-desk
-```
+- **Continuous surfaces.** Fragmented walls and tables were replaced with fitted structural surfaces. Calibrated photo projection, foreground exclusion and blending reduce gaps, texture seams and duplicated silhouettes.
+- **Recognizable materials.** Wall signs, packaging and object fronts use the original capture imagery. Weakly observed carpet and blinds are completed from photographed material samples.
+- **Complete furniture.** Broken chair fragments were replaced with fitted seats, backs, arms, bases and wheels. Parts retain individual transforms for roll and swivel animation.
+- **Separate objects.** Selected cartons and the snack packet have their own visual meshes and collision proxies, allowing interaction independently of the room.
+- **Smoother navigation.** Guided paths, camera transitions and movement checks make the scene easier to explore continuously.
+- **More reliable alignment.** Repeated artwork on different pantry cartons caused a false match between videos. Additional turn frames and scene-specific match exclusions repaired the camera connection.
 
-`site/<scene>/` contains its own HTML, JavaScript, vendor libraries, assets, manifest and checksums. Share that folder or serve it with static hosting. Serve over HTTP; browser workers and module imports need a server.
+[Read the implementation history and supporting checks](reference/ARCHIVE_IMPROVEMENTS.md).
 
-## Execute on the supplied videos
-
-The local checkout includes `inputs/office.mp4` from `1000021594.mp4` and `inputs/desk.mp4` from the comparison capture. Inputs are ignored by Git. For a fresh checkout, put your videos there or change config paths.
-
-The reconstruction backend is **Nerfstudio Splatfacto**, matching the supplied desk export. [Backend selection](configs/backend-selection.json) records the selection and provenance. This is based on the supplied proposal/export; a new Astra selection call has not been claimed.
+## How it works
 
 ```mermaid
 flowchart LR
- V[Video frames] --> C[COLMAP camera recovery]
- C --> G[Splatfacto room Gaussians]
- G --> B[Blender mesh repairs and splat cleanup]
- B --> S[SAM 3D selected objects]
- S --> W[Portable browser package]
- W --> R[Separate Astra review and fix]
- R --> B
+    A[Video or photographs] --> B[Frame selection]
+    B --> C[Camera recovery]
+    C --> D[Scene reconstruction]
+    D --> E[Geometry and texture cleanup]
+    E --> F[Separate interactive objects]
+    F --> G[Browser viewer and 3D export]
 ```
 
-With the reconstruction, Blender and SAM 3D environments already available:
+The completed mesh demonstrations use **COLMAP/PyCOLMAP** for camera estimation, **OpenMVS** for multi-view depth and meshing, and fitted surface/object completion where observations are incomplete. Earlier RGB-D experiments use **Open3D TSDF fusion**. **MuJoCo** supplies contact-based pickup playback; chair movement is authored animation.
+
+The current pipeline also provides adapters for **Nerfstudio Splatfacto**, **Blender repairs** and **SAM 3D object reconstruction**. These are a separate configurable workflow. The historical screenshots above are examples from the completed mesh experiments, rather than evidence that every current adapter has been rerun end to end.
+
+[Pipeline stages](docs/PIPELINE.md) · [Earlier reconstruction methods](reference/ARCHIVE_METHODS.md) · [Environment setup](docs/SETUP.md)
+
+## Recorded results
+
+The combined pantry experiment used two ordinary RGB videos, without supplied sensor depth or a known physical measurement.
+
+| Measure | Recorded result |
+| --- | ---: |
+| Selected frames | 214 |
+| Registered camera views | 177 |
+| Sparse 3D points | 31,701 |
+| Mean reprojection error | Approximately 0.822 px |
+| Fused dense points | 2,205,365 |
+| Exported scene | 29 mesh nodes; 38,638 triangles |
+| Demo recording | 59.92 seconds |
+| Simulated snack lift | Approximately 0.464 m at estimated scene scale |
+
+The pickup commands the gripper while the object moves as a free rigid body. A zero-friction control fails to lift the packet, confirming that the demonstrated grasp depends on the modeled contact interaction. This is a simulation check, not a physical robot success rate.
+
+## Work with your own capture
+
+Start by checking the environment and editing a scene configuration to point to your input video:
 
 ```bash
+python3 room2sim.py doctor
 python3 room2sim.py init --config configs/office.json --run runs/office-v1
 python3 room2sim.py ingest --run runs/office-v1
 python3 room2sim.py reconstruct --run runs/office-v1
 python3 room2sim.py splat --run runs/office-v1
-# Review before replacing geometry. An empty repair stage needs no Blender.
 python3 room2sim.py repair --run runs/office-v1
 python3 room2sim.py objects --run runs/office-v1
 python3 room2sim.py package --run runs/office-v1 --output site/office-v1
 python3 room2sim.py serve site/office-v1
 ```
 
-Or execute the same configured stages in sequence:
+These commands require the dependencies and external environments described in [SETUP.md](docs/SETUP.md). Review the [pipeline instructions](docs/PIPELINE.md) before executing them. Repair coordinates, object masks and alignment settings must be fitted to the capture; example configurations are starting points.
 
-```bash
-python3 room2sim.py run --config configs/office.json --run runs/office-v2 --output site/office-v2
-```
+## Why this matters for simulation
 
-Splat optimization is part of reconstructing appearance. No robot policy or task training is included.
+A captured room gives interaction experiments a real spatial context. It helps inspect object placement, camera routes, collision proxies and pick-and-place sequences before moving to a physical setup. A shared scene also makes demonstrations repeatable and lets collaborators inspect the same environment.
 
-See [stage instructions](docs/PIPELINE.md) for table replacement, object masks, background cleanup, alignment, stage receipts and failure recovery. `configs/repair.example.json` and `configs/objects.example.json` are **templates**, with example coordinates that must be fitted to your scene. They are not applied automatically.
+Robot learning would add measured calibration, a robot model, task definitions, policy training and real-world evaluation. Those steps remain beyond the demonstrations here.
 
-## Separate Astra review and fixing
+## Scope and validation
 
-These tools are outside the reconstruction package and do not run automatically. They read screenshots, console errors, source frames, Gaussian bounds and exact mesh names. Scene repairs use typed operations, not model-authored Blender scripts. Browser code changes are written into a separate candidate folder.
+Room scale, hidden geometry and some material regions are estimated. Grasp playback uses rigid collision proxies and assumed physical parameters; it is replayed in the browser. Chair motion is authored animation. The project does not claim a measured digital twin, live browser grasp physics, a trained robot policy or an Isaac-validated task.
 
-```bash
-# Uses already installed Node Playwright and browser; no installation attempt:
-node agents/capture.mjs site/office-v1 review-work/before
-python3 agents/review.py prepare --package site/office-v1 \
-  --evidence review-work/before --output review-work/request \
-  --source-images runs/office-v1/frames/capture-00-frame-000020.jpg
-# Set OPENAI_API_KEY in your own environment before this explicit API call.
-python3 agents/review.py call review-work/request
-python3 agents/review.py apply --package site/office-v1 \
-  --review review-work/request/review.json --output site/office-candidate
-node agents/capture.mjs site/office-candidate review-work/after
-```
+The current pipeline's checks and execution status are recorded in [VALIDATION.md](docs/VALIDATION.md). The earlier scene improvements and recorded results are documented separately in [the reconstruction archive](reference/ARCHIVE_IMPROVEMENTS.md).
 
-Repeat `prepare` and `call` with the new evidence to review the candidate. There is no automatic paid retry, promotion or deployment. [Review workflow](docs/REVIEW.md) also documents the separate `agents/fix_browser.py` tool and a prompt for using this repo from a GPT/Codex environment.
+## Repository guide
 
-## Supplied demonstration material
+| Directory | Contents |
+| --- | --- |
+| `src/room2sim/` | Pipeline CLI, stage orchestration, scene packaging and validation |
+| `blender/` | Geometry repair and mesh export |
+| `backends/` | Object reconstruction adapter |
+| `configs/` | Scene recipes and repair/object templates |
+| `demo/` | Supplied models, photographs of results, tour recording and offline pantry viewer |
+| `site/` | Exported browser packages |
+| `reference/` | Earlier methods, improvements and implementation notes |
+| `tests/` | Pipeline and data-integrity tests |
+| `docs/` | Setup, stage execution and validation instructions |
 
-- [Office carton interaction preview](demo/media/office-preview.png) and [chair repair preview](demo/media/chairs-preview.png).
-- [Pantry walkthrough recording](demo/media/pantry-tour.webm).
-- [Supplied user recording](demo/media/supplied-demo.mov): copied from `~/Downloads/random_py_demo_2.mov`. The requested `~/Downloads/random_py_2.mov` was absent; the alternative is explicitly recorded in [provenance](demo/media/provenance.json).
-- [Existing desk reconstruction metadata](demo/desk/source-metadata/manifest.json): 228,043 Gaussians, 7,000 Splatfacto iterations, unverified scale.
+## Attribution
 
-![Supplied pantry walkthrough and object pickup](demo/media/pantry-preview.jpg)
-
-The MOV is large and retained without transcoding. `.gitattributes` marks large assets for Git LFS if you publish the project. Use the smaller WebM for ordinary README demo sharing. Archive and input-video attribution is preserved in [THIRD_PARTY.md](THIRD_PARTY.md).
-
-## What is verified
-
-The Python contract tests and JavaScript parser/interaction tests pass, all three demo packages pass hash/asset validation, and the offline viewer build completes using already cached Three.js bytes. The desk PLY is decoded as 228,043 Gaussians.
-
-The current restricted workspace blocks localhost serving and browser launch. Browser screenshots therefore remain pending. The new video reconstruction, Blender stage, SAM 3D inference and live Astra calls were not executed here. [Validation report](docs/VALIDATION.md) distinguishes these checks from historical demo evidence.
-
-```bash
-python3 -m unittest discover -s tests -v
-node --test web/tests/*.test.mjs
-python3 room2sim.py validate site/desk
-```
-
-The browser renderer projects anisotropic Gaussian covariance and sorts splats globally. It uses **SH degree 0** for a lightweight preview; original higher-order SH is preserved in the PLY. Selected objects have kinematic movement and approximate box bounds. Scale, physical dynamics, full room collision, hidden-surface completion and robot training require additional work and validation.
-
-## Project layout
-
-```text
-src/room2sim/       CLI, stage orchestration, PLY edits, manifests and validation
-blender/           Deterministic table/box/cylinder repair and mesh export
-backends/          SAM 3D Objects inference adapter for its isolated environment
-agents/            Browser evidence, Astra scene repair and browser code proposals
-web/               Offline Gaussian + mesh viewer and interaction controls
-configs/           Office/desk recipes and explicit repair/object templates
-demo/              Supplied splats, meshes, recordings, previews and attribution
-site/              Ready-to-serve portable demo packages
-inputs/            Local videos; ignored by Git
-reference/         Proposal, archive methods, prior implementation notes
-tests/             Pipeline and data integrity contracts
-docs/              Setup, execution, review and validation instructions
-```
+Room and pantry visuals derive from supplied captures. The can example uses photographs from the **YCB Object and Model Set**, attributed to Calli, Singh, Walsman, Srinivasa, Abbeel and Dollar (2015), under **CC BY 4.0**. See [asset attribution](demo/media/ATTRIBUTION.txt), [the can source record](demo/media/can-sources.json) and [archive attribution](reference/ARCHIVE_THIRD_PARTY.md).
