@@ -1,6 +1,6 @@
 {
   "version": 1,
   "operations": [
-    {"id": "table_replacement", "kind": "table", "position": [0, 0.38, 0], "dimensions": [1.4, 0.76, 0.8], "rotation": [0, 0, 0], "color": [0.65, 0.5, 0.32], "reason": "Example only: replace a poor table after measuring and aligning it to your room"}
+    {"id": "table_replacement", "kind": "table", "interactive": false, "position": [0, 0.38, 0], "dimensions": [1.4, 0.76, 0.8], "rotation": [0, 0, 0], "color": [0.65, 0.5, 0.32], "reason": "Example only: replace a poor table after measuring and aligning it to your room"}
   ]
 }

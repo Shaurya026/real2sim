@@ -17,6 +17,8 @@ from align_package import align
 from project_metadata import metadata
 from render_guides import build_guides
 from test_pipeline import tiny_ply
+from room2sim.patches import validate_patch, repair_objects
+from room2sim.core import transform
 spec=importlib.util.spec_from_file_location('guide_review',ROOT/'agents/review.py');review=importlib.util.module_from_spec(spec);spec.loader.exec_module(review)
 
 
@@ -43,7 +45,8 @@ class OwnVideoWorkflowTests(unittest.TestCase):
         loaded=load_config(cfg);self.assertEqual(resolve(loaded['_base'],loaded['existing_splat']),candidate/'evidence/astra-candidate/room.ply')
         self.assertEqual(loaded['room_transform'],IDENTITY)
         run=pipeline.new_run(cfg,self.p/'run');pipeline.stage_splat(run);pipeline.stage_repair(run);pipeline.stage_objects(run)
-        output=pipeline.stage_package(run,self.p/'out');self.assertEqual(pipeline.validate_package(output)['assets'],1)
+        output=pipeline.stage_package(run,self.p/'out');self.assertEqual(pipeline.validate_package(output)['assets'],2)
+        self.assertEqual(json.loads((output/'scene.json').read_text())['objects'][0]['id'],'bottle')
     def test_package_config_rejects_mesh_demo_and_existing_destination(self):
         cfg=self.p/'cfg.json';create(self.pkg,self.video,cfg)
         with self.assertRaisesRegex(ValueError,'destination exists'):create(self.pkg,self.video,cfg)
@@ -78,6 +81,62 @@ class OwnVideoWorkflowTests(unittest.TestCase):
         html=(self.p/'guide.html').read_text();self.assertIn('tools/align_package.py',html);self.assertIn('future.html',html)
         self.assertIn('OPENAI_API_KEY',html);self.assertIn('32 GB',html)
         self.assertIn('https://arxiv.org/abs/2403.06738',(self.p/'future.html').read_text())
+
+
+    def shape(self,interactive=True):
+        return {'id':'replacement','kind':'box','position':[1,2,3],
+          'dimensions':[.2,.4,.3],'rotation':[.1,.2,.3],'color':[.5,.5,.5],
+          'reason':'offline fixture','interactive':interactive}
+    def review_file(self,operations):
+        result=self.p/'review.json';write_json(result,{'scene_sha256':digest(self.pkg/'scene.json'),
+          'package_sha256':digest(self.pkg/'checksums.json'),'verdict':'repair',
+          'patch':{'version':1,'operations':operations}});return result
+    def exported_box(self,path,name='replacement'):
+        # Local Blender-output contract fixture; no Blender or API invocation.
+        vertices=struct.pack('<9f',0,0,0,1,0,0,0,1,0)
+        doc={'asset':{'version':'2.0'},'scene':0,'scenes':[{'nodes':[0]}],
+          'nodes':[{'name':name,'children':[1]},{'name':name+'_mesh','mesh':0}],
+          'meshes':[{'primitives':[{'attributes':{'POSITION':0}}]}],
+          'buffers':[{'byteLength':len(vertices)}], 'bufferViews':[{'buffer':0,'byteLength':len(vertices)}],
+          'accessors':[{'bufferView':0,'componentType':5126,'count':3,'type':'VEC3','min':[0,0,0],'max':[1,1,0]}]}
+        raw=json.dumps(doc).encode();raw+=b' '*((-len(raw))%4)
+        path.write_bytes(struct.pack('<4sII',b'glTF',2,28+len(raw)+len(vertices))+struct.pack('<I4s',len(raw),b'JSON')+raw+struct.pack('<I4s',len(vertices),b'BIN\x00')+vertices)
+    def test_movable_repair_contract_is_explicit_and_legacy_shapes_stay_static(self):
+        op=self.shape();objects=repair_objects({'version':1,'operations':[op]})
+        self.assertEqual(objects[0]['node_source'],'repairs');transform(objects[0]['transform'])
+        self.assertEqual(objects[0]['collider']['dimensions'],op['dimensions'])
+        for value in [False,None]:
+            old=self.shape(False)
+            if value is None:old.pop('interactive')
+            self.assertEqual(repair_objects({'version':1,'operations':[old]}),[])
+        bad=self.shape();bad['interactive']='true'
+        with self.assertRaises(ValueError):validate_patch({'version':1,'operations':[bad]})
+    def test_api_schema_requires_explicit_interaction_choice_for_shapes(self):
+        for variant in review.PATCH_SCHEMA['properties']['operations']['items']['anyOf']:
+            kind=variant['properties']['kind']['enum'][0]
+            if kind in ('box','table','cylinder'):
+                self.assertIn('interactive',variant['required'])
+                self.assertEqual(variant['properties']['interactive'],{'type':'boolean'})
+    def test_apply_registers_repaired_object_and_preserves_source_and_existing_objects(self):
+        old=digest(self.pkg/'checksums.json');result=self.review_file([self.shape()]);out=self.p/'refined'
+        def export(cmd,log):
+            self.assertIn('--python',cmd);dest=Path(cmd[cmd.index('--output')+1]);self.exported_box(dest/'repairs.glb')
+        with patch.object(review,'executable',return_value='blender'),patch.object(review,'run_command',side_effect=export):
+            review.apply(self.pkg,result,out)
+        data=json.loads((out/'scene.json').read_text())
+        self.assertEqual([obj['id'] for obj in data['objects']],['bottle','replacement'])
+        self.assertEqual(data['objects'][1]['node_source'],'repairs')
+        self.assertEqual(digest(self.pkg/'checksums.json'),old);pipeline.validate_package(out)
+    def test_duplicate_repair_object_is_rejected_before_output_or_blender(self):
+        op=self.shape();op['id']='bottle';result=self.review_file([op]);out=self.p/'duplicate'
+        with self.assertRaisesRegex(ValueError,'already exists'):review.apply(self.pkg,result,out)
+        self.assertFalse(out.exists())
+    def test_missing_exported_repair_node_cannot_finalize_candidate(self):
+        result=self.review_file([self.shape()]);out=self.p/'bad-export'
+        def export(cmd,log):self.exported_box(Path(cmd[cmd.index('--output')+1])/'repairs.glb','wrong')
+        with patch.object(review,'executable',return_value='blender'),patch.object(review,'run_command',side_effect=export):
+            with self.assertRaisesRegex(RuntimeError,'interactive repair node'):review.apply(self.pkg,result,out)
+        self.assertNotIn('mesh',json.loads((out/'scene.json').read_text())['room'])
 
 
 if __name__=='__main__':unittest.main()

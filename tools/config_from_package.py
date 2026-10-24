@@ -24,6 +24,7 @@ def create(package,video,output,objects=None):
          'camera':manifest.get('camera',{'position':[3,2,3],'target':[0,0,0]}),
          'existing_splat':relative(inside(package,room['asset']))}
     if room.get('mesh'):cfg['existing_mesh']=relative(inside(package,room['mesh']))
+    if manifest.get('objects'):cfg['existing_objects_package']=relative(package)
     if objects:
         objects=Path(objects).resolve()
         if not objects.is_file():raise ValueError('Object spec must exist before initializing the new run')

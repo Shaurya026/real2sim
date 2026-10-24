@@ -82,7 +82,7 @@ flowchart LR
 
 The completed mesh demonstrations use **COLMAP/PyCOLMAP** for camera estimation, **OpenMVS** for multi-view depth and meshing, and fitted surface/object completion where observations are incomplete. Earlier RGB-D experiments use **Open3D TSDF fusion**. **MuJoCo** supplies contact-based pickup playback; chair movement is authored animation.
 
-The current pipeline also provides adapters for **Nerfstudio Splatfacto**, **Blender repairs** and **SAM 3D object reconstruction**. These are a separate configurable workflow. The historical screenshots above are examples from the completed mesh experiments, rather than evidence that every current adapter has been rerun end to end.
+The current pipeline reconstructs Gaussian appearance with **Nerfstudio Splatfacto**, then uses **GPT-6 Astra** to review source frames, rendered splat views and scene metadata and propose targeted repairs. **Blender** applies the geometry edits; **SAM 3D** reconstructs selected objects from images and masks. Explicitly movable repairs become selectable objects alongside the retained scene, with movement/reset controls and approximate interaction bounds. Astra refinement runs after reconstruction through the [separate review commands](docs/REVIEW.md). The historical screenshots above are examples from the completed mesh experiments, rather than evidence that every current adapter has been rerun end to end.
 
 [Pipeline stages](docs/PIPELINE.md) · [Earlier reconstruction methods](reference/ARCHIVE_METHODS.md) · [Environment setup](docs/SETUP.md)
 

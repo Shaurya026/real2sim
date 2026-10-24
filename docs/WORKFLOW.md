@@ -18,7 +18,7 @@ The supplied architecture diagram is a project roadmap. Its measured geometry, p
 | Assembly | Explicit transforms align splats, meshes, and selected objects | Portable browser package with checksums |
 | Review | A separate Astra tool compares source frames with browser evidence and proposes typed edits | An isolated candidate for further visual review |
 
-Astra does not run automatically as part of `run`. Repairs and object reconstruction are optional configuration stages. SAM 3D currently exports Gaussians rather than final triangle meshes; alignment, duplicate removal, and background completion require scene-specific review.
+After the initial reconstruction, Astra reviews splat renders and source frames to propose targeted crops and Blender repairs. Explicitly movable repairs are registered as selectable objects with local box bounds; static structure remains in the repair layer. Reused packages preserve existing SAM objects and repairs. Astra does not run automatically as part of `run`. Repairs and object reconstruction are optional configuration stages. SAM 3D currently exports Gaussians rather than final triangle meshes; alignment, duplicate removal, and background completion require scene-specific review.
 
 ## Explore the supplied results
 

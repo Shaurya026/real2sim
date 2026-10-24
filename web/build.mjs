@@ -4,7 +4,7 @@ import {fileURLToPath} from 'node:url';
 const here=path.dirname(fileURLToPath(import.meta.url));
 const dist=path.join(here,'dist');
 fs.mkdirSync(dist,{recursive:true});
-for(const file of ['index.html','app.js','gaussians.js','ply.js','sort-worker.js','interaction.js','style.css'])
+for(const file of ['index.html','app.js','gaussians.js','ply.js','sort-worker.js','interaction.js','node-objects.js','style.css'])
   fs.copyFileSync(path.join(here,file),path.join(dist,file));
 // A pre-installed Three.js is sufficient. No network or package manager invocation.
 const threeRoot=process.env.THREE_MODULE_ROOT || path.join(here,'node_modules/three');

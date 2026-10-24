@@ -174,7 +174,7 @@ python3 room2sim.py validate site/my-room-reviewed
 python3 room2sim.py serve site/my-room-reviewed
 ```
 
-A mesh operation invokes `BLENDER_BIN`; a crop-only patch does not. Supported operations are table/box/cylinder creation, exact-name mesh removal, and Gaussian crops. This is constrained scene editing, not arbitrary GPT-authored Python execution or automatic detailed mesh sculpting.
+A mesh operation invokes `BLENDER_BIN`; a crop-only patch does not. Supported operations are table/box/cylinder creation, exact-name mesh removal, and Gaussian crops. For each proposed table/box/cylinder, Astra explicitly chooses `interactive`: true registers a movable repair with a local box proxy; false keeps structural geometry static. The viewer exposes movable Blender groups alongside existing objects. Human patches without this field remain static. Adding a repair does not erase its Gaussian ghost; removal needs a separately justified crop. This is constrained scene editing, not arbitrary GPT-authored Python execution or automatic detailed mesh sculpting.
 
 Capture the candidate again, then prepare a fresh review if needed:
 
@@ -202,7 +202,7 @@ python3 room2sim.py objects --run runs/my-room-repair-v2
 python3 room2sim.py package --run runs/my-room-repair-v2 --output site/my-room-repair-v2
 ```
 
-Create and review `configs/my-repair.json` before that block. `config_from_package.py` reads the actual manifest paths, preserves the room transform, and carries the approved mesh forward. Skip `ingest`/`reconstruct` for this staged import; running the convenience `run` command would extract video again. The room is imported, not retrained. If an existing mesh is present, `repair` imports/exports it through Blender even with an empty patch.
+Create and review `configs/my-repair.json` before that block. `config_from_package.py` reads the actual manifest paths, preserves the room transform, and carries the approved mesh and existing objects forward. Reused objects retain their assets and do not invoke SAM again; new SAM object ids must be distinct. Skip `ingest`/`reconstruct` for this staged import; running the convenience `run` command would extract video again. The room is imported, not retrained. If an existing mesh is present, `repair` imports/exports it through Blender even with an empty patch.
 
 If you use this optional repair candidate, substitute `site/my-room-repair-v2` for the room package in the following steps.
 

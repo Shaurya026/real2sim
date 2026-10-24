@@ -2,8 +2,8 @@
 
 ## Newly completed checks
 
-- **31 Python tests passed**: Gaussian cropping and finite values, path confinement, typed patch validation, config loading, staged offline import/repair/objects/package, receipt tampering, asset recovery, LFS placeholders, modified-asset preservation, frozen-config integrity, checksum coverage, and stale browser/review evidence.
-- **13 JavaScript tests passed**: interaction bounds, finite placements, binary header boundaries, 228,043-Gaussian desk decoding, non-Gaussian rejection, malformed ASCII rows, and duplicate property rejection.
+- **36 Python tests passed**: Gaussian cropping and finite values, path confinement, typed patch validation, config loading, staged offline import/repair/objects/package, receipt tampering, asset recovery, LFS placeholders, modified-asset preservation, frozen-config integrity, checksum coverage, and stale browser/review evidence.
+- **16 JavaScript tests passed**: interaction bounds, finite placements, binary header boundaries, 228,043-Gaussian desk decoding, non-Gaussian rejection, malformed ASCII rows, and duplicate property rejection.
 - Four office/reference GLBs passed SHA-256, file-size, embedded-dependency, and declared geometry-inventory checks. Triangle counts are 59,716 / 70,000 / 129,060 / 62,280.
 - The early PLY was converted to GLB and rendered as a static scientific preview from its actual triangles. This is not a browser screenshot.
 - The GitHub Pages artifact includes the office mesh reference, original pantry viewer, yellow-room player, and architecture walkthrough. Its static build and JavaScript syntax checks pass; the embedded office package passes checksum validation.
@@ -55,3 +55,7 @@ The Pages guide is generated from the Markdown guide. Future video-model-to-3D w
 ## README and destination-link revision
 
 Restored the original project summary and richer README scene demonstrations, including the original office, chair and gripper screenshots and pantry result table. Public workflow links are relative. The site checker rejects the personal fork URLs in HTML and primary project documentation. README, summary, workflow and Pages document links were checked locally; the Pages build passed with a different destination repository. Publication remains a post-merge maintainer step.
+
+## Incremental Astra refinement update
+
+Astra shape proposals now explicitly distinguish static structure from movable repairs. Movable Blender groups are registered with local box proxies and resolved from the repair layer by the viewer. Package reuse retains existing reconstructed objects and repair bindings. Tests cover the response contract, duplicate ids, missing exported nodes, candidate assembly using a local Blender-output fixture, object retention, world placement, and legacy axis transforms. These are offline checks; the Blender-output fixture is not a Blender execution or live model result. No new API call, GPU inference or browser rendering is claimed. The original README Mermaid diagram and presentation sections are retained.

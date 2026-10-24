@@ -3,6 +3,7 @@ import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
 import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
 import {GaussianLayer} from './gaussians.js';
 import {permittedMove} from './interaction.js';
+import {attachInteractiveNode} from './node-objects.js';
 const $=s=>document.querySelector(s), status=$('#status');
 const state={ready:false,objects:[],selected:null,walk:false,keys:new Set(),errors:[],cameraViews:[],manifest:null};
 window.room2sim={state};
@@ -58,9 +59,7 @@ try{
  for(const spec of manifest.objects||[]){
   let root;
   if(spec.node){
-   root=roomMesh?.getObjectByName(spec.node);if(!root)throw Error(`Missing interactive node: ${spec.node}`);
-   // Detach preserving world transform; placement for archive nodes comes from the GLB.
-   scene.attach(root);
+   root=attachInteractiveNode(scene,roomMesh,repairRoot,spec);
   }else{
    root=new THREE.Group();scene.add(root);apply(root,spec.transform);
    if(spec.representation==='splat')await layer.add(spec.asset,root);

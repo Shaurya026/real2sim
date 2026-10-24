@@ -4,9 +4,10 @@ from pathlib import Path
 import shutil
 import time
 import uuid
+from copy import deepcopy
 from .core import (ROOT, IDENTITY, clean_config, digest, executable, ffmpeg, inside,
                    load_config, read_json, resolve, run_command, transform, vector, write_json)
-from .patches import validate_patch
+from .patches import validate_patch, repair_objects
 from . import splats
 
 
@@ -193,9 +194,28 @@ def stage_objects(run):
         spec_file = resolve(base,spec_path)
         base = spec_file.parent
         specs = validate_objects(read_json(spec_file)['objects'],base)
+    imported=[]
+    previous=cfg.get('existing_objects_package')
+    if previous:
+        previous=resolve(cfg['_base'],previous)
+        validate_package(previous)
+        imported=deepcopy(read_json(previous/'scene.json').get('objects',[]))
+    additions=repair_objects(read_json(run/'repairs'/'patch.json'), imported)
+    retained_ids={obj['id'] for obj in imported+additions}
+    if any(obj['id'] in retained_ids for obj in specs):
+        raise ValueError('New SAM object id collides with a retained or repaired object')
     dest = run/'objects'
     dest.mkdir(exist_ok=False)
     results=[]
+    for obj in imported:
+        if obj.get('asset'):
+            source=inside(previous,obj['asset'])
+            obj['asset']=str(Path('objects')/'imported'/obj['id']/source.name)
+            target=inside(run,obj['asset']);target.parent.mkdir(parents=True,exist_ok=True)
+            shutil.copy2(source,target)
+        obj.setdefault('provenance',{})['reused_package_sha256']=digest(previous/'checksums.json')
+        results.append(obj)
+    results.extend(additions)
     for obj in specs:
         out = dest/obj['id']
         repo = Path(os.environ.get('SAM3D_REPO','')).expanduser()
@@ -237,7 +257,9 @@ def stage_package(run, output):
         room['mesh']=copy_asset(run/'repairs'/'repairs.glb',out,'assets/repairs.glb')
     objects=read_json(run/'objects'/'objects.json')['objects']
     for obj in objects:
-        obj['asset']=copy_asset(inside(run,obj['asset']),out,f"assets/objects/{obj['id']}.ply")
+        if obj.get('asset'):
+            source=inside(run,obj['asset'])
+            obj['asset']=copy_asset(source,out,f"assets/objects/{obj['id']}{source.suffix}")
     manifest={'version':1,'title':cfg.get('title','Reconstructed room'), 'world':{'up':'+Y','units':cfg.get('units','uncalibrated'),
               'metric_scale_verified':False}, 'room':room,'objects':objects,
               'camera':cfg.get('camera',{'position':[3,2,3],'target':[0,0,0]}),

@@ -1,7 +1,7 @@
 {
   "review_date": "2026-10-25",
-  "python_contract_tests": 31,
-  "javascript_tests": 13,
+  "python_contract_tests": 36,
+  "javascript_tests": 16,
   "mesh_assets": {
     "status": "passed",
     "triangles": [
@@ -39,5 +39,6 @@
   "local_documentation_and_page_links": "passed",
   "original_archive_assets_verified": 13,
   "object_controls": "Three.js tests passed against original bottle triangles; browser QA pending",
-  "own_video_workflow": "offline crop/import/staged package/alignment tests passed; live GPU and API chain unverified"
+  "own_video_workflow": "offline crop/import/staged package/alignment tests passed; live GPU and API chain unverified",
+  "astra_refinement": "offline contract/candidate assembly/repair-node and retained-object tests passed; live API and Blender execution not performed"
 }
