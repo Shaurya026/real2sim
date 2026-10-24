@@ -1,10 +1,12 @@
 # Stage execution and contracts
 
+For a complete own-video walkthrough, see [the execution guide](OWN_VIDEO.md).
+
 All commands below run from the repository root. Config video/asset paths are relative to the config file, not the caller's current directory. Command-line `--patch` is relative to your current directory. Outputs must use fresh destinations to preserve sources and failed-run evidence.
 
 ## Input and reconstruction
 
-`init` freezes config JSON and its original path base. `ingest` extracts JPEG frames at configured FPS, with a per-video `max_frames` limit and nominal sampling times. Review the frames before continuing: moving people, blur, reflections and cuts can break reconstruction. Videos of unrelated rooms belong in separate runs; do not concatenate them into one reconstruction.
+`init` freezes config JSON and its original path base, records the saved config hash, and rejects later config mutation. Older runs without the integrity receipt need a fresh initialization. `ingest` extracts JPEG frames at configured FPS, with a per-video `max_frames` limit and nominal sampling times. Review the frames before continuing: moving people, blur, reflections and cuts can break reconstruction. Videos of unrelated rooms belong in separate runs; do not concatenate them into one reconstruction.
 
 `reconstruct` invokes `ns-process-data images`, then records registered camera count against extracted frames. A minimum of three cameras is a sanity check, not a quality threshold. `splat` either imports a validated existing Gaussian PLY or invokes Splatfacto optimization and Gaussian export. The default office config performs a fresh reconstruction; the desk config uses the supplied existing PLY.
 

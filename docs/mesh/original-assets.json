@@ -1,0 +1,110 @@
+{
+  "version": 1,
+  "scope": "Original archive assets preserved byte-for-byte; HTML/JS for the office and booth players is new, GLB animations are original.",
+  "assets": [
+    {
+      "path": "pantry/viewer.html",
+      "source_archive": "room2sim_repository.zip",
+      "source_entry": "room2sim/demo/pantry/viewer.html",
+      "sha256": "560f24c58238a85c4bf628053987b9725b5a096d5d9bccccf6c0bdbcd1f1a705",
+      "bytes": 26791490,
+      "preserved_verbatim": true
+    },
+    {
+      "path": "pantry/room.glb",
+      "source_archive": "room2sim_repository.zip",
+      "source_entry": "room2sim/demo/pantry/room.glb",
+      "sha256": "b772fa832c52fbf653f1db7730e2850b2702bf213d8e589212322753da49add6",
+      "bytes": 5082632,
+      "preserved_verbatim": true
+    },
+    {
+      "path": "pantry/README.txt",
+      "source_archive": "room2sim_repository.zip",
+      "source_entry": "room2sim/demo/pantry/README.txt",
+      "sha256": "05bc6ebae8616835bcea12f2f7c88eaf4dda1a2d9f65384f6b56b69a57ef4710",
+      "bytes": 3205,
+      "preserved_verbatim": true
+    },
+    {
+      "path": "assets/pantry-tour.webm",
+      "source_archive": "room2sim_repository.zip",
+      "source_entry": "room2sim/demo/pantry/room_tour_demo.webm",
+      "sha256": "5957c1bf1ba62f2706ec6aecf46aa7f3580b85b7c81ad5774be8957454fb9495",
+      "bytes": 18134305,
+      "preserved_verbatim": true
+    },
+    {
+      "path": "assets/pantry-preview.jpg",
+      "source_archive": "room2sim_repository.zip",
+      "source_entry": "room2sim/demo/pantry/tour_contact.jpg",
+      "sha256": "3d72bc02f97008abcb211b2b8062839544b74883a5da262624f66e120d82925f",
+      "bytes": 203569,
+      "preserved_verbatim": true
+    },
+    {
+      "path": "booth/room.glb",
+      "source_archive": "room2sim_repository.zip",
+      "source_entry": "room2sim/demo/office_tour/room.glb",
+      "sha256": "1221ca540a6551b40f4e7c34fbb6e2c4ece2aeec80d4ecf52b31396a0f790c6c",
+      "bytes": 3626688,
+      "preserved_verbatim": true
+    },
+    {
+      "path": "assets/booth-preview.png",
+      "source_archive": "room2sim_repository.zip",
+      "source_entry": "room2sim/demo/office_tour/chairs_clean_preview.png",
+      "sha256": "34278980f021c7ef0730c5bf7b67d316b7b8324574c5cc1b1389ce31b7606e16",
+      "bytes": 947567,
+      "preserved_verbatim": true
+    },
+    {
+      "path": "assets/office-preview.png",
+      "source_archive": "room2sim_repository.zip",
+      "source_entry": "room2sim/demo/office_interactions/carton_lift_wide_preview.png",
+      "sha256": "e0962098dda5142ae5e777bdc0196ae548960aeb9fec945a786765c39c9f04dc",
+      "bytes": 910140,
+      "preserved_verbatim": true
+    },
+    {
+      "path": "objects/can.glb",
+      "source_archive": "room2sim_repository.zip",
+      "source_entry": "room2sim/demo/ycb_can/can.glb",
+      "sha256": "294f8752c2094186e4eb9347c0600344eaf0d29ecc2c91989d02b8ea93cf8d8f",
+      "bytes": 477160,
+      "preserved_verbatim": true
+    },
+    {
+      "path": "objects/can-sources.json",
+      "source_archive": "room2sim_repository.zip",
+      "source_entry": "room2sim/demo/ycb_can/sources.json",
+      "sha256": "507da68871c28f8ef5655f4ad4601669c3c13cfc085d43f6d5fa840ad02caa07",
+      "bytes": 4076,
+      "preserved_verbatim": true
+    },
+    {
+      "path": "assets/grasp-preview.png",
+      "source_archive": "room2sim_repository.zip",
+      "source_entry": "room2sim/demo/ycb_can/grasp_preview.png",
+      "sha256": "438c310ef489b93c32db59829e066384bdf8d1a41d84450aca152586a0566ef4",
+      "bytes": 131051,
+      "preserved_verbatim": true
+    },
+    {
+      "path": "scene-attribution.txt",
+      "source_archive": "room2sim_repository.zip",
+      "source_entry": "room2sim/demo/ATTRIBUTION.txt",
+      "sha256": "41b1a604901ce2a063d66e696e6f7633c460f2936df6a5e9b3923582f077b0b4",
+      "bytes": 1380,
+      "preserved_verbatim": true
+    },
+    {
+      "path": "environment/assets/room.glb",
+      "source_archive": "room2sim_repository.zip",
+      "source_entry": "room2sim/demo/office_interactions/room.glb",
+      "sha256": "57b116e5b318c020381699763a48c05cb3130c924f114f2e6bfca12927371ddd",
+      "bytes": 7952684,
+      "preserved_verbatim": true
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "status": "passed",
+  "usd_rigid_bodies": 3,
+  "usd_meshes": 20,
+  "textures_packed": true,
+  "unresolved_assets": [],
+  "finite_repair": true,
+  "shared_collider_bounds": true,
+  "chair_triangles": 62280,
+  "chair_convex_collision_parts": 10,
+  "glb": {
+    "room-repaired.glb": {
+      "meshes": 8,
+      "embedded_images": 2
+    },
+    "chair-repaired.glb": {
+      "meshes": 6,
+      "embedded_images": 0
+    }
+  },
+  "drop_contact_samples": 437,
+  "settled_chair": {
+    "id": "office_chair",
+    "translation": [
+      -0.012452554130660765,
+      0.02817909297494728,
+      0.0008245487021594222
+    ],
+    "quaternion": [
+      -0.010358284000049487,
+      -0.006305045964337568,
+      -0.023644336197166688,
+      0.999646886512311
+    ]
+  },
+  "isaac_runtime_tested": false,
+  "metric_measured": false
+}

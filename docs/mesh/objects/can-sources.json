@@ -1,0 +1,116 @@
+{
+  "url": "https://ycb-benchmarks.s3.amazonaws.com/data/berkeley/005_tomato_soup_can/005_tomato_soup_can_berkeley_rgb_highres.tgz",
+  "license": "CC BY 4.0",
+  "attribution": "YCB Object and Model Set \u2014 Calli, Singh, Walsman, Srinivasa, Abbeel, Dollar (2015)",
+  "selection": "First 18 RGB image entries streamed from original photo archive; no supplied mesh/depth loaded",
+  "images": [
+    {
+      "name": "N1_177.jpg",
+      "original_path": "005_tomato_soup_can/N1_177.jpg",
+      "bytes": 2747099,
+      "sha256": "b9bf187031d4e760b113f80d424d13cda76ae646d0bd2752dbf006910359d525"
+    },
+    {
+      "name": "N1_156.jpg",
+      "original_path": "005_tomato_soup_can/N1_156.jpg",
+      "bytes": 2826320,
+      "sha256": "da49b9d1771264ee9a020dfb39b76486d9175d3015ed0eed1ad4623e8aaeacf0"
+    },
+    {
+      "name": "N4_282.jpg",
+      "original_path": "005_tomato_soup_can/N4_282.jpg",
+      "bytes": 2600317,
+      "sha256": "52c38f99b72121ef8d87415417161340db84f8fb12d8372bd131b7cd6766bae2"
+    },
+    {
+      "name": "N2_33.jpg",
+      "original_path": "005_tomato_soup_can/N2_33.jpg",
+      "bytes": 2760811,
+      "sha256": "38e828a5e1b36ef0c4fb2eecacfef5bc1fd1bf694f3f9dfd5884f6822ef296ea"
+    },
+    {
+      "name": "N4_27.jpg",
+      "original_path": "005_tomato_soup_can/N4_27.jpg",
+      "bytes": 2614306,
+      "sha256": "6ef73338e556dfe850679db5e7af4902b3d39e2a8ee19e6029297ebf002eb206"
+    },
+    {
+      "name": "N1_264.jpg",
+      "original_path": "005_tomato_soup_can/N1_264.jpg",
+      "bytes": 2802917,
+      "sha256": "b081dd6656f0c54d56653023a91b604878e5b5c850f45e2249c36dd772ef053b"
+    },
+    {
+      "name": "N5_42.jpg",
+      "original_path": "005_tomato_soup_can/N5_42.jpg",
+      "bytes": 2547349,
+      "sha256": "942594c4bc35138954a1f82e02ab643dbf47c867f4b73f47486c68650271eb10"
+    },
+    {
+      "name": "N3_144.jpg",
+      "original_path": "005_tomato_soup_can/N3_144.jpg",
+      "bytes": 2634562,
+      "sha256": "36ef5a168a3b96165597723fc4989a3e300f53490386a4af00fcbfda59bd9d97"
+    },
+    {
+      "name": "N1_51.jpg",
+      "original_path": "005_tomato_soup_can/N1_51.jpg",
+      "bytes": 2755554,
+      "sha256": "e14b53407a382b8df012463fcb393f1e75ccb365f19f510de121ece680914589"
+    },
+    {
+      "name": "N1_249.jpg",
+      "original_path": "005_tomato_soup_can/N1_249.jpg",
+      "bytes": 2733393,
+      "sha256": "ab409ad6c2a3cd4898e75f60cc120b2baf39f6e482cb5cfc4d95775908a5179c"
+    },
+    {
+      "name": "N1_318.jpg",
+      "original_path": "005_tomato_soup_can/N1_318.jpg",
+      "bytes": 2702526,
+      "sha256": "e81bdac82a544bb2330944dda22710e1f7aadceeb1bcd660831927f3f26c778c"
+    },
+    {
+      "name": "N3_324.jpg",
+      "original_path": "005_tomato_soup_can/N3_324.jpg",
+      "bytes": 2726493,
+      "sha256": "c72344f7a2b7ad68f9ed00fc949cdb251d5f0ea030af5fffb8fd44867415efbb"
+    },
+    {
+      "name": "N5_27.jpg",
+      "original_path": "005_tomato_soup_can/N5_27.jpg",
+      "bytes": 2513366,
+      "sha256": "5355b67e399b4e27616487150473525963046f27b93ba7e69f0b1ba226c9c6a9"
+    },
+    {
+      "name": "N1_84.jpg",
+      "original_path": "005_tomato_soup_can/N1_84.jpg",
+      "bytes": 2715408,
+      "sha256": "b6d13930673a579c5025161027d4be860966b95b6d30b5728376753a693ab824"
+    },
+    {
+      "name": "N3_186.jpg",
+      "original_path": "005_tomato_soup_can/N3_186.jpg",
+      "bytes": 2639851,
+      "sha256": "d08c13782eb24225e4c9bbc0ebd7fb2e5b3d5e07213ea4a98312c81494efd71e"
+    },
+    {
+      "name": "N2_204.jpg",
+      "original_path": "005_tomato_soup_can/N2_204.jpg",
+      "bytes": 2699252,
+      "sha256": "83d5f914022604ba5194e29880e8b398a017afd5a7b2b037dd4249f45591e0b8"
+    },
+    {
+      "name": "N3_153.jpg",
+      "original_path": "005_tomato_soup_can/N3_153.jpg",
+      "bytes": 2645629,
+      "sha256": "e82634cdf10ffacfe3e38e4173bbd3c36d9bc2bfdd12fe3fb444795184a8f07d"
+    },
+    {
+      "name": "N3_300.jpg",
+      "original_path": "005_tomato_soup_can/N3_300.jpg",
+      "bytes": 2625285,
+      "sha256": "9c83f63db98deb2e834c3e1818a6bd039fbef9a053cde49734a9e01bc395b31b"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+DEMONSTRATION ASSETS AND PROVENANCE
+
+pantry, office_interactions, office_tour
+Derived from user-supplied indoor RGB video captures. Fitted/hidden surfaces,
+room scale and physical properties include explicit assumptions, recorded in
+../evidence/. No separate asset reuse license is granted by this repository.
+Original capture videos and frames are omitted. Rendered textures may include
+room signage, product labels and reflections from those captures.
+
+YCB CAN
+YCB Object and Model Set, 005_tomato_soup_can.
+Berk Calli, Arjun Singh, Aaron Walsman, Siddhartha Srinivasa,
+Pieter Abbeel, Aaron M. Dollar (2015).
+Dataset: https://ycb-benchmarks.s3.amazonaws.com/index.html
+License: CC BY 4.0 https://creativecommons.org/licenses/by/4.0/
+Original RGB archive URL and file hashes: ycb_can/sources.json.
+Changes: cropped photos, annotated rims, fitted cylinder, photographic label
+projection, generated collision/visual geometry and physics demonstration.
+No original supplied YCB mesh or depth map was used. No endorsement implied.
+Photo-derived assets retain CC BY 4.0 attribution.
+
+Physics videos/viewers replay simulated poses. They do not run a live browser
+physics engine or establish real-robot performance. Office chair motion is
+authored rolling/swiveling animation; carton, bottle, can and packet pickup
+are recorded MuJoCo contact simulations. Isaac runtime was not tested.

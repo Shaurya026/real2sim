@@ -1,0 +1,24 @@
+{
+  "office": {
+    "asset": "environment/assets/room.glb",
+    "objects": [
+      {"id":"bottle","label":"Bottle","names":["bottle_31"]},
+      {"id":"carton","label":"Top carton","names":["carton_top"]}
+    ]
+  },
+  "pantry": {
+    "asset": "pantry/room.glb",
+    "objects": [
+      {"id":"bottles","label":"Water bottles (group)","names":["water_bottles"]},
+      {"id":"snack","label":"Snack packet","names":["snack_packet"]},
+      {"id":"carton","label":"Snack carton","names":["snack_carton"]}
+    ]
+  },
+  "yellow_room": {
+    "asset": "booth/room.glb",
+    "objects": [
+      {"id":"chair","label":"Office chair","names":["office_chair_base","office_chair_seat","office_chair_wheel_0","office_chair_wheel_1","office_chair_wheel_2","office_chair_wheel_3","office_chair_wheel_4"]},
+      {"id":"folding_chair","label":"Folding chair","names":["folding_chair"]}
+    ]
+  }
+}

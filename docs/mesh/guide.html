@@ -1,0 +1,181 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Real2Sim · Use your own video</title><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="manual.css"><script type="module" src="project-links.js"></script><script type="module" src="manual.js"></script></head><body><header><a class="brand" href="index.html">real<span>2</span>sim</a><span class="edition">PROJECT GUIDE</span><a class="nav-link" href="guide.html">Your own video</a><a class="nav-link" href="future.html">Future work</a><a class="repo" href="guide.html" data-project-link="repository">Repository ↗</a></header><main class="manual-layout"><nav class="manual-toc" aria-label="On this page"><span class="eyebrow">ON THIS PAGE</span><a href="#1-choose-a-machine-and-separate-the-environments">1. Choose a machine and separate the environments</a><a href="#2-create-the-lightweight-pipeline-and-review-environments">2. Create the lightweight pipeline and review environments</a><a href="#3-configure-executables-and-credentials">3. Configure executables and credentials</a><a href="#4-prepare-your-capture-and-configuration">4. Prepare your capture and configuration</a><a href="#5-reconstruct-a-first-static-room">5. Reconstruct a first, static room</a><a href="#6-ask-gpt-6-astra-to-review-and-propose-repairs">6. Ask GPT-6 Astra to review and propose repairs</a><a href="#7-add-manual-blender-repairs-when-needed">7. Add manual Blender repairs when needed</a><a href="#8-select-an-object-and-create-its-mask">8. Select an object and create its mask</a><a href="#9-run-sam-in-a-fresh-imported-room-run">9. Run SAM in a fresh imported-room run</a><a href="#10-fit-placement-and-proxies-without-rerunning-sam">10. Fit placement and proxies without rerunning SAM</a><a href="#11-review-share-and-troubleshoot">11. Review, share, and troubleshoot</a><a href="#what-has-been-checked">What has been checked</a></nav><article class="manual"><h1 id="use-your-own-video-reconstruction-astra-review-and-sam-3d">Use your own video: reconstruction, Astra review, and SAM 3D</h1>
+<p>This guide follows the current code, from a local room video to an editable browser package. Work from the repository root. The examples use <code>my-room</code>; choose new names for later attempts.</p>
+<p>GitHub Pages hosts examples and this guide. It does not upload videos, keep API keys, run Blender, or provide GPU inference. Run the commands on your workstation or a configured GPU server; then serve the resulting package locally or host its static files.</p>
+<h2 id="1-choose-a-machine-and-separate-the-environments">1. Choose a machine and separate the environments</h2>
+<div class="table-scroll"><table><thead><tr><th>Environment</th><th>What runs there</th><th>Requirements</th></tr></thead><tbody>
+<tr><td>Pipeline</td><td>CLI, package validation, masks</td><td>Python 3.10+; Pillow for masks; FFmpeg or imageio-ffmpeg</td></tr>
+<tr><td>Reconstruction</td><td>COLMAP, <code>ns-process-data</code>, <code>ns-train</code>, <code>ns-export</code></td><td>Compatible NVIDIA/CUDA/PyTorch/gsplat/Nerfstudio installation</td></tr>
+<tr><td>Blender</td><td>Typed geometry repairs and GLB export</td><td>Blender 4.2+ executable, with its own bundled Python</td></tr>
+<tr><td>SAM 3D Objects</td><td>Selected image/mask inference</td><td>Upstream Linux/CUDA environment, checkpoint access, and sufficient VRAM</td></tr>
+<tr><td>Review</td><td>Offline request preparation and the explicit Astra call</td><td>Separate Python environment with the OpenAI SDK</td></tr>
+<tr><td>Browser evidence</td><td>Screenshots and object-control checks</td><td>Node 18+ with Playwright and an installed Chromium/Chrome</td></tr>
+</tbody></table></div>
+<p>Meta&#x27;s official SAM 3D setup specifies Linux and an NVIDIA GPU with at least 32 GB VRAM. A laptop that can display the gallery is not necessarily able to run that backend. Use the <a href="https://github.com/facebookresearch/sam-3d-objects/blob/main/doc/setup.md">official SAM environment/checkpoint instructions</a>; keep its dependencies separate from Nerfstudio.</p>
+<p>For reconstruction, follow the <a href="https://docs.nerf.studio/quickstart/installation.html">official Nerfstudio installation</a>, including its compatible PyTorch/CUDA and COLMAP prerequisites. <a href="https://docs.nerf.studio/nerfology/methods/splat.html">Splatfacto</a> is the implemented room backend. <code>requirements-reconstruction.txt</code> records a historical stack, not a universal installer for every GPU or current upstream release. Record the versions and source revisions you actually use.</p>
+<p>The orchestration process calls stage executables by path. It does not need all those Python dependencies in one environment. If your stages use different machines, copy the complete run/package plus needed source inputs and preserve configured paths; this CLI does not schedule remote jobs automatically.</p>
+<h2 id="2-create-the-lightweight-pipeline-and-review-environments">2. Create the lightweight pipeline and review environments</h2>
+<p>These are first-time setup commands for the person running the project. No tool installs anything automatically.</p>
+<div class="code-block"><button type="button" class="copy-code">Copy</button><pre><code class="language-bash">python3 -m venv .venv
+. .venv/bin/activate
+python3 -m pip install -r requirements.txt
+python3 -m venv .venv-review
+.venv-review/bin/python -m pip install -r requirements-review.txt</code></pre></div>
+<p>Keep the pipeline environment active for the <code>python3</code> commands below. Windows users should use a Linux GPU host/WSL configuration compatible with the upstream backends and adjust activation/executable paths. The upstream SAM setup is not a native macOS workflow.</p>
+<p>For first-time browser evidence setup:</p>
+<div class="code-block"><button type="button" class="copy-code">Copy</button><pre><code class="language-bash">cd agents
+npm install
+npx playwright install chromium
+cd ..</code></pre></div>
+<p>If Playwright/Chrome are already installed, use <code>PLAYWRIGHT_MODULE</code>/<code>BROWSER_BIN</code> instead. The prebuilt scene viewer itself does not require an npm build. Browser capture is optional until you need Astra image review or browser QA.</p>
+<h2 id="3-configure-executables-and-credentials">3. Configure executables and credentials</h2>
+<div class="code-block"><button type="button" class="copy-code">Copy</button><pre><code class="language-bash">cp .env.example .env</code></pre></div>
+<p>Edit <code>.env</code> with your actual paths. For example, point <code>NS_TRAIN_BIN</code> at the <code>ns-train</code> executable inside the reconstruction environment, and <code>SAM3D_PYTHON</code> at Python inside Meta&#x27;s configured environment. Set <code>REVIEW_PYTHON</code> to the absolute path of <code>.venv-review/bin/python</code>. Quote values containing spaces.</p>
+<div class="table-scroll"><table><thead><tr><th>Variable</th><th>Meaning</th></tr></thead><tbody>
+<tr><td><code>FFMPEG_BIN</code></td><td>Existing FFmpeg executable; unset it to allow the imageio-ffmpeg fallback</td></tr>
+<tr><td><code>NS_PROCESS_BIN</code>, <code>NS_TRAIN_BIN</code>, <code>NS_EXPORT_BIN</code></td><td>Existing Nerfstudio executables</td></tr>
+<tr><td><code>BLENDER_BIN</code></td><td>Blender executable, not a Python interpreter</td></tr>
+<tr><td><code>SAM3D_PYTHON</code></td><td>Python from the configured SAM 3D environment</td></tr>
+<tr><td><code>SAM3D_REPO</code></td><td>Absolute upstream checkout containing <code>notebook/inference.py</code></td></tr>
+<tr><td><code>SAM3D_CONFIG</code></td><td>Absolute checkpoint pipeline YAML, commonly <code>checkpoints/hf/pipeline.yaml</code></td></tr>
+<tr><td><code>REVIEW_PYTHON</code></td><td>Shell helper for the separate OpenAI SDK environment</td></tr>
+<tr><td><code>OPENAI_API_KEY</code></td><td>Your OpenAI API credential, used only by explicit review calls</td></tr>
+<tr><td><code>OPENAI_REVIEW_MODEL</code></td><td>Requested review model, default <code>gpt-6-astra</code>; your account must have access</td></tr>
+<tr><td><code>PLAYWRIGHT_MODULE</code>, <code>BROWSER_BIN</code></td><td>Optional existing browser tool paths; omit or unset unused entries</td></tr>
+</tbody></table></div>
+<p>Load the file explicitly in each new terminal:</p>
+<div class="code-block"><button type="button" class="copy-code">Copy</button><pre><code class="language-bash">set -a
+. ./.env
+set +a
+python3 room2sim.py doctor</code></pre></div>
+<p>The scripts do not automatically load dotenv files. <code>.env</code> is ignored by Git. Keep keys out of JSON configs, browser files, screenshots, and published packages. ChatGPT access does not configure this script&#x27;s API credential.</p>
+<p>Check the external tools before spending time on a run:</p>
+<div class="code-block"><button type="button" class="copy-code">Copy</button><pre><code class="language-bash">&quot;$NS_PROCESS_BIN&quot; --help
+&quot;$NS_TRAIN_BIN&quot; --help
+&quot;$NS_EXPORT_BIN&quot; --help
+&quot;$BLENDER_BIN&quot; --version
+&quot;$SAM3D_PYTHON&quot; -c &#x27;import torch; print(torch.__version__, torch.version.cuda); print(&quot;CUDA available:&quot;, torch.cuda.is_available()); assert torch.cuda.is_available()&#x27;
+&quot;$REVIEW_PYTHON&quot; -c &#x27;import openai; print(openai.__version__)&#x27;</code></pre></div>
+<p><code>doctor</code> reports executable availability and whether variables are set; it does not authenticate to OpenAI, verify checkpoint access, or certify GPU compatibility. Obtain/download the gated SAM checkpoint in its upstream environment before continuing. Keep upstream runtime library variables active when calling that interpreter.</p>
+<h2 id="4-prepare-your-capture-and-configuration">4. Prepare your capture and configuration</h2>
+<p>Record one mostly static room with overlap, camera translation, varied viewpoints, and object close-ups. Avoid cuts between unrelated rooms, motion blur, moving people, and relying on reflective/textureless surfaces. Capture a known distance if you need metric scale; monocular reconstruction does not establish it automatically.</p>
+<p>Put the video at <code>inputs/my-room.mp4</code>. The supplied configuration is <code>configs/my-video.json</code>:</p>
+<div class="code-block"><button type="button" class="copy-code">Copy</button><pre><code class="language-json">{
+  &quot;version&quot;: 1,
+  &quot;title&quot;: &quot;My room — first reconstruction&quot;,
+  &quot;backend&quot;: &quot;splatfacto&quot;,
+  &quot;videos&quot;: [&quot;../inputs/my-room.mp4&quot;],
+  &quot;fps&quot;: 2,
+  &quot;max_frames&quot;: 240,
+  &quot;iterations&quot;: 15000,
+  &quot;units&quot;: &quot;uncalibrated&quot;,
+  &quot;room_transform&quot;: {&quot;position&quot;:[0,0,0],&quot;quaternion&quot;:[-0.7071067811865476,0,0,0.7071067811865476],&quot;scale&quot;:1},
+  &quot;camera&quot;: {&quot;position&quot;:[3,2,3],&quot;target&quot;:[0,0,0]}
+}</code></pre></div>
+<p><code>fps</code> is extraction sampling rate. <code>max_frames</code> is a per-video limit, so these defaults retain approximately the first two minutes at 2 fps; adjust them for your capture. <code>iterations</code> is the Splatfacto training target, not an Astra setting. The sample room transform is a provisional Z-up to Y-up conversion, not a guarantee about your reconstructed axes. Inspect orientation and camera framing in the browser before judging the result.</p>
+<p>All config paths resolve relative to the config file. Object image/mask paths later resolve relative to their object spec. CLI file arguments resolve from the current working directory.</p>
+<h2 id="5-reconstruct-a-first-static-room">5. Reconstruct a first, static room</h2>
+<div class="code-block"><button type="button" class="copy-code">Copy</button><pre><code class="language-bash">python3 room2sim.py init --config configs/my-video.json --run runs/my-room-v1
+python3 room2sim.py ingest --run runs/my-room-v1
+python3 room2sim.py reconstruct --run runs/my-room-v1
+python3 room2sim.py splat --run runs/my-room-v1
+python3 room2sim.py repair --run runs/my-room-v1
+python3 room2sim.py objects --run runs/my-room-v1
+python3 room2sim.py package --run runs/my-room-v1 --output site/my-room-v1
+python3 room2sim.py validate site/my-room-v1
+python3 room2sim.py serve site/my-room-v1</code></pre></div>
+<p>Open http://127.0.0.1:8080. Stop the server with Ctrl+C before reusing the terminal. On a remote host, forward the server port to your workstation.</p>
+<p>This first config intentionally has no <code>repairs</code> or <code>objects</code>. Those two stages record an unchanged room and empty object list, so they need neither Blender nor SAM inference. This gives you a baseline to inspect before adding repairs. It is not evidence that GPT or SAM ran.</p>
+<p>Check these outputs before moving on:</p>
+<ul>
+<li><code>runs/my-room-v1/capture.json</code>: extracted frames and source hashes.</li>
+<li><code>runs/my-room-v1/coverage.json</code>: registered cameras and coverage fraction; the three-camera minimum is only a sanity check.</li>
+<li><code>runs/my-room-v1/appearance/room.ply</code>: actual Gaussian output.</li>
+<li><code>runs/my-room-v1/logs/</code>: FFmpeg, COLMAP, training, and export logs.</li>
+<li><code>site/my-room-v1/scene.json</code>: room transform and portable package references.</li>
+</ul>
+<p><code>init</code> freezes and hashes its config. Do not edit <code>runs/.../config.json</code> or rerun completed stages into their existing directories. A failed stage can leave partial evidence; use a fresh run when retrying. Preserve the source config and any external patch/object specs with your experiment notes.</p>
+<h2 id="6-ask-gpt-6-astra-to-review-and-propose-repairs">6. Ask GPT-6 Astra to review and propose repairs</h2>
+<p>Choose representative original frames under <code>runs/my-room-v1/frames/</code>. The example below uses the guaranteed first extracted frame; select a sharper, more informative frame if needed.</p>
+<div class="code-block"><button type="button" class="copy-code">Copy</button><pre><code class="language-bash">node agents/capture.mjs site/my-room-v1 review-work/my-room/before
+&quot;$REVIEW_PYTHON&quot; agents/review.py prepare --package site/my-room-v1 \
+  --evidence review-work/my-room/before --output review-work/my-room/request \
+  --source-images runs/my-room-v1/frames/capture-00-frame-000001.jpg</code></pre></div>
+<p>These commands capture/prepare evidence without calling the model. Inspect <code>request.json</code>, the copied images, and <code>response.schema.json</code>. Preparation binds the package hashes, source frames, Gaussian bounds, browser evidence, and available mesh names. Review images must be PNG/JPEG/WebP, no larger than 8 MiB each, with at most eight images total.</p>
+<p>The next command makes the explicit paid API call:</p>
+<div class="code-block"><button type="button" class="copy-code">Copy</button><pre><code class="language-bash">&quot;$REVIEW_PYTHON&quot; agents/review.py call review-work/my-room/request</code></pre></div>
+<p>The implementation sends a Responses API request with images and strict structured output. See <a href="https://developers.openai.com/api/docs/guides/structured-outputs">official OpenAI structured outputs documentation</a>. It uses the configured model, disables SDK retries, and saves the review, typed patch, and API receipt. Model/account access and actual response quality must be checked on your account.</p>
+<p>Read <code>review.json</code> before applying it. A <code>pass</code> verdict needs no repair. An <code>uncertain</code> verdict means coordinates/evidence are insufficient; improve the evidence rather than inventing a crop. Only a <code>repair</code> verdict with nonempty validated operations can be applied:</p>
+<div class="code-block"><button type="button" class="copy-code">Copy</button><pre><code class="language-bash">&quot;$REVIEW_PYTHON&quot; agents/review.py apply --package site/my-room-v1 \
+  --review review-work/my-room/request/review.json --output site/my-room-reviewed
+python3 room2sim.py validate site/my-room-reviewed
+python3 room2sim.py serve site/my-room-reviewed</code></pre></div>
+<p>A mesh operation invokes <code>BLENDER_BIN</code>; a crop-only patch does not. Supported operations are table/box/cylinder creation, exact-name mesh removal, and Gaussian crops. This is constrained scene editing, not arbitrary GPT-authored Python execution or automatic detailed mesh sculpting.</p>
+<p>Capture the candidate again, then prepare a fresh review if needed:</p>
+<div class="code-block"><button type="button" class="copy-code">Copy</button><pre><code class="language-bash">node agents/capture.mjs site/my-room-reviewed review-work/my-room/after</code></pre></div>
+<p>A valid package/patch is not a visual pass. Compare multiple viewpoints against source frames. <code>apply</code> supports Gaussian room packages; the historical mesh-only gallery scenes are not inputs for this workflow. If Astra returned <code>pass</code>, keep <code>site/my-room-v1</code> and use that package instead of <code>site/my-room-reviewed</code> in the next section.</p>
+<h2 id="7-add-manual-blender-repairs-when-needed">7. Add manual Blender repairs when needed</h2>
+<p>For a human-authored patch, copy <code>configs/repair.example.json</code> to a new scene-specific file. Fit the position, dimensions, and rotation to the scene; do not apply the example table at its template coordinates.</p>
+<p>Primitive repairs use browser/glTF +Y-up coordinates and Euler XYZ radians. Crops use source PLY coordinates before <code>room_transform</code>. Adding a mesh does not remove the old Gaussian object. Wide crops may destroy background; missing background needs separately justified completion.</p>
+<p>The initial repair stage has already completed. To try another patch, create a fresh imported-room run using the approved package:</p>
+<div class="code-block"><button type="button" class="copy-code">Copy</button><pre><code class="language-bash">python3 tools/config_from_package.py --package site/my-room-reviewed \
+  --video inputs/my-room.mp4 --output configs/my-room-repair-v2.json
+python3 room2sim.py init --config configs/my-room-repair-v2.json --run runs/my-room-repair-v2
+python3 room2sim.py splat --run runs/my-room-repair-v2
+python3 room2sim.py repair --run runs/my-room-repair-v2 --patch configs/my-repair.json
+python3 room2sim.py objects --run runs/my-room-repair-v2
+python3 room2sim.py package --run runs/my-room-repair-v2 --output site/my-room-repair-v2</code></pre></div>
+<p>Create and review <code>configs/my-repair.json</code> before that block. <code>config_from_package.py</code> reads the actual manifest paths, preserves the room transform, and carries the approved mesh forward. Skip <code>ingest</code>/<code>reconstruct</code> for this staged import; running the convenience <code>run</code> command would extract video again. The room is imported, not retrained. If an existing mesh is present, <code>repair</code> imports/exports it through Blender even with an empty patch.</p>
+<p>If you use this optional repair candidate, substitute <code>site/my-room-repair-v2</code> for the room package in the following steps.</p>
+<h2 id="8-select-an-object-and-create-its-mask">8. Select an object and create its mask</h2>
+<p>SAM 3D Objects accepts one image and a foreground mask per selected object. A mask is a same-size, white-foreground/black-background PNG. This is separate from automatic 2D segmentation: the repository includes a polygon helper, not an automatic text-prompt mask service.</p>
+<p>Create the input directory first:</p>
+<div class="code-block"><button type="button" class="copy-code">Copy</button><pre><code class="language-bash">mkdir -p inputs/my-room</code></pre></div>
+<p>Inspect the chosen source frame, then create <code>inputs/my-room/bottle-polygon.json</code> with at least three image-pixel points. Use actual coordinates inside that frame, not this explanatory notation: <code>[[x1,y1],[x2,y2],[x3,y3], ...]</code>.</p>
+<div class="code-block"><button type="button" class="copy-code">Copy</button><pre><code class="language-bash">python3 room2sim.py mask --image runs/my-room-v1/frames/capture-00-frame-000001.jpg \
+  --polygon inputs/my-room/bottle-polygon.json --output inputs/my-room/bottle-mask.png
+cp configs/my-video-objects.example.json configs/my-room-objects.json</code></pre></div>
+<p>If you choose another source frame, update both the mask command and the object&#x27;s <code>image</code> field. Inspect the mask overlay/alignment before inference. The adapter rejects empty masks and mismatched image dimensions.</p>
+<p>Edit <code>configs/my-room-objects.json</code>. The template defines a <code>bottle</code> id, source image, mask, seed, a provisional pose/scale, and a provisional box collider. Those coordinates are not a fitted result. Keep <code>background_removed</code> false until you have actually checked room-object separation.</p>
+<h2 id="9-run-sam-in-a-fresh-imported-room-run">9. Run SAM in a fresh imported-room run</h2>
+<div class="code-block"><button type="button" class="copy-code">Copy</button><pre><code class="language-bash">python3 tools/config_from_package.py --package site/my-room-reviewed \
+  --video inputs/my-room.mp4 --objects configs/my-room-objects.json \
+  --output configs/my-room-with-objects.json
+python3 room2sim.py init --config configs/my-room-with-objects.json --run runs/my-room-objects-v1
+python3 room2sim.py splat --run runs/my-room-objects-v1
+python3 room2sim.py repair --run runs/my-room-objects-v1
+python3 room2sim.py objects --run runs/my-room-objects-v1
+python3 room2sim.py package --run runs/my-room-objects-v1 --output site/my-room-objects-v1
+python3 room2sim.py serve site/my-room-objects-v1</code></pre></div>
+<p>The <code>objects</code> command invokes <code>SAM3D_PYTHON</code> in <code>SAM3D_REPO</code> with the configured checkpoint YAML. It runs inference for every selected object and saves <code>objects/bottle/splat.ply</code>, <code>inference.json</code>, source hashes, and statistics. The maximum is 16 selected objects per spec.</p>
+<p>This adapter exports inferred Gaussians, not a final triangle mesh. The inferred layout metadata does not establish alignment with COLMAP. If the object is missing from view, check its package asset, selector entry, source-relative pose, scale, and camera before concluding inference failed. The gallery&#x27;s bespoke bottle controls are separate from the generic viewer used for your new package.</p>
+<h2 id="10-fit-placement-and-proxies-without-rerunning-sam">10. Fit placement and proxies without rerunning SAM</h2>
+<p>Select the object in the generated viewer. Move/lift/rotate it, compare multiple source views, and export <code>placements.json</code>. Save that download at <code>review-work/my-room/placements.json</code>. To change scale, edit the selected object&#x27;s positive uniform <code>transform.scale</code> in that export; the viewer&#x27;s buttons do not scale objects.</p>
+<p>Apply it into a fresh package:</p>
+<div class="code-block"><button type="button" class="copy-code">Copy</button><pre><code class="language-bash">python3 tools/align_package.py --package site/my-room-objects-v1 \
+  --placements review-work/my-room/placements.json --fit-colliders \
+  --output site/my-room-aligned-v1
+python3 room2sim.py validate site/my-room-aligned-v1
+python3 room2sim.py serve site/my-room-aligned-v1</code></pre></div>
+<p>This helper preserves source assets and viewer bytes, records the placements, and refreshes candidate checksums. It makes no inference or API call. <code>--fit-colliders</code> estimates local AABBs from Gaussian centers; inspect them with <strong>Show bounds</strong>, because they are approximate interaction proxies, not physical collision meshes. For a custom fit, add a local box <code>collider</code> to an object&#x27;s placement entry; it overrides the estimated box. A degenerate box must be fitted manually.</p>
+<p>Transforms use world position, normalized xyzw quaternion, and positive uniform scale. Collider center/dimensions are local to the object asset, before that transform. Reset returns to the placements in the currently loaded package, so reopening an alignment candidate makes the accepted placement its new reset baseline.</p>
+<p>Clean motion also requires removal of the captured object from the room. Otherwise moving the SAM object exposes a duplicate. <code>background_removed</code> is an operator declaration, not an automated test. Review a room crop/repair first, or return to a fresh room-repair candidate and preserve the already-generated object evidence. Hidden surfaces and physical scale remain separate validation tasks.</p>
+<h2 id="11-review-share-and-troubleshoot">11. Review, share, and troubleshoot</h2>
+<p>Capture your final candidate and compare it against the original frames. A new Astra call is optional and explicit; changed package bytes require a fresh capture and request. Keep the reviewed package, masks, configs, source frames, model/checkpoint versions, and operation receipts together.</p>
+<p>Share only the self-contained package, and serve it over HTTP. You can copy an approved package under the static Pages source and link it deliberately before rebuilding; the gallery does not automatically publish arbitrary runs. Check that captures, credentials, and unwanted private imagery are not in the shared files.</p>
+<div class="table-scroll"><table><thead><tr><th>Symptom</th><th>Check or next step</th></tr></thead><tbody>
+<tr><td><code>Missing ns-train</code> or another executable</td><td>Load <code>.env</code>; point the variable at the executable in its own environment</td></tr>
+<tr><td>CUDA/SAM import error or out of memory</td><td>Verify the upstream environment, driver/extensions, checkpoint, and GPU capacity; this CLI has no CPU fallback</td></tr>
+<tr><td>Too few registered cameras</td><td>Inspect sharpness, overlap, translation, reflections, and <code>logs/colmap.log</code>; recapture before trusting a scene</td></tr>
+<tr><td>Output destination already exists</td><td>Use a new run/output/request name; do not delete or edit immutable receipts to force a retry</td></tr>
+<tr><td>Browser shows no room</td><td>Serve over HTTP, inspect console errors, orientation, camera, asset paths, and file sizes</td></tr>
+<tr><td>Object invisible or unusually large</td><td>Inspect PLY statistics, object pose and uniform scale; fit placement/proxy rather than retraining the room</td></tr>
+<tr><td>Original object remains after moving</td><td>The room was not cleaned; propose a reviewed source-coordinate crop or repair</td></tr>
+<tr><td><code>Run config changed</code> / stale review</td><td>Start a new run, or recapture/reprepare evidence; do not add fake hashes to old evidence</td></tr>
+<tr><td>Astra authentication, access, or billing error</td><td>Check the runner&#x27;s API account, key, requested model, and usage; do not put the key in browser code</td></tr>
+<tr><td><code>uncertain</code>, refusal, or incomplete review</td><td>Improve source evidence/coordinates or reduce scope; no repair is applied automatically</td></tr>
+<tr><td>Mask rejected</td><td>Check exact frame dimensions, white foreground, nonempty content, and image path</td></tr>
+<tr><td>Collider fit is poor</td><td>Edit the local box and inspect multiple views; Gaussian-center bounds are only proxies</td></tr>
+</tbody></table></div>
+<h2 id="what-has-been-checked">What has been checked</h2>
+<p>The commands, config-relative paths, CLI flags, stage dependencies, and import/alignment helpers are checked against the local implementation. Automated tests exercise offline import, typed candidate edits, configuration reuse, placement alignment, checksum preservation, and failure cases. This is an on-paper/offline contract check; it is not a fresh GPU reconstruction, live Astra/SAM/Blender run, or visual browser pass. Hardware, installed backend versions, source video quality, provider access, and final scene alignment must still be verified on the runner.</p>
+<p>For the planned alternative approach, see <a href="future.html">Future work: video models for 3D and world modeling</a>.</p></article></main><footer><span>Authors: <strong>Shaurya Gupta · Shreya Sajal</strong><br>Hackathon project team: <strong>random.py</strong> — Second place</span><a href="index.html">Scene gallery ↗</a></footer></body></html>

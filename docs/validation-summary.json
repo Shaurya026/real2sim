@@ -1,0 +1,43 @@
+{
+  "review_date": "2026-10-25",
+  "python_contract_tests": 31,
+  "javascript_tests": 13,
+  "mesh_assets": {
+    "status": "passed",
+    "triangles": [
+      59716,
+      70000,
+      129060,
+      62280
+    ],
+    "hashes_verified": true
+  },
+  "pages_build": "passed",
+  "demo_packages": [
+    "desk",
+    "office",
+    "pantry"
+  ],
+  "browser_runtime": "blocked; localhost binding EPERM and Chromium launch failure",
+  "gpu_reconstruction": "not executed",
+  "blender": "not executed",
+  "sam3d": "not executed",
+  "live_gpt": "not executed",
+  "remote_comparison": "reconciled with genuine user-supplied clone at 47785b5 on improve-project-pages-and-guide",
+  "push": "not performed",
+  "deployment": "not performed",
+  "dependency_installations": "none",
+  "pages_experiences": [
+    "office mesh reference with bottle controls",
+    "original pantry viewer and object editor",
+    "yellow-room animation and object controls",
+    "architecture walkthrough",
+    "own-video execution guide",
+    "future video-to-3D research direction"
+  ],
+  "refined_environment_package": "passed",
+  "local_documentation_and_page_links": "passed",
+  "original_archive_assets_verified": 13,
+  "object_controls": "Three.js tests passed against original bottle triangles; browser QA pending",
+  "own_video_workflow": "offline crop/import/staged package/alignment tests passed; live GPU and API chain unverified"
+}

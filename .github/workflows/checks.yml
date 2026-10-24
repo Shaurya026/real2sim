@@ -1,0 +1,32 @@
+name: Source and mesh checks
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '22'
+      - name: Python pipeline regression tests
+        run: python3 -m unittest discover -s tests -v
+      - name: Gaussian parser and interaction tests
+        run: node --test web/tests/*.test.mjs
+      - name: Inspect case-study geometry and hashes
+        run: python3 tools/check_mesh_site.py
+      - name: Check inspector syntax
+        run: |
+          node --input-type=module --check < docs/mesh/inspector.js
+          node --input-type=module --check < docs/mesh/room-player.js
+          node --check docs/mesh/object-controls.js
+          node --check docs/mesh/project-links.js
+          node --check docs/mesh/manual.js
+      - name: Build static mesh inspector
+        run: python3 tools/build_pages.py --output _site

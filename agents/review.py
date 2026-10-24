@@ -65,6 +65,9 @@ def prepare(package,evidence,output,source_images):
     validate_package(package)
     output.mkdir(parents=True,exist_ok=False)
     manifest=read_json(package/'scene.json');browser=read_json(evidence/'browser.json')
+    if (browser.get('scene_sha256') != digest(package/'scene.json') or
+            browser.get('package_sha256') != digest(package/'checksums.json')):
+        raise ValueError('Browser evidence is stale or unbound; capture the current package again')
     if not browser.get('ready'):
         raise ValueError('Need a completed browser capture')
     images=[(inside(evidence,s['file']),'browser render') for s in browser['screenshots']]
@@ -83,7 +86,7 @@ def prepare(package,evidence,output,source_images):
         if room.get(key) and room[key].endswith('.glb'):inventory+=glb_inventory(inside(package,room[key]))
     stats=inspect(inside(package,room['asset'])) if room['representation']=='splat' else None
     write_json(output/'request.json',{'version':1,'model':os.environ.get('OPENAI_REVIEW_MODEL','gpt-6-astra'),
-        'scene_sha256':digest(package/'scene.json'),'manifest':manifest,'browser':browser,
+        'scene_sha256':digest(package/'scene.json'),'package_sha256':digest(package/'checksums.json'),'manifest':manifest,'browser':browser,
         'gaussian_statistics':stats,'mesh_inventory':inventory,'images':references})
     write_json(output/'response.schema.json',SCHEMA)
     (output/'prompt.txt').write_text(PROMPT)
@@ -108,6 +111,7 @@ def call(request_dir):
     if response.status!='completed' or not response.output_text:raise RuntimeError('Model response incomplete/refused; no patch applied')
     review=json.loads(response.output_text);validate_patch(review['patch'])
     review['scene_sha256']=req['scene_sha256']
+    review['package_sha256']=req['package_sha256']
     write_json(root/'review.json',review);write_json(root/'patch.json',review['patch'])
     write_json(root/'api-receipt.json',{'model':req['model'],'response_id':response.id,
        'usage':response.usage.model_dump() if response.usage else None,'scope':'proposed repair, not executed or visually verified'})
@@ -117,6 +121,8 @@ def apply(package,review_file,output):
     package=Path(package).resolve();output=Path(output).resolve();review=read_json(review_file)
     validate_package(package)
     if review['scene_sha256']!=digest(package/'scene.json'):raise ValueError('Review is stale: scene differs from reviewed manifest')
+    if review.get('package_sha256') != digest(package/'checksums.json'):
+        raise ValueError('Review is stale: package assets or viewer differ; capture and review again')
     patch=validate_patch(review['patch'])
     if review.get('verdict')!='repair' or not patch['operations']:raise ValueError('Review does not propose a repair')
     manifest=read_json(package/'scene.json')
@@ -139,7 +145,7 @@ def apply(package,review_file,output):
         run_command(cmd,edits/'blender.log')
         if not (edits/'repairs.glb').is_file():raise RuntimeError('No Blender output; candidate was not finalized')
         manifest['room']['mesh']=str((edits/'repairs.glb').relative_to(candidate))
-    manifest['provenance']['astra_candidate']={'review_sha256':digest(review_file),'base_scene_sha256':review['scene_sha256'],
+    manifest['provenance']['astra_candidate']={'review_sha256':digest(review_file),'base_scene_sha256':review['scene_sha256'],'base_package_sha256':review['package_sha256'],
         'status':'applied candidate; requires fresh browser capture and review'}
     write_json(candidate/'scene.json',manifest);finalize_package(candidate)
 

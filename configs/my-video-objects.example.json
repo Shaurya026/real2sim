@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "objects": [{
+    "id": "bottle",
+    "label": "My bottle",
+    "image": "../runs/my-room-v1/frames/capture-00-frame-000001.jpg",
+    "mask": "../inputs/my-room/bottle-mask.png",
+    "seed": 42,
+    "transform": {"position":[0,0,0],"quaternion":[0,0,0,1],"scale":0.2},
+    "collider": {"type":"box","dimensions":[1,1,1],"center":[0,0,0]},
+    "background_removed": false,
+    "note": "Provisional placement and collider only. Use your reviewed source frame, fit the local proxy and scale, and align after inference."
+  }]
+}

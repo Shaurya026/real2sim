@@ -15,6 +15,8 @@ def parser():
     p=argparse.ArgumentParser(description='Room2Sim: video → splats → repairs → objects → browser')
     sub=p.add_subparsers(dest='command',required=True)
     sub.add_parser('doctor')
+    s=sub.add_parser('check-repo'); s.add_argument('--root',default=str(ROOT))
+    s=sub.add_parser('restore-assets'); s.add_argument('archive')
     i=sub.add_parser('init'); i.add_argument('--config',required=True); i.add_argument('--run',required=True)
     for name in ('ingest','reconstruct','splat','repair','objects'):
         s=sub.add_parser(name); s.add_argument('--run',required=True)
@@ -32,7 +34,14 @@ def parser():
 def main(argv=None):
     a=parser().parse_args(argv)
     try:
-        if a.command=='doctor':
+        if a.command=='check-repo':
+            from .uploads import check_checkout
+            report=check_checkout(a.root); print(json.dumps(report,indent=2))
+            if report['status']!='ready': raise SystemExit(1)
+        elif a.command=='restore-assets':
+            from .uploads import restore_assets
+            print(json.dumps(restore_assets(a.archive),indent=2))
+        elif a.command=='doctor':
             try:
                 ffmpeg_bin=ffmpeg()
             except RuntimeError:
@@ -97,7 +106,7 @@ def main(argv=None):
                 'scope':'supplied historical demo recording; not evidence of this pipeline execution'})
     except KeyboardInterrupt:
         return
-    except (ValueError,RuntimeError,FileNotFoundError,FileExistsError,KeyError) as exc:
+    except (ValueError,RuntimeError,FileNotFoundError,FileExistsError,KeyError,ImportError) as exc:
         print(f'Error: {exc}',file=sys.stderr)
         raise SystemExit(1)
 

@@ -1,0 +1,17 @@
+{
+  "desk": {
+    "status": "passed",
+    "assets": 1,
+    "files": 25
+  },
+  "office": {
+    "status": "passed",
+    "assets": 1,
+    "files": 14
+  },
+  "pantry": {
+    "status": "passed",
+    "assets": 1,
+    "files": 14
+  }
+}

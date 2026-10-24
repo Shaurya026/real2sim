@@ -1,14 +1,18 @@
 # Real2Sim
 
+**Authors:** Shaurya Gupta · Shreya Sajal
+
+**Hackathon project team:** random.py — **Second place**, HackWithAwign · [Award announcement](https://www.linkedin.com/posts/awign-enterprises_hackwithawign-hackwithawign-hackathon-activity-7516807800790900736-QykL)
+
 ### Capture a real space. Explore it in 3D. Bring its objects to life.
 
 Real2Sim turns room videos and photographs into interactive 3D environments: photographic rooms you can navigate, chairs you can move, and objects you can pick up in simulation.
 
 The project brings together camera recovery, scene reconstruction, texture cleanup, fitted geometry and object interaction. The demonstrations below show completed reconstruction experiments; the current pipeline packages those ideas into configurable stages for new captures.
 
-[**Watch the demo**](https://github.com/shreyasajal/real2sim/raw/refs/heads/main/demo/media/pantry-tour.webm) · [**Explore the 3D scene**](#try-the-interactive-scene) · [**How it works**](#how-it-works) · [**Setup**](docs/SETUP.md)
+[**Watch the demo**](demo/media/pantry-tour.webm) · [**Explore the 3D scene**](#try-the-interactive-scene) · [**How it works**](#how-it-works) · [**Setup**](docs/SETUP.md)
 
-[![Pantry reconstruction: coffee station, room tour and simulated snack pickup](demo/media/pantry-preview.jpg)](https://github.com/shreyasajal/real2sim/raw/refs/heads/main/demo/media/pantry-tour.webm)
+[![Pantry reconstruction: coffee station, room tour and simulated snack pickup](demo/media/pantry-preview.jpg)](demo/media/pantry-tour.webm)
 
 *One room reconstructed from two videos, with a continuous walkthrough and a simulated snack pickup. Click the preview to open the approximately 60-second recording.*
 
@@ -16,26 +20,24 @@ The project brings together camera recovery, scene reconstruction, texture clean
 
 | Office: movable objects | Office: repaired furniture |
 | :---: | :---: |
-| [![Carton pickup in the reconstructed office](demo/media/office-preview.png)](https://github.com/shreyasajal/real2sim/raw/refs/heads/main/demo/office/assets/room.glb) | [![Completed office chairs and photographic walls](demo/media/chairs-preview.png)](https://github.com/shreyasajal/real2sim/raw/refs/heads/main/demo/office-tour/assets/room.glb) |
+| [![Carton pickup in the reconstructed office](demo/media/office-preview.png)](demo/office/assets/room.glb) | [![Completed office chairs and photographic walls](demo/media/chairs-preview.png)](demo/office-tour/assets/room.glb) |
 | A separate carton with a pickup animation, plus two chairs that roll and swivel. | Repaired chair geometry, photographed wall detail and an animated chair. |
-| [Download animated GLB](https://github.com/shreyasajal/real2sim/raw/refs/heads/main/demo/office/assets/room.glb) | [Download animated GLB](https://github.com/shreyasajal/real2sim/raw/refs/heads/main/demo/office-tour/assets/room.glb) |
+| [Download animated GLB](demo/office/assets/room.glb) | [Download animated GLB](demo/office-tour/assets/room.glb) |
 
 | Demonstration | What to open |
 | --- | --- |
-| **Pantry tour and snack pickup** | [Watch the video](https://github.com/shreyasajal/real2sim/raw/refs/heads/main/demo/media/pantry-tour.webm) · [Download animated 3D scene](https://github.com/shreyasajal/real2sim/raw/refs/heads/main/demo/pantry/assets/room.glb) |
-| **Office carton and chair interactions** | [Preview](demo/media/office-preview.png) · [3D scene with three animation clips](https://github.com/shreyasajal/real2sim/raw/refs/heads/main/demo/office/assets/room.glb) |
-| **Second office and chair motion** | [Preview](demo/media/chairs-preview.png) · [Animated 3D scene](https://github.com/shreyasajal/real2sim/raw/refs/heads/main/demo/office-tour/assets/room.glb) |
-| **Object reconstruction from four images** | [Can grasp preview](demo/media/can-preview.png) · [Textured can model](https://github.com/shreyasajal/real2sim/raw/refs/heads/main/demo/can/assets/can.glb) |
+| **Pantry tour and snack pickup** | [Watch the video](demo/media/pantry-tour.webm) · [Download animated 3D scene](demo/pantry/assets/room.glb) |
+| **Office carton and chair interactions** | [Preview](demo/media/office-preview.png) · [3D scene with three animation clips](demo/office/assets/room.glb) |
+| **Second office and chair motion** | [Preview](demo/media/chairs-preview.png) · [Animated 3D scene](demo/office-tour/assets/room.glb) |
+| **Object reconstruction from four images** | [Can grasp preview](demo/media/can-preview.png) · [Textured can model](demo/can/assets/can.glb) |
 
 GLB downloads contain embedded textures. Open them in a compatible 3D viewer or Blender; select an animation clip to inspect motion. The can GLB is a static model—the grasp is shown in the preview and documented in the earlier experiments.
 
 ## Try the interactive scene
 
-The supplied pantry viewer runs locally and includes both navigation and pickup playback:
+From the downloaded or cloned repository root, the supplied pantry viewer runs locally and includes both navigation and pickup playback:
 
 ```bash
-git clone https://github.com/shreyasajal/real2sim.git
-cd real2sim
 python3 -m http.server 8080 --bind 127.0.0.1
 ```
 
@@ -52,6 +54,8 @@ Open **http://127.0.0.1:8080/demo/pantry/viewer.html**.
 | **Overview / room cutaway** | Inspect the room and object layout |
 
 You can also open `demo/pantry/viewer.html` directly in a desktop browser. Its scene is embedded and works offline. The screenshot and recording links above are previews; GitHub's file browser does not execute the HTML viewer.
+
+The additional [Pages gallery](docs/PAGES.md) presents the first-office mesh reference, pantry object controls and yellow-room animation. Serve `docs/mesh/` locally to try it. Publish Pages from the destination repository after merge, then add its deployment URL to the repository About panel.
 
 ## What changed between a scan and an interactive room?
 
@@ -101,21 +105,11 @@ The pickup commands the gripper while the object moves as a free rigid body. A z
 
 ## Work with your own capture
 
-Start by checking the environment and editing a scene configuration to point to your input video:
+Follow the [complete own-video guide](docs/OWN_VIDEO.md) for separate environments, `.env`, capture configuration, Gaussian reconstruction, GPT/Astra review, constrained Blender repairs, masks, SAM 3D object inference and manual placement. The same guide is available in the local Pages gallery.
 
-```bash
-python3 room2sim.py doctor
-python3 room2sim.py init --config configs/office.json --run runs/office-v1
-python3 room2sim.py ingest --run runs/office-v1
-python3 room2sim.py reconstruct --run runs/office-v1
-python3 room2sim.py splat --run runs/office-v1
-python3 room2sim.py repair --run runs/office-v1
-python3 room2sim.py objects --run runs/office-v1
-python3 room2sim.py package --run runs/office-v1 --output site/office-v1
-python3 room2sim.py serve site/office-v1
-```
+The guide distinguishes tested offline data flow from GPU/API steps that require validation on your machine. SAM currently exports object splats; alignment and collision proxies require inspection. Example configurations are starting points for your capture.
 
-These commands require the dependencies and external environments described in [SETUP.md](docs/SETUP.md). Review the [pipeline instructions](docs/PIPELINE.md) before executing them. Repair coordinates, object masks and alignment settings must be fitted to the capture; example configurations are starting points.
+[Future work](docs/FUTURE_WORK.md) outlines video-model-assisted 3D and world modeling, with potential benefits, limitations and an evaluation plan. No video-model backend is integrated yet.
 
 ## Why this matters for simulation
 

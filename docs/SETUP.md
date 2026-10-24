@@ -1,5 +1,7 @@
 # Required existing environments
 
+For a complete own-video walkthrough, see [the execution guide](OWN_VIDEO.md).
+
 The project assumes dependencies are already installed. It never installs packages, downloads checkpoints or accepts licenses automatically. Ask the person executing it to provide the paths/environment for these prerequisites.
 
 | Stage | Prerequisites to provide | Configuration |

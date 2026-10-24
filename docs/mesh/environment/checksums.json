@@ -1,0 +1,16 @@
+{
+  "app.js": "3ef043c53abf23ebb6907b7f4527ec12da66895718c72eae31b63d9608f6e353",
+  "assets/room.glb": "57b116e5b318c020381699763a48c05cb3130c924f114f2e6bfca12927371ddd",
+  "gaussians.js": "3ad6f4134e6e37e7504f30de7fd2f279b1dc76a8292dbebfdb2d38de8d99579b",
+  "index.html": "4c3de05579f97163db5b46f0d44016b9433ff72a6cbeb9f5619a6b672b08a09a",
+  "interaction.js": "7478f2253900a2796447cdf9a60b33d99d45d86f10c4cefabdc30cc74011a1aa",
+  "ply.js": "f170c440513ca5306d7f5f00a3025d25f2877c23ac2974462c134230147d29ea",
+  "scene.json": "eb7cd85e7a0445e2f49f0fef32d2b889c3b3d70edde9bac4d3042a0b8c2615f2",
+  "sort-worker.js": "2e886c55694e2ea9a19751c5c09d3561155d27d914d84ff0d41a87f2a8dce51d",
+  "style.css": "0714c41d48b349a7fe3f9dfdd0e49159d8b64fa1f447836b4653762aad892428",
+  "vendor/THREE-LICENSE.txt": "4c40a1ef62450b857c3b2aaf294936304cd552d965fbcd9d32d4c5bcf4ba4454",
+  "vendor/addons/controls/OrbitControls.js": "80efaadea4f8a636a65fb0bd08bfef62f3d93a0bb94e2e7500f23176c5c07f4e",
+  "vendor/addons/loaders/GLTFLoader.js": "45139faddd5aaf48ed2d62203d976e5cbd703db1a592de40527f9f6cf58abd44",
+  "vendor/addons/utils/BufferGeometryUtils.js": "c25b7930e570e9ec56173cd3b866ec8d2e10016630db3937efb439daf1cedbf6",
+  "vendor/three.module.js": "ce1fa418de16a19495a9f72495580e3015d7745c296d3ce0485897f902ddedfb"
+}
