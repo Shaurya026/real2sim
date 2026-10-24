@@ -6,13 +6,14 @@ The project pages live in `docs/mesh/`. They use original project media and scen
 
 | Path | Content |
 | --- | --- |
-| `/` | Gallery: first-office mesh reference, pantry, and yellow room |
+| `/` | Gallery: office environment and mesh reference, pantry, and yellow room |
+| `/environment/` | Textured office with walk/orbit modes, bottle/carton controls, reset and placement export |
 | `/analysis.html#office` | Original first-office mesh with bottle/carton controls, plus the later room and early-surface references |
 | `/pantry/` | Original pantry viewer plus a separate object-controls mode for bottles, snack packet, and carton |
 | `/booth/` | Yellow room with the original animated GLB, chair/folding-chair controls, timeline, cutaway, and free camera inspection |
 | `/workflow.html` | Separate architecture walkthrough with the supplied pipeline diagram |
 
-The first office is featured as a mesh reference. Pantry and yellow room are the interactive environment examples. The previously packaged `/environment/` office editor remains available for existing links, but is not featured in the gallery.
+The gallery features the office, pantry and yellow room as interactive environments. The office also has a separate mesh-analysis view. The office environment supports walk mode (WASD and Q/E, drag to look, Esc to exit), orbit inspection, bottle/carton selection, movement, reset and placement export.
 
 The original pantry HTML, recording, model, and screenshots are copied byte-for-byte from `room2sim_repository.zip`. The yellow-room GLB is also unchanged; its player is new. `original-assets.json` records archive entry paths, sizes, and hashes. The gallery video uses `preload="none"`; scene geometry loads when an example is opened.
 

@@ -22,6 +22,7 @@ Astra does not run automatically as part of `run`. Repairs and object reconstruc
 
 ## Explore the supplied results
 
+- [Office environment](mesh/environment/): walk through the textured room and edit the bottle/carton placements.
 - [First-office mesh reference](mesh/analysis.html#office): inspect the room surface, chair, and early mesh.
 - [Pantry](mesh/pantry/): the original guided tour and snack-pickup viewer.
 - [Yellow room / booth](mesh/booth/): the original animated second-office GLB in a new player.

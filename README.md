@@ -55,7 +55,7 @@ Open **http://127.0.0.1:8080/demo/pantry/viewer.html**.
 
 You can also open `demo/pantry/viewer.html` directly in a desktop browser. Its scene is embedded and works offline. The screenshot and recording links above are previews; GitHub's file browser does not execute the HTML viewer.
 
-The additional [Pages gallery](docs/PAGES.md) presents the first-office mesh reference, pantry object controls and yellow-room animation. Serve `docs/mesh/` locally to try it. Publish Pages from the destination repository after merge, then add its deployment URL to the repository About panel.
+The additional [Pages gallery](docs/PAGES.md) includes a walkable office environment with bottle/carton controls, a separate office mesh reference, pantry object controls and yellow-room animation. Serve `docs/mesh/` locally to try it. Publish Pages from the destination repository after merge, then add its deployment URL to the repository About panel.
 
 ## What changed between a scan and an interactive room?
 
