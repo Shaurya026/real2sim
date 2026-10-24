@@ -3,6 +3,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import http from 'node:http';
+import {createHash} from 'node:crypto';
 import {createRequire} from 'node:module';
 const require=createRequire(import.meta.url);
 const [pkgArg,outArg]=process.argv.slice(2);
@@ -20,6 +21,8 @@ const server=http.createServer((req,res)=>{
 });
 const routeFiles=process.env.ROOM2SIM_FILE_ROUTES==='1';
 if(!routeFiles)await new Promise((resolve,reject)=>{server.once('error',reject);server.listen(0,'127.0.0.1',resolve);});
+const hashFile=name=>createHash('sha256').update(fs.readFileSync(path.join(pkg,name))).digest('hex');
+const evidenceBinding={scene_sha256:hashFile('scene.json'),package_sha256:hashFile('checksums.json')};
 let browser;
 try{
  browser=await playwright.chromium.launch({headless:true,...(process.env.BROWSER_BIN?{executablePath:process.env.BROWSER_BIN}:{})});
@@ -32,7 +35,7 @@ try{
   await route.fulfill({status:200,contentType:types[path.extname(file)]||'application/octet-stream',body:fs.readFileSync(file)});
  });
  await page.goto(routeFiles?'https://room2sim.local/':`http://127.0.0.1:${server.address().port}`,{waitUntil:'load'});
- await page.waitForFunction(()=>window.room2sim?.state.ready,{timeout:120000});
+ await page.waitForFunction(()=>window.room2sim?.state.ready,undefined,{timeout:120000});
  // Wait for asynchronous sorter and GPU to produce the first frame, then settle.
  await page.waitForFunction(()=>document.querySelector('#status')?.textContent.startsWith('Ready'));
  await page.waitForTimeout(2000);
@@ -56,8 +59,9 @@ try{
   const reset=await page.evaluate(()=>window.room2sim.snapshot());
   movement={accepted:movement,before,after,reset,reset_matches:JSON.stringify(before)===JSON.stringify(reset)};
  }
+ if(evidenceBinding.scene_sha256!==hashFile('scene.json')||evidenceBinding.package_sha256!==hashFile('checksums.json'))throw Error('Package changed during capture; capture again');
  const ready=await page.evaluate(()=>({ready:window.room2sim.state.ready,errors:window.room2sim.state.errors}));
- fs.writeFileSync(path.join(out,'browser.json'),JSON.stringify({version:1,...ready,page_errors:errors,screenshots,movement,renderer:'perspective Gaussian covariance; SH0; no physical dynamics'},null,2));
+ fs.writeFileSync(path.join(out,'browser.json'),JSON.stringify({version:1,...evidenceBinding,...ready,page_errors:errors,screenshots,movement,renderer:'perspective Gaussian covariance; SH0; no physical dynamics'},null,2));
  if(errors.length||ready.errors.length||!ready.ready||movement?.reset_matches===false)throw Error('Browser check failed; inspect browser.json');
  console.log(`Browser evidence: ${out}`);
 }finally{if(browser)await browser.close();if(server.listening)await new Promise(resolve=>server.close(resolve));}

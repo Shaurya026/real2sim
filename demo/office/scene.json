@@ -1,0 +1,85 @@
+{
+  "version": 1,
+  "title": "Office \u00b7 supplied repaired mesh demo",
+  "world": {
+    "up": "+Y",
+    "units": "estimated metres",
+    "metric_scale_verified": false
+  },
+  "room": {
+    "representation": "mesh",
+    "asset": "assets/room.glb",
+    "transform": {
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "quaternion": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": 1
+    }
+  },
+  "camera": {
+    "position": [
+      0.6,
+      1.5,
+      1.4
+    ],
+    "target": [
+      -0.4,
+      1.1,
+      -0.1
+    ]
+  },
+  "show_grid": false,
+  "objects": [
+    {
+      "id": "carton_top",
+      "label": "Carton Top",
+      "representation": "mesh",
+      "node": "carton_top",
+      "transform": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": 1
+      },
+      "collider": {
+        "type": "box",
+        "dimensions": [
+          0.5220777988433838,
+          0.48781368136405945,
+          0.1841747760772705
+        ],
+        "center": [
+          0.0,
+          1.4901161193847656e-08,
+          0.0
+        ]
+      },
+      "background_removed": true
+    }
+  ],
+  "provenance": {
+    "source": "room2sim_repository.zip",
+    "scope": "Existing capture-specific Blender/mesh repair result, adapted to new browser controls; not a newly reconstructed Gaussian/SAM 3D result"
+  },
+  "limitations": [
+    "Scale is estimated",
+    "Existing archive mesh rather than room splats",
+    "Kinematic interactions rather than physical simulation"
+  ]
+}

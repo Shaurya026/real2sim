@@ -10,7 +10,7 @@ requires-python = ">=3.10"
 dependencies = []
 
 [project.optional-dependencies]
-review = ["openai>=2,<3", "playwright>=1.48,<2"]
+review = ["openai>=2,<3"]
 media = ["Pillow>=10,<13", "imageio-ffmpeg>=0.5,<1"]
 
 [project.scripts]

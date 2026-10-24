@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Room2Sim · Scene review</title><link rel="stylesheet" href="./style.css">
+<script type="importmap">{"imports":{"three":"./vendor/three.module.js","three/addons/":"./vendor/addons/"}}</script></head>
+<body><main id="viewport" aria-label="Interactive 3D environment"></main>
+<aside><div class="eyebrow">ROOM2SIM / ENVIRONMENT LAB</div><h1 id="title">Loading scene</h1><p id="scope">Video to an editable environment</p><div id="status" role="status">Loading…</div>
+<div class="controls"><button id="home">Reset view</button><button id="walk">Walk mode</button><button id="reset">Reset objects</button><button id="shot">Save screenshot</button></div>
+<label><input id="show-room" type="checkbox" checked> Room appearance</label><label><input id="show-repairs" type="checkbox" checked> Blender repairs</label><label><input id="show-colliders" type="checkbox"> Interaction bounds</label>
+<div class="divider"></div><h2>Selected objects</h2><p class="muted">Select an object, then move or lift it. Each visual follows its interaction bounds.</p><select id="objects" aria-label="Selected object"><option value="">Select an object</option></select><div class="controls"><button id="left">← X</button><button id="right">X →</button><button id="forward">− Z</button><button id="back">+ Z</button><button id="lift">Lift</button><button id="lower">Lower</button><button id="turn">Rotate</button></div>
+<div id="object-info"></div><button id="export">Export placements</button><details><summary>Scene provenance</summary><pre id="provenance"></pre></details><p class="muted" id="limitations"></p>
+</aside><div class="badge" id="badge">Visual review · kinematic interaction</div><footer>Drag to orbit · Scroll to zoom · Right-drag to pan · Walk: WASD + Q/E, drag to look · Esc to exit</footer>
+<div id="error" role="alert" hidden></div><script type="module">
+// Catch module-import and WebGL startup failures before app.js can set its status.
+import('./app.js').catch(error => {
+  const message='Viewer failed to start: '+error.message+'. Ensure this is a generated scene package with vendor/, ply.js, scene.json and assets/; serve it over HTTP.';
+  document.querySelector('#status').textContent='Viewer startup failed';
+  const alert=document.querySelector('#error');alert.hidden=false;alert.textContent=message;
+  window.room2sim=window.room2sim||{state:{ready:false,errors:[]}};
+  window.room2sim.state.errors.push(message);
+  console.error(error);
+});
+</script></body></html>

@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "assets": [
+    {
+      "path": "demo/desk/assets/room.ply",
+      "bytes": 56556195,
+      "sha256": "2104c7957871913115db877da651facc6159b14e349a0489f3a417bb76c613be",
+      "required": true
+    },
+    {
+      "path": "demo/office/assets/room.glb",
+      "bytes": 7952684,
+      "sha256": "57b116e5b318c020381699763a48c05cb3130c924f114f2e6bfca12927371ddd",
+      "required": true
+    },
+    {
+      "path": "demo/pantry/assets/room.glb",
+      "bytes": 5082632,
+      "sha256": "b772fa832c52fbf653f1db7730e2850b2702bf213d8e589212322753da49add6",
+      "required": true
+    },
+    {
+      "path": "demo/media/office-preview.png",
+      "bytes": 910140,
+      "sha256": "e0962098dda5142ae5e777bdc0196ae548960aeb9fec945a786765c39c9f04dc",
+      "required": false
+    },
+    {
+      "path": "demo/media/chairs-preview.png",
+      "bytes": 947567,
+      "sha256": "34278980f021c7ef0730c5bf7b67d316b7b8324574c5cc1b1389ce31b7606e16",
+      "required": false
+    },
+    {
+      "path": "demo/media/pantry-preview.jpg",
+      "bytes": 203569,
+      "sha256": "3d72bc02f97008abcb211b2b8062839544b74883a5da262624f66e120d82925f",
+      "required": false
+    },
+    {
+      "path": "demo/media/pantry-tour.webm",
+      "bytes": 18134305,
+      "sha256": "5957c1bf1ba62f2706ec6aecf46aa7f3580b85b7c81ad5774be8957454fb9495",
+      "required": false
+    },
+    {
+      "path": "demo/media/supplied-demo.mov",
+      "bytes": 167372268,
+      "sha256": "d55135760c1378f80883945d76285865781d3bebcf39f18a22f8e420629ff0e6",
+      "required": false
+    }
+  ],
+  "archive": "real2sim-demo-assets.zip",
+  "optional_external_recording": "supplied-demo.mov"
+}

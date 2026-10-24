@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Real2Sim: inspect the early room mesh, textured reconstruction, and Blender chair repair from a real room capture.">
+<title>Real2Sim · Reconstruction lab</title>
+<link rel="stylesheet" href="style.css">
+<script type="importmap">{"imports":{"three":"./vendor/three.module.js","three/addons/":"./vendor/addons/"}}</script>
+<script type="module" src="inspector.js"></script>
+<script type="module" src="project-links.js"></script></head>
+<body>
+<header><a class="brand" href="guide.html" data-project-link="repository">real<span>2</span>sim</a><span class="edition">ENVIRONMENT RECONSTRUCTION</span><a class="nav-link" href="index.html">Scene gallery</a><a class="nav-link" href="guide.html">Your own video</a><a class="nav-link" href="workflow.html">Workflow</a><a class="repo" href="guide.html" data-project-link="repository">View repository ↗</a></header>
+<main>
+<section class="intro"><p class="eyebrow"><span class="dot"></span> REAL CAPTURE. INSPECTABLE GEOMETRY.</p><h1>A room, reconstructed.</h1><p class="dek">Inspect the textured room and fitted Blender chair, then compare them with the early observed surface. Return to the scene gallery to explore the pantry and yellow-room examples.</p></section>
+<div class="lab">
+<section class="workspace" aria-label="Interactive mesh inspection">
+<nav class="stages" aria-label="Reconstruction stages"><button data-asset="office" class="active" aria-pressed="true"><span>01</span> Office reference</button><button data-asset="rough" aria-pressed="false"><span>02</span> Early surface</button><button data-asset="repaired" aria-pressed="false"><span>03</span> Textured room</button><button data-asset="chair" aria-pressed="false"><span>04</span> Chair repair</button></nav>
+<div id="viewport" tabindex="0" aria-label="3D mesh viewport. Drag to orbit, scroll to zoom, right drag to pan. Select a mesh from the list for keyboard access."><div class="viewport-label"><span id="asset-label">FIRST OFFICE · ORIGINAL MESH</span><span>Y ↑ / SCALE UNVERIFIED</span></div><p id="status" role="status" aria-live="polite">Loading original office…</p><div id="load-error" hidden role="alert"></div><div class="axis-note" aria-hidden="true">+Y<br>└ +X</div></div>
+<div class="toolbar"><button id="fit">Fit view</button><button id="wire" aria-pressed="false">Wireframe</button><button id="bounds" aria-pressed="false">Bounds</button><button id="neutral" aria-pressed="false">Neutral material</button><button id="snapshot">Save image ↓</button></div>
+<p class="help">Drag to orbit · Scroll to zoom · Right drag to pan · Click a surface to inspect it</p>
+</section>
+<aside class="analysis"><div class="panel-heading"><span class="eyebrow">ARTIFACT ANALYSIS</span><span id="asset-size">—</span></div><h2 id="artifact-title">First office · original mesh</h2><p id="artifact-note">Captured video textures on the observed room, with a fitted Blender chair and a small floor completion.</p><dl class="metrics"><div><dt>Triangles</dt><dd id="triangles">—</dd></div><div><dt>Vertices stored</dt><dd id="vertices">—</dd></div><div><dt>Mesh primitives</dt><dd id="meshes">—</dd></div><div><dt>Embedded images</dt><dd id="textures">—</dd></div></dl><div class="extent"><span class="eyebrow">WORLD EXTENT / SCENE UNITS</span><p id="extent">— × — × —</p><small>These dimensions are not verified physical measurements.</small></div><label for="mesh-select" class="eyebrow">SELECT A MESH</label><select id="mesh-select"><option value="">All meshes</option></select><p id="selection">Inspect the whole artifact or select an individual mesh.</p><section id="object-controls" hidden><label for="object-select">Interactive objects</label><select id="object-select"></select><div class="object-buttons"><button id="object-focus">Focus object</button><button id="object-isolate" aria-pressed="false">Isolate object</button><button id="object-left">←</button><button id="object-right">→</button><button id="object-forward">Forward</button><button id="object-back">Back</button><button id="object-lift">Lift</button><button id="object-lower">Lower</button><button id="object-turn">Turn</button><button id="object-reset">Reset object</button></div><p id="object-note" role="status" aria-live="polite"></p></section><a id="download" class="primary" href="environment/assets/room.glb" download>Download GLB ↓</a><button id="report" class="report">Export inspection JSON ↓</button><a class="provenance" href="assets.json">View hashes & source provenance ↗</a></aside>
+</div>
+<section class="workflow"><p class="eyebrow">THE INTENDED WORKFLOW</p><div class="flow"><div><b>01 / Capture</b><p>Video frames + COLMAP cameras</p></div><span>→</span><div><b>02 / Appearance</b><p>Splatfacto Gaussian optimization</p></div><span>→</span><div><b>03 / Refine</b><p>Astra review + typed Blender repairs</p></div><span>→</span><div><b>04 / Objects</b><p>Configured SAM 3D inference</p></div></div><p class="honesty">This case study verifies historical mesh artifacts. SAM 3D and live Astra execution are not established by these assets. Browser controls provide inspection; metric scale, robot training, and Isaac Sim runtime remain unverified.</p></section>
+</main>
+<footer><span>Authors: <strong>Shaurya Gupta · Shreya Sajal</strong><br>Hackathon project team: <strong>random.py</strong> — Second place · <a href="https://www.linkedin.com/posts/awign-enterprises_hackwithawign-hackwithawign-hackathon-activity-7516807800790900736-QykL">Award announcement ↗</a></span><span>REAL2SIM / RECONSTRUCTION LAB<br><a href="guide.html" data-project-link="repository">Source, methods & limitations ↗</a></span></footer>
+<noscript><p class="noscript">Enable JavaScript for the inspector, or <a href="assets/rough-room.glb">download the early mesh</a> to open in Blender.</p></noscript>
+</body>
+</html>

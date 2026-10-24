@@ -1,0 +1,28 @@
+.venv*/
+__pycache__/
+*.egg-info/
+.env
+inputs/
+runs/
+site/
+node_modules/
+review-work/
+.DS_Store
+
+# Downloaded release bundles and comparison reports
+real2sim-demo-assets.zip
+upload-diff.json
+
+# Runtime demo assets: restore from the release ZIP instead of committing duplicates.
+demo/**/assets/*.ply
+demo/**/assets/*.glb
+demo/media/*.mov
+demo/media/*.webm
+web.zip
+
+# Generated GitHub Pages output and local evidence
+_site/
+verification-work/
+*.pem
+id_rsa
+id_rsa.pub

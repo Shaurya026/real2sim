@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "title": "My room — first reconstruction",
+  "backend": "splatfacto",
+  "videos": ["../inputs/my-room.mp4"],
+  "fps": 2,
+  "max_frames": 240,
+  "iterations": 15000,
+  "units": "uncalibrated",
+  "room_transform": {"position":[0,0,0],"quaternion":[-0.7071067811865476,0,0,0.7071067811865476],"scale":1},
+  "camera": {"position":[3,2,3],"target":[0,0,0]}
+}

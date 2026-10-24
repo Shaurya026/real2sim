@@ -1,0 +1,7 @@
+# Demo assets are distributed separately through release attachments by default.
+# Binary classification does not require Git LFS or cause automatic installation.
+*.ply binary
+*.glb binary
+*.mov binary
+*.webm binary
+*.mp4 binary

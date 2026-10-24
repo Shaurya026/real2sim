@@ -1,0 +1,617 @@
+{
+  "status": "trained_video_textured_interactive_hybrid",
+  "active": {
+    "run": "sousvide_v2",
+    "hybrid": "outputs/hybrid_v2",
+    "data": "data/sousvide_colmap",
+    "checkpoint_step": 30000
+  },
+  "gaussian_training_started": true,
+  "training_steps_completed": 30000,
+  "training": {
+    "pipeline": "SousVide / FiGS",
+    "train_views": 348,
+    "held_out_views": 20,
+    "points": 40899,
+    "image_max_side": 1024,
+    "source_reconstruction": "/home/ubuntu/SHAURYA/room-to-robot/data/colmap_training",
+    "normalization": {
+      "center": [
+        -0.1716631654197448,
+        0.3698532479508592,
+        0.46051131100451237
+      ],
+      "scale": 0.1617975914414723,
+      "rotation": [
+        [
+          -0.09457998042562987,
+          -0.07391237223987766,
+          0.9927696553242153
+        ],
+        [
+          -0.07391237223987766,
+          0.995009009055691,
+          0.06703755013338109
+        ],
+        [
+          -0.9927696553242153,
+          -0.06703755013338109,
+          -0.09957097136993898
+        ]
+      ]
+    },
+    "metric_scale_measured": false,
+    "up_axis": "Z; estimated from camera orientation, not surveyed",
+    "scale_alignment": "ArUco/measurement unavailable; normalized scene units",
+    "excluded": [
+      "authored collision proxy",
+      "unrelated example datasets"
+    ],
+    "backend": "Nerfstudio Splatfacto",
+    "backend_version": "1.1.4",
+    "rasterizer": "gsplat 1.5.3",
+    "sousvide_revision": "a2400aa6e100c81b388bd105fdbe153710479004",
+    "figs_revision": "11ad36ccf294c8423b54e4e7263a03e6a246f1b1",
+    "config_path": "/home/ubuntu/SHAURYA/room-to-robot/outputs/sousvide/meeting_room/splatfacto/sousvide_v2/config.yml",
+    "data_path": "/home/ubuntu/SHAURYA/room-to-robot/data/sousvide_colmap",
+    "requested_steps": 30000,
+    "maximum_gaussians": 600000,
+    "gaussian_training_started": true,
+    "status": "complete",
+    "device": "Tesla T4",
+    "torch": "2.3.1+cu118",
+    "object_separation": false,
+    "completed_steps": 30000,
+    "gaussians": 359326,
+    "elapsed_seconds": 1431.0233051776886,
+    "elapsed_scope": "This process only; prior resumed sessions excluded",
+    "peak_vram_gb": 1.77036288
+  },
+  "latest_evaluation": {
+    "step": 30000,
+    "gaussians": 359326,
+    "psnr": 27.838554477691652,
+    "ssim": 0.9158303558826446,
+    "evaluation": "within-capture held-out views",
+    "comparison_columns": [
+      "real photograph",
+      "Splatfacto render",
+      "absolute error"
+    ]
+  },
+  "capture_frames_scored": 5599,
+  "selected_frames": 567,
+  "registered_views": 368,
+  "objects_reconstructed_and_separated": true,
+  "objects": [
+    {
+      "id": "top_box",
+      "label": 1,
+      "name": "Top Box",
+      "gaussians": 5519,
+      "multi_view_core": 5348,
+      "center": [
+        1.3088625705242154,
+        -0.14919473085552454,
+        0.19038370177149772
+      ],
+      "size": [
+        0.2688320469856258,
+        0.41885500006377696,
+        0.14542809993028638
+      ],
+      "mass_kg": 1,
+      "friction": 0.6,
+      "collider": "convex hull of observed Gaussian centers",
+      "complete_surface": false
+    },
+    {
+      "id": "second_box",
+      "label": 2,
+      "name": "Second Box",
+      "gaussians": 6874,
+      "multi_view_core": 6659,
+      "center": [
+        1.3215818452835078,
+        -0.15327575603500013,
+        0.030937769580632435
+      ],
+      "size": [
+        0.2727711987495407,
+        0.40532035987824194,
+        0.16603490587323902
+      ],
+      "mass_kg": 1,
+      "friction": 0.6,
+      "collider": "convex hull of observed Gaussian centers",
+      "complete_surface": false
+    },
+    {
+      "id": "office_chair",
+      "label": 3,
+      "name": "Office Chair",
+      "gaussians": 7999,
+      "multi_view_core": 5692,
+      "center": [
+        0.5085012471675873,
+        -0.07459462784230712,
+        -0.7863400469720364
+      ],
+      "size": [
+        0.6142807519435882,
+        0.47920182719826687,
+        0.7809730938076973
+      ],
+      "mass_kg": 8,
+      "friction": 0.6,
+      "collider": "Observed convex hull with an inferred symmetric caster footprint",
+      "complete_surface": false,
+      "inferred_footprint": {
+        "radius": 0.2156408222392201,
+        "z": -0.41571523582366476,
+        "source": "Unobserved caster contacts completed for stable rigid-body support; no wheel articulation"
+      },
+      "segmentation": "SAM silhouettes with optimized per-Gaussian membership; geometry frozen"
+    }
+  ],
+  "static_triangles": 66778,
+  "depth_model": "Depth Anything 3 Base, pose conditioned; not retrained",
+  "depth_fused_views": 125,
+  "depth_sparse_checks": [
+    {
+      "batch": 0,
+      "scale": 0.8384158510386011,
+      "fit_samples": 16716,
+      "held_out_samples": 4270,
+      "held_out_sparse_relative_error": 0.017903053493478933
+    },
+    {
+      "batch": 1,
+      "scale": 0.9163780530008194,
+      "fit_samples": 21787,
+      "held_out_samples": 5563,
+      "held_out_sparse_relative_error": 0.02283351127770403
+    },
+    {
+      "batch": 2,
+      "scale": 0.842331531951805,
+      "fit_samples": 9928,
+      "held_out_samples": 2497,
+      "held_out_sparse_relative_error": 0.018343392359296003
+    },
+    {
+      "batch": 3,
+      "scale": 0.8908537598261462,
+      "fit_samples": 8353,
+      "held_out_samples": 2163,
+      "held_out_sparse_relative_error": 0.025192849044447584
+    },
+    {
+      "batch": 4,
+      "scale": 0.9155440823200576,
+      "fit_samples": 7452,
+      "held_out_samples": 1924,
+      "held_out_sparse_relative_error": 0.026143642326606653
+    },
+    {
+      "batch": 5,
+      "scale": 0.9637114876700835,
+      "fit_samples": 7228,
+      "held_out_samples": 1836,
+      "held_out_sparse_relative_error": 0.03854939489788106
+    },
+    {
+      "batch": 6,
+      "scale": 0.8835800674300963,
+      "fit_samples": 8059,
+      "held_out_samples": 1965,
+      "held_out_sparse_relative_error": 0.03546074008228322
+    },
+    {
+      "batch": 7,
+      "scale": 0.9175959424700215,
+      "fit_samples": 12285,
+      "held_out_samples": 2965,
+      "held_out_sparse_relative_error": 0.021522565038904134
+    },
+    {
+      "batch": 8,
+      "scale": 0.9970772002010498,
+      "fit_samples": 13844,
+      "held_out_samples": 3470,
+      "held_out_sparse_relative_error": 0.014329208752360479
+    },
+    {
+      "batch": 9,
+      "scale": 0.9932862834610008,
+      "fit_samples": 9887,
+      "held_out_samples": 2519,
+      "held_out_sparse_relative_error": 0.01656632498494027
+    },
+    {
+      "batch": 10,
+      "scale": 1.000910201498265,
+      "fit_samples": 13343,
+      "held_out_samples": 3288,
+      "held_out_sparse_relative_error": 0.01906598639811242
+    },
+    {
+      "batch": 11,
+      "scale": 0.9776948692550389,
+      "fit_samples": 9824,
+      "held_out_samples": 2385,
+      "held_out_sparse_relative_error": 0.01741634082697118
+    },
+    {
+      "batch": 12,
+      "scale": 0.9417393540642197,
+      "fit_samples": 9394,
+      "held_out_samples": 2329,
+      "held_out_sparse_relative_error": 0.025393990433730102
+    },
+    {
+      "batch": 13,
+      "scale": 0.8770622075515472,
+      "fit_samples": 5944,
+      "held_out_samples": 1444,
+      "held_out_sparse_relative_error": 0.028351840998233062
+    },
+    {
+      "batch": 14,
+      "scale": 0.9537610676813517,
+      "fit_samples": 5221,
+      "held_out_samples": 1279,
+      "held_out_sparse_relative_error": 0.024835042919246687
+    },
+    {
+      "batch": 15,
+      "scale": 0.9764641910497485,
+      "fit_samples": 5394,
+      "held_out_samples": 1346,
+      "held_out_sparse_relative_error": 0.02169200072030399
+    }
+  ],
+  "figs_dynamics_render_verified": true,
+  "browser_interaction_verified": true,
+  "browser_interaction": {
+    "status": "passed",
+    "errors": [],
+    "continuous_move_distance": 0.23799999999999985,
+    "mouse_look_verified": true,
+    "chair_picked_by_ray_click": true,
+    "carried_chair": {
+      "id": "office_chair",
+      "translation": [
+        0.14587541880059662,
+        0.11215266522403725,
+        0.287195484640588
+      ],
+      "quaternion": [
+        4.059542824439795e-51,
+        2.4901825341707397e-51,
+        0.09982682373997276,
+        0.995004826753111
+      ]
+    },
+    "released_chair": {
+      "id": "office_chair",
+      "translation": [
+        0.14493773850307556,
+        0.11434730325293566,
+        -0.0011167027970765409
+      ],
+      "quaternion": [
+        -0.002151251439927234,
+        -0.0007412504951628581,
+        0.09837622433930734,
+        0.9951466932817935
+      ]
+    },
+    "release_contacts": 16335,
+    "edited_usd_pose_matches": true,
+    "packed_textures_verified": true,
+    "appearance_switch_verified": true,
+    "reset_verified": true,
+    "invalid_session_rejected": true,
+    "checkpoint_step": 30000,
+    "metric_measured": false,
+    "isaac_runtime_tested": false
+  },
+  "usd_structural_import_verified": true,
+  "serving_ports": {
+    "3500": true,
+    "4500": true
+  },
+  "metric_alignment_verified": false,
+  "isaac_runtime_verified": false,
+  "sam3d_ran": false,
+  "sv_net_policy_trained": false,
+  "remaining": [
+    "Measured scene scale and dimensional checks",
+    "Isaac/PhysX execution on a supported host",
+    "Unobserved room surfaces and reflections; chair repair is an approximation, wheels are not articulated",
+    "SV-Net expert-data generation and policy training if required"
+  ],
+  "default_appearance": "stitched",
+  "realism": {
+    "validation": {
+      "status": "passed",
+      "usd_rigid_bodies": 3,
+      "usd_meshes": 20,
+      "textures_packed": true,
+      "unresolved_assets": [],
+      "finite_repair": true,
+      "shared_collider_bounds": true,
+      "chair_triangles": 62280,
+      "chair_convex_collision_parts": 10,
+      "glb": {
+        "room-repaired.glb": {
+          "meshes": 8,
+          "embedded_images": 2
+        },
+        "chair-repaired.glb": {
+          "meshes": 6,
+          "embedded_images": 0
+        }
+      },
+      "drop_contact_samples": 437,
+      "settled_chair": {
+        "id": "office_chair",
+        "translation": [
+          -0.012452554130660765,
+          0.02817909297494728,
+          0.0008245487021594222
+        ],
+        "quaternion": [
+          -0.010358284000049487,
+          -0.006305045964337568,
+          -0.023644336197166688,
+          0.999646886512311
+        ]
+      },
+      "isaac_runtime_tested": false,
+      "metric_measured": false
+    },
+    "texture": {
+      "method": "Calibrated multi-view video projection into UV atlas",
+      "sources": 125,
+      "registered_source_names": [
+        "v0_000000.jpg",
+        "v0_000031.jpg",
+        "v0_000061.jpg",
+        "v0_000099.jpg",
+        "v0_000125.jpg",
+        "v0_000152.jpg",
+        "v0_000186.jpg",
+        "v0_000220.jpg",
+        "v0_000873.jpg",
+        "v0_002705.jpg",
+        "v1_000028.jpg",
+        "v0_000247.jpg",
+        "v0_000271.jpg",
+        "v0_000310.jpg",
+        "v0_000336.jpg",
+        "v0_000362.jpg",
+        "v0_000393.jpg",
+        "v0_000429.jpg",
+        "v0_000455.jpg",
+        "v0_000482.jpg",
+        "v0_000511.jpg",
+        "v0_000541.jpg",
+        "v0_000578.jpg",
+        "v0_000605.jpg",
+        "v0_000633.jpg",
+        "v0_000661.jpg",
+        "v0_000694.jpg",
+        "v0_000721.jpg",
+        "v0_000754.jpg",
+        "v0_000785.jpg",
+        "v0_000817.jpg",
+        "v0_000842.jpg",
+        "v0_000910.jpg",
+        "v0_000932.jpg",
+        "v0_000966.jpg",
+        "v0_000992.jpg",
+        "v0_001024.jpg",
+        "v0_001054.jpg",
+        "v0_001087.jpg",
+        "v0_001112.jpg",
+        "v0_001149.jpg",
+        "v0_001173.jpg",
+        "v0_001202.jpg",
+        "v0_001340.jpg",
+        "v0_001367.jpg",
+        "v0_001391.jpg",
+        "v0_002034.jpg",
+        "v0_002060.jpg",
+        "v0_002099.jpg",
+        "v0_002120.jpg",
+        "v0_002155.jpg",
+        "v0_002185.jpg",
+        "v0_002210.jpg",
+        "v0_002241.jpg",
+        "v0_002269.jpg",
+        "v0_002307.jpg",
+        "v0_002330.jpg",
+        "v0_002360.jpg",
+        "v0_002394.jpg",
+        "v0_002419.jpg",
+        "v0_002456.jpg",
+        "v0_002487.jpg",
+        "v0_002513.jpg",
+        "v0_002548.jpg",
+        "v0_002569.jpg",
+        "v0_002606.jpg",
+        "v0_002634.jpg",
+        "v0_002662.jpg",
+        "v0_002692.jpg",
+        "v0_002722.jpg",
+        "v0_002754.jpg",
+        "v0_002822.jpg",
+        "v0_002858.jpg",
+        "v0_002886.jpg",
+        "v0_002918.jpg",
+        "v0_002939.jpg",
+        "v0_003738.jpg",
+        "v0_003758.jpg",
+        "v0_003788.jpg",
+        "v0_003818.jpg",
+        "v0_003953.jpg",
+        "v0_003987.jpg",
+        "v0_004012.jpg",
+        "v0_004046.jpg",
+        "v0_004077.jpg",
+        "v0_004102.jpg",
+        "v0_004129.jpg",
+        "v0_004158.jpg",
+        "v0_004190.jpg",
+        "v0_004218.jpg",
+        "v0_004256.jpg",
+        "v0_004278.jpg",
+        "v0_004314.jpg",
+        "v0_004339.jpg",
+        "v0_004375.jpg",
+        "v0_004404.jpg",
+        "v0_004432.jpg",
+        "v0_004457.jpg",
+        "v0_004497.jpg",
+        "v0_004522.jpg",
+        "v0_004557.jpg",
+        "v1_000020.jpg",
+        "v1_000054.jpg",
+        "v1_000082.jpg",
+        "v1_000112.jpg",
+        "v1_000133.jpg",
+        "v1_000163.jpg",
+        "v1_000190.jpg",
+        "v1_000217.jpg",
+        "v1_000244.jpg",
+        "v1_000273.jpg",
+        "v1_000309.jpg",
+        "v1_000336.jpg",
+        "v1_000365.jpg",
+        "v1_000394.jpg",
+        "v1_000419.jpg",
+        "v1_000447.jpg",
+        "v1_000473.jpg",
+        "v1_000781.jpg",
+        "v1_000808.jpg",
+        "v1_000833.jpg",
+        "v1_000866.jpg",
+        "v1_000894.jpg",
+        "v1_000914.jpg",
+        "v1_000945.jpg"
+      ],
+      "texture": [
+        4951,
+        4947
+      ],
+      "covered_faces": 66778,
+      "faces": 66778,
+      "covered_texels": 12807387,
+      "surface_texels": 12807387,
+      "pixel_source": "Original undistorted video frames, blended from up to 3 depth-checked views per face",
+      "unsupported_texels": "Retain DA3 fusion vertex color; no generated imagery",
+      "seconds": 631.4259343147278
+    },
+    "chair_fit": {
+      "method": "Coordinate search against six SAM masks with captured-depth occlusion",
+      "initial": {
+        "parameters": [
+          -60.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0
+        ],
+        "mean_iou": 0.5557998754740555,
+        "views": [
+          0.6029046787388547,
+          0.6856343283582089,
+          0.680437695399732,
+          0.42422815631936506,
+          0.4683275907765704,
+          0.4732668032516027
+        ]
+      },
+      "parameters": {
+        "yaw_degrees": -57.0,
+        "translation": [
+          -0.01,
+          -0.06,
+          0
+        ],
+        "scale": [
+          0.73,
+          1.12,
+          1.0
+        ]
+      },
+      "mean_mask_iou": 0.6528208333729043,
+      "view_mask_iou": [
+        0.6410119840213049,
+        0.7922417008578888,
+        0.8163672654690619,
+        0.5285307360102913,
+        0.5592298394059748,
+        0.5795434744729047
+      ],
+      "seconds": 22.181260108947754
+    },
+    "chair_color_transfer": {
+      "method": "Visibility-checked color transfer from six original chair masks to repaired surface",
+      "vertices": 186840,
+      "observed_vertices": 27005,
+      "unseen_vertices": "Authored black fabric/plastic/metal PBR",
+      "mix_observed": 0.12,
+      "lighting": "Approximate inverse diffuse shading; not calibrated reflectance",
+      "review_adjustment": "Reduce uncalibrated baked illumination while retaining measured chair color variation"
+    },
+    "floor_completion": {
+      "method": "Inferred checker carpet completion fitted to observed floor colors and tile edges",
+      "source_camera_indices": [
+        295,
+        298,
+        299,
+        301
+      ],
+      "floor_observations": 4033,
+      "tile_size_scene_units": 0.44932905718203203,
+      "orientation_degrees": 60.79862099173262,
+      "fit_error": 0.002768497521997411,
+      "colors": [
+        [
+          0.5058823529411764,
+          0.5098039215686274,
+          0.5176470588235295
+        ],
+        [
+          0.396078431372549,
+          0.396078431372549,
+          0.4
+        ]
+      ],
+      "bounds": [
+        [
+          0.13136087119579315,
+          -0.3841955414414406
+        ],
+        [
+          0.8856416231393813,
+          0.2350062857568263
+        ]
+      ],
+      "floor_z": -1.2080552827957012,
+      "hidden_floor_observed": false,
+      "scope": "Small completion under original chair footprint; blended at its edge"
+    },
+    "exports": {
+      "usdz": "outputs/realism/scene-repaired.usdz",
+      "glb": "outputs/realism/room-repaired.glb",
+      "blend": "outputs/realism/room-repaired.blend"
+    },
+    "geometry_provenance": "Observed partial room mesh; reference-informed Blender chair and hidden carpet repair",
+    "renderer": "Trained Gaussian room, confidence-gated video texture blend, CUDA PBR chair",
+    "material_limit": "Room atlas includes captured lighting; chair hidden surfaces and PBR parameters are authored"
+  }
+}
